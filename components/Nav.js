@@ -35,11 +35,14 @@ import { useRouter } from "next/router";
 const Nav = () => {
   const router = useRouter();
   const pathname = router.pathname;
-  
+
   return (
     <nav>
       {/* Inner */}
-      <div>
+      <div
+        className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4
+        md:px-40 xl:px-0 h-80 bg-red-200/10 xl:h-max py-8 bg-white/10"
+      >
         {navData.map((link, index) => {
           return <Link href={link.path}> {link.icon} </Link>;
         })}
