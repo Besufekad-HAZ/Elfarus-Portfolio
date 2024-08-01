@@ -47,7 +47,17 @@ const Nav = () => {
         md:px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full"
       >
         {navData.map((link, index) => {
-          return <Link href={link.path}> {link.icon} </Link>;
+          return (
+            <Link
+              className={`${
+                link.path === pathname && "text-accent"
+              } relative flex items-center group hover:text-accent transition-all duration-300`}
+              href={link.path}
+              key={index}
+            >
+              <div>{link.icon}</div>
+            </Link>
+          );
         })}
       </div>
     </nav>
