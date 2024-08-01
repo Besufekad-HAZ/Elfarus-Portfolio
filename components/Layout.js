@@ -16,9 +16,10 @@ import TopLeftImg from "../components/TopLeftImg";
 const Layout = ({ children }) => {
   return (
     <div>
+      <TopLeftImg />
       <Nav />
       <Header />
-      <TopLeftImg />
+      {children}
     </div>
   );
 };
