@@ -18,12 +18,12 @@ const Home = () => {
       {/* Text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div
-          className="text-center flex flex-col justify-center xl:pt-40
+          className="text-center flex flex-col justify-center xl:pt-40 xl:text-left
         h-full container mx-auto"
         >
           {/* title */}
           <h1 className="h1">
-            Elfarus <br />Transforming Ideas <br /> Into{" "}
+            Transforming Ideas <br /> Into{" "}
             <span className="text-accent">Digital Reality</span>
           </h1>
           {/* Subtitle */}
@@ -34,6 +34,10 @@ const Home = () => {
             distinctio animi optio. Cumque, est repudiandae laboriosam, modi
             sunt praesentium odit repellendus in ab nam cum dignissimos!
           </p>
+          {/* button */}
+          <div className="flex justify-center xl:hidden relative">
+            <ProjectBtn />
+          </div>
         </div>
       </div>
       {/* Image */}
