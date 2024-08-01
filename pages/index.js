@@ -3,7 +3,7 @@ import Image from "next/image";
 
 // components
 import ParticlesContainer from "../components/ParticlesContainer";
-import ProjectBtn from "../components/ProjectsBtn";
+import ProjectsBtn from "../components/ProjectsBtn";
 import Avatar from "../components/Avatar";
 
 // framer motion
@@ -22,22 +22,43 @@ const Home = () => {
         h-full container mx-auto"
         >
           {/* title */}
-          <h1 className="h1">
+          <motion.h1
+            variants={fadeIn("down", 0.2)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="h1"
+          >
             Transforming Ideas <br /> Into{" "}
             <span className="text-accent">Digital Reality</span>
-          </h1>
+          </motion.h1>
           {/* Subtitle */}
-          <p className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            nulla nam impedit sequi molestias quam quasi, maiores libero harum
-            ducimus possimus sit commodi doloremque eos est fugit deleniti
-            distinctio animi optio. Cumque, est repudiandae laboriosam, modi
-            sunt praesentium odit repellendus in ab nam cum dignissimos!
-          </p>
+          <motion.p
+            variants={fadeIn("down", 0.3)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            // my touch on text-justify
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-justify"
+          >
+            Elevate your brand's visual presence with captivating videos that
+            connect, inspire, and engage your audience. As a versatile
+            videographer and video editor, I bring your ideas to life with
+            cinematic storytelling and unparalleled technical expertise.!
+          </motion.p>
           {/* button */}
           <div className="flex justify-center xl:hidden relative">
-            <ProjectBtn />
+            <ProjectsBtn />
           </div>
+          <motion.div
+            variants={fadeIn("down", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="hidden xl:flex"
+          >
+            <ProjectsBtn />
+          </motion.div>
         </div>
       </div>
       {/* Image */}
