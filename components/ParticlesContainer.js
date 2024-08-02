@@ -21,7 +21,7 @@ const ParticlesContainer = () => {
         fullScreen: { enable: false },
         background: {
           color: {
-            value: "#000000",
+            value: "",
           },
         },
         fps_limit: 120,
@@ -80,8 +80,15 @@ const ParticlesContainer = () => {
           },
           opacity: {
             value: 0.5,
-          }
+          },
+          shape: {
+            type: "circle",
+          },
+          size: {
+            value: { min: 1, max: 5 },
+          },
         },
+        detectRetina: true,
       }}
     />
   );
