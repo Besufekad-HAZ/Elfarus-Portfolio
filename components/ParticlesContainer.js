@@ -4,7 +4,28 @@ import { loadFull } from "tsparticles";
 import { useCallback } from "react";
 
 const ParticlesContainer = () => {
-  return <div>Ehhh srabet</div>;
+  // init
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async () => {}, []);
+
+  return (
+    <Particles
+      id="tsparticles"
+      init={particlesInit}
+      loaded={particlesLoaded}
+      options={{
+        fullScreen: { enable: false },
+        background: {
+          color: {
+            value: "#000000",
+          },
+        },
+      }}
+    />
+  );
 };
 
 export default ParticlesContainer;
