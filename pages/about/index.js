@@ -25,6 +25,9 @@ import Circles from "../../components/Circles";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
+//counter
+import Counter from "react-countup";
+
 //  data
 const aboutData = [
   {
@@ -113,8 +116,25 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        <div className="flex-1 flex flex-col justify-center">text</div>
+      <div
+        className="container mx-auto h-full flex flex-col items-center xl:flex-row
+        gap-x-6"
+      >
+        {/* text */}
+        <div className="flex-1 flex flex-col pt-10 xl:pt-0 justify-center">
+          <h2 className="h2">
+            Captivating <span className="text-accent">stories</span> birth
+            magnificent designs.
+          </h2>
+          <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-white">
+            My journey into the world of computers began 15 years ago with
+            gaming. This initial spark ignited a lifelong passion for
+            understanding how these machines work, leading me to delve into
+            computer support, maintenance, graphic design, and eventually, the
+            dynamic world of video editing.
+          </p>
+        </div>
+        {/* info */}
         <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
@@ -139,11 +159,21 @@ const About = () => {
           >
             {aboutData[index].info.map((item, itemIndex) => {
               return (
-                <div key={itemIndex}>
+                <div
+                  key={itemIndex}
+                  className="flex-1 flex flex-col md:flex-row max-w-max
+                gap-x-2 items-center text-white/60"
+                >
                   {/* title */}
-                  <div>{item.title}</div>
+                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
                   <div className="hidden md:flex">-</div>
                   <div>{item.stage}</div>
+                  <div className="flex gap-x-4">
+                    {/* icons */}
+                    {item.icons?.map((icon, itemIndex) => {
+                      return <div className="text-2xl text-white">{icon}</div>;
+                    })}
+                  </div>
                 </div>
               );
             })}
