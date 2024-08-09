@@ -121,7 +121,7 @@ const About = () => {
         gap-x-6"
       >
         {/* text */}
-        <div className="flex-1 flex flex-col pt-10 xl:pt-0 justify-center">
+        <div className="flex-1 flex flex-col justify-center">
           <h2 className="h2">
             Captivating <span className="text-accent">stories</span> birth
             magnificent designs.
@@ -141,7 +141,7 @@ const About = () => {
                 className="relative flex-1 after:w-[1px] after:h-full
               after:bg-white/10 after:absolute after:top-0 after:right-0"
               >
-                <div>
+                <div className="text-2xl xl-text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={10} duration={5} /> +
                 </div>
                 <div>Years of experience</div>
