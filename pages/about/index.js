@@ -100,7 +100,7 @@ const aboutData = [
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div>
+    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
       {/* Avatar img */}
       <motion.div
@@ -112,6 +112,18 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
+      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+        <div>text</div>
+        <div>
+          <div>
+            {aboutData.map(item, itemIndex) => {
+              return (<div key={itemsIndex} className="cursor-pointer capitalize xl:text-lg relative after:w-8
+              after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0 ">{item.title}</div>
+            )
+            }}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
