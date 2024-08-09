@@ -116,11 +116,17 @@ const About = () => {
         <div>text</div>
         <div>
           <div>
-            {aboutData.map(item, itemIndex) => {
-              return (<div key={itemsIndex} className="cursor-pointer capitalize xl:text-lg relative after:w-8
-              after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0 ">{item.title}</div>
-            )
-            }}
+            {aboutData.map((item, itemIndex) => {
+              return (
+                <div
+                  key={itemsIndex}
+                  className="cursor-pointer capitalize xl:text-lg relative after:w-8
+              after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0 "
+                >
+                  {item.title}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
