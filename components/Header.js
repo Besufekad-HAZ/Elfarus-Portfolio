@@ -20,7 +20,7 @@ const Header = () => {
               width={220}
               height={48}
               priority={true}
-              className="cursor-pointer mix-blend-color-burn"
+              className="cursor-pointer mix-blend-color-dodge z-10"
             />
           </Link>
           {/* Socials */}

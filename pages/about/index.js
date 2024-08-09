@@ -21,6 +21,10 @@ import {
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 
+// framer motion
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
+
 //  data
 const aboutData = [
   {
@@ -94,10 +98,20 @@ const aboutData = [
 ];
 
 const About = () => {
-  const [index, setIndex] = useState[0];
+  const [index, setIndex] = useState(0);
   return (
     <div>
       <Circles />
+      {/* Avatar img */}
+      <motion.div
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="hidden xl:flex absolute bottom-0 -left-[370px]"
+      >
+        <Avatar />
+      </motion.div>
     </div>
   );
 };
