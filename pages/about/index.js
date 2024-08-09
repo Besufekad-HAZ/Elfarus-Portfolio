@@ -133,6 +133,8 @@ const About = () => {
             computer support, maintenance, graphic design, and eventually, the
             dynamic world of video editing.
           </p>
+          {/* counters */}
+          <div>counters</div>
         </div>
         {/* info */}
         <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
