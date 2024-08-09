@@ -26,7 +26,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
 //counter
-import Counter from "react-countup";
+import CountUp from "react-countup";
 
 //  data
 const aboutData = [
@@ -134,7 +134,20 @@ const About = () => {
             dynamic world of video editing.
           </p>
           {/* counters */}
-          <div>counters</div>
+          <div>
+            <div>
+              {/* experience */}
+              <div
+                className="relative flex-1 after:w-[1px] after:h-full
+              after:bg-white/10 after:absolute after:top-0 after:right-0"
+              >
+                <div>
+                  <CountUp start={0} end={10} duration={5} /> +
+                </div>
+                <div>Years of experience</div>
+              </div>
+            </div>
+          </div>
         </div>
         {/* info */}
         <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
