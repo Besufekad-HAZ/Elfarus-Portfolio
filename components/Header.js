@@ -18,7 +18,7 @@ const Header = () => {
               src="/logo.png"
               alt="Logo"
               width={220}
-              height={80}
+              height={48}
               priority={true}
               className="cursor-pointer mix-blend-color-burn"
             />
