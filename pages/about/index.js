@@ -19,6 +19,7 @@ import {
 
 //components
 import Avatar from "../../components/Avatar";
+import Circles from "../../components/Circles";
 
 //  data
 const aboutData = [
@@ -93,7 +94,12 @@ const aboutData = [
 ];
 
 const About = () => {
-  return <div>About</div>;
+  const [index, setIndex] = useState[0];
+  return (
+    <div>
+      <Circles />
+    </div>
+  );
 };
 
 export default About;
