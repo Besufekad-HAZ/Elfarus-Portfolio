@@ -122,20 +122,38 @@ const About = () => {
       >
         {/* text */}
         <div className="flex-1 flex flex-col justify-center">
-          <h2 className="h2">
+          <motion.h2
+            variants={fadeIn("right", 0.5)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="h2"
+          >
             Captivating <span className="text-accent">stories</span> birth
             magnificent designs.
-          </h2>
-          <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-white">
+          </motion.h2>
+          <motion.p
+            variants={fadeIn("right", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-white"
+          >
             My journey into the world of computers began 15 years ago with
             gaming. This initial spark ignited a lifelong passion for
             understanding how these machines work, leading me to delve into
             computer support, maintenance, graphic design, and eventually, the
             dynamic world of video editing.
-          </p>
+          </motion.p>
           {/* counters */}
-          <div>
-            <div>
+          <motion.div
+            variants={fadeIn("right", 0.7)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+          >
+            <div className="flex flex-1 xl:gap-x-5">
               {/* experience */}
               <div
                 className="relative flex-1 after:w-[1px] after:h-full
@@ -182,7 +200,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
         {/* info */}
         <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
