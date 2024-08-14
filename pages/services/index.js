@@ -15,29 +15,28 @@ const Services = () => {
         <div className="flex flex-col xl:flex-row gap-x-8">
           {/* text */}
           <motion.div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4">
-            <h2 className="h2 xl:mt-8">
+            <motion.h2
+              variants={fadeIn("up", 0.3)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="h2 xl:mt-8"
+            >
               My Services <span className="text-accent">.</span>{" "}
-            </h2>
+            </motion.h2>
             <p className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-white">
-              As a versatile videographer and video editor, I offer a
-              comprehensive suite of services to elevate your brand's visual
-              presence:{" "}
-              <ul className="list-disc pl-6 mt-4">
-                <li>Corporate Video Production</li>
-                <li>Promotional and Marketing Videos</li>
-                <li>Event Videography and Livestreaming</li>
-                <li>Cinematic Storytelling and Editing</li>
-                <li>Motion Graphics and Visual Effects</li>
-                <li>Sound Design and Audio Post-Production</li>
-              </ul>
-              With a keen eye for detail and a collaborative approach, I work
-              closely with clients to bring their creative vision to life and
-              deliver high-quality, impactful videos tailored to their unique
-              needs and objectives.
+              Elevate your brand's visual presence with my comprehensive
+              videography and video editing services. From captivating corporate
+              videos and dynamic promotional reels to cinematic event coverage
+              and polished post-production, I bring your ideas to life with an
+              unparalleled eye for detail and a collaborative approach tailored
+              to your unique needs.
             </p>
           </motion.div>
-          {/* slider */}
-          <ServiceSlider />
+          <div className="w-full xl:max-w-[65%]">
+            {/* slider */}
+            <ServiceSlider />
+          </div>
         </div>
       </div>
       <Bulb />

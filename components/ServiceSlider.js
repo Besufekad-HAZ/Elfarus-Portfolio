@@ -7,12 +7,12 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 // icons
 import {
-  RxCrop,
-  RxPencil2,
-  RxDesktop,
-  RxReader,
-  RxRocket,
+  RxVideo,
+  RxImage,
+  RxCamera,
+  RxMagicWand,
   RxArrowTopRight,
+  RxDesktop,
 } from "react-icons/rx";
 
 // import required modules
@@ -21,32 +21,36 @@ import { FreeMode, Pagination } from "swiper";
 // data
 const serviceData = [
   {
-    icon: <RxCrop />,
-    title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: <RxVideo />,
+    title: "Corporate Videos",
+    description:
+      "Engaging, brand-aligned videos to elevate your company's image.",
   },
   {
-    icon: <RxPencil2 />,
-    title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: <RxImage />,
+    title: "Promotional Reels",
+    description:
+      "Dynamic, visually compelling videos to showcase your products or services.",
+  },
+  {
+    icon: <RxCamera />,
+    title: "Event Videography",
+    description:
+      "Captivating coverage of your events, conferences, and live streams.",
   },
   {
     icon: <RxDesktop />,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Cinematic Editing",
+    description:
+      "Polished, cinematic post-production to bring your vision to life.",
   },
   {
-    icon: <RxReader />,
-    title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    icon: <RxRocket />,
-    title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: <RxMagicWand />,
+    title: "Motion Graphics",
+    description:
+      "Impactful visual effects and animations to elevate your videos.",
   },
 ];
-
 const ServiceSlider = () => {
   return (
     <Swiper
@@ -70,17 +74,25 @@ const ServiceSlider = () => {
       {serviceData.map((item, index) => {
         return (
           <SwiperSlide key={index}>
-            <div>
+            <div
+              className="bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col
+            gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
+            >
               {/* icon */}
-              <div>{item.icon}</div>
+              <div className="text-4xl text-accent mb-4">{item.icon}</div>
               {/* title & desc */}
-              <div>
-                <div>{item.title}</div>
-                <div>{item.description}</div>
+              <div className="mb-8">
+                <div className="mb-2 text-lg">{item.title}</div>
+                <p className="maxw-[350px] leading-normal">
+                  {item.description}
+                </p>
               </div>
               {/* arrow */}
               <div className="text-3xl">
-                <RxArrowTopRight />
+                <RxArrowTopRight
+                  className="group-hover:rotate-45 group-hover:text-accent
+                transition-all duration-300"
+                />
               </div>
             </div>
           </SwiperSlide>
