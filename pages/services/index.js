@@ -24,19 +24,31 @@ const Services = () => {
             >
               My Services <span className="text-accent">.</span>{" "}
             </motion.h2>
-            <p className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-white">
+            <motion.p
+              variants={fadeIn("up", 0.4)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-white"
+            >
               Elevate your brand's visual presence with my comprehensive
               videography and video editing services. From captivating corporate
               videos and dynamic promotional reels to cinematic event coverage
               and polished post-production, I bring your ideas to life with an
               unparalleled eye for detail and a collaborative approach tailored
               to your unique needs.
-            </p>
+            </motion.p>
           </motion.div>
-          <div className="w-full xl:max-w-[65%]">
+          <motion.div
+            variants={fadeIn("down", 0.6)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="w-full xl:max-w-[65%]"
+          >
             {/* slider */}
             <ServiceSlider />
-          </div>
+          </motion.div>
         </div>
       </div>
       <Bulb />
