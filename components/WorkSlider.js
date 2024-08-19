@@ -70,12 +70,11 @@ const WorkSlider = () => {
           spaceBetween: 15,
         },
       }}
-      freeMode={true}
       pagination={{
         clickable: true,
       }}
       modules={[Pagination]}
-      className="h-[240px] sm:h-[340px]"
+      className="h-[280px] sm:h-[480px]"
     >
       {workSlider.slides.map((slide, index) => {
         return <SwiperSlide key={index}>Slides</SwiperSlide>;
