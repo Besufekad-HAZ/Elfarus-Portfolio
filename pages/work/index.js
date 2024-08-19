@@ -1,5 +1,5 @@
 // components
-import ServiceSlider from "../../components/ServiceSlider";
+import WorkSlider from "../../components/WorkSlider";
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 
@@ -47,7 +47,7 @@ const Work = () => {
             className="w-full xl:max-w-[65%]"
           >
             {/* slider */}
-            <ServiceSlider />
+            <WorkSlider />
           </motion.div>
         </div>
       </div>
