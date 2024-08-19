@@ -1,3 +1,48 @@
+const workSlider = {
+  slides: [
+    {
+      images: [
+        {
+          title: "title",
+          path: "/thumb1.jpg",
+        },
+        {
+          title: "title",
+          path: "/thumb2.jpg",
+        },
+        {
+          title: "title",
+          path: "/thumb3.jpg",
+        },
+        {
+          title: "title",
+          path: "/thumb4.jpg",
+        },
+      ],
+    },
+    {
+      images: [
+        {
+          title: "title",
+          path: "/thumb4.jpg",
+        },
+        {
+          title: "title",
+          path: "/thumb1.jpg",
+        },
+        {
+          title: "title",
+          path: "/thumb2.jpg",
+        },
+        {
+          title: "title",
+          path: "/thumb3.jpg",
+        },
+      ],
+    },
+  ],
+};
+
 // import swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -32,8 +77,8 @@ const WorkSlider = () => {
       modules={[Pagination]}
       className="h-[240px] sm:h-[340px]"
     >
-      {WorkSlider.slides.map((item, index) => {
-        return <SwiperSlide key={index}></SwiperSlide>;
+      {workSlider.slides.map((slide, index) => {
+        return <SwiperSlide key={index}>Slides</SwiperSlide>;
       })}
     </Swiper>
   );
