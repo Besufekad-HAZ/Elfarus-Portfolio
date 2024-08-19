@@ -73,15 +73,20 @@ const WorkSlider = () => {
       {workSlider.slides.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
-            <div>
+            <div className="grid grid-cols-2 grid-rows-2 gap-4">
               {slide.images.map((image, index) => {
                 return (
                   <div>
                     <div>
                       {/* image */}
-                      <Image />
+                      <Image
+                        src={image.path}
+                        width={500}
+                        height={300}
+                        alt="work slides image "
+                      />
                     </div>
-                    <BsArrowRight />
+                    {/* <BsArrowRight /> */}
                   </div>
                 );
               })}
