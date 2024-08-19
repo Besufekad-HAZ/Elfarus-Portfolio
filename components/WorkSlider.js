@@ -57,19 +57,13 @@ import { Pagination } from "swiper";
 // icons
 import { BsArrowRight } from "react-icons/bs";
 
+// import next image
+import Image from "next/image";
+
 const WorkSlider = () => {
   return (
     <Swiper
-      breakpoints={{
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 15,
-        },
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-        },
-      }}
+      spaceBetween={10}
       pagination={{
         clickable: true,
       }}
@@ -77,7 +71,23 @@ const WorkSlider = () => {
       className="h-[280px] sm:h-[480px]"
     >
       {workSlider.slides.map((slide, index) => {
-        return <SwiperSlide key={index}>Slides</SwiperSlide>;
+        return (
+          <SwiperSlide key={index}>
+            <div>
+              {slide.images.map((image, index) => {
+                return (
+                  <div>
+                    <div>
+                      {/* image */}
+                      <Image />
+                    </div>
+                    <BsArrowRight />
+                  </div>
+                );
+              })}
+            </div>
+          </SwiperSlide>
+        );
       })}
     </Swiper>
   );
