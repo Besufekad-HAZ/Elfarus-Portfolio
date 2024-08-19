@@ -18,39 +18,6 @@ import {
 // import required modules
 import { FreeMode, Pagination } from "swiper";
 
-// data
-const serviceData = [
-  {
-    icon: <RxVideo />,
-    title: "Corporate Videos",
-    description:
-      "Engaging, brand-aligned videos to elevate your company's image.",
-  },
-  {
-    icon: <RxImage />,
-    title: "Promotional Reels",
-    description:
-      "Dynamic, visually compelling videos to showcase your products or services.",
-  },
-  {
-    icon: <RxCamera />,
-    title: "Event Videography",
-    description:
-      "Captivating coverage of your events, conferences, and live streams.",
-  },
-  {
-    icon: <RxDesktop />,
-    title: "Cinematic Editing",
-    description:
-      "Polished, cinematic post-production to bring your vision to life.",
-  },
-  {
-    icon: <RxMagicWand />,
-    title: "Motion Graphics",
-    description:
-      "Impactful visual effects and animations to elevate your videos.",
-  },
-];
 const WorkSlider = () => {
   return (
     <Swiper
