@@ -5,18 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-// icons
-import {
-  RxVideo,
-  RxImage,
-  RxCamera,
-  RxMagicWand,
-  RxArrowTopRight,
-  RxDesktop,
-} from "react-icons/rx";
 
 // import required modules
-import { FreeMode, Pagination } from "swiper";
+import { Pagination } from "swiper";
 
 const WorkSlider = () => {
   return (
