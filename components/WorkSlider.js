@@ -5,18 +5,22 @@ const workSlider = {
         {
           title: "title",
           path: "/thumb1.jpg",
+          link: "http://ezraseminary.org/",
         },
         {
           title: "title",
           path: "/thumb2.jpg",
+          link: "https://mern-dashboard-client-37t0.onrender.com/",
         },
         {
           title: "title",
           path: "/thumb3.jpg",
+          link: "https://rent-motorcycles.onrender.com/",
         },
         {
           title: "title",
           path: "/thumb4.jpg",
+          link: "https://url-shortner-bese-b983225bbc35.herokuapp.com/",
         },
       ],
     },
@@ -25,18 +29,22 @@ const workSlider = {
         {
           title: "title",
           path: "/thumb4.jpg",
+          link: "http://ezraseminary.org/",
         },
         {
           title: "title",
           path: "/thumb1.jpg",
+          link: "https://cash-buddy.onrender.com/",
         },
         {
           title: "title",
           path: "/thumb2.jpg",
+          link: "https://rent-motorcycles.onrender.com/",
         },
         {
           title: "title",
           path: "/thumb3.jpg",
+          link: "https://url-shortner-bese-b983225bbc35.herokuapp.com/",
         },
       ],
     },
@@ -76,37 +84,40 @@ const WorkSlider = () => {
             <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
               {slide.images.map((image, index) => {
                 return (
-                  <div
-                    className="relative rounded-lg overflow-hidden flex
-                  items-center justify-center group"
+                  <a
+                    href={image.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     key={index}
+                    className="relative rounded-lg overflow-hidden flex
+                      items-center justify-center group"
                   >
                     <div
                       className="flex items-center justify-center relative
-                    oveflow-hidden group"
+                        overflow-hidden group"
                     >
                       {/* image */}
                       <Image
                         src={image.path}
                         width={500}
                         height={300}
-                        alt="work slides image "
+                        alt="work slides image"
                       />
                       {/* overlay gradient */}
                       <div
                         className="absolute inset-0 bg-gradient-to-l
-                      from-transparent via-[#e838cc] to-[#4a22bd] opacity-0
-                      group-hover:opacity-80 transition-all duration-700"
+                          from-transparent via-[#e838cc] to-[#4a22bd] opacity-0
+                          group-hover:opacity-80 transition-all duration-700"
                       ></div>
                       {/* title */}
                       <div
                         className="absolute bottom-0 translate-y-full
-                      group-hover:-translate-y-10 group-hover:xl:-translate-y-20
-                      transition-all duration-300"
+                          group-hover:-translate-y-10 group-hover:xl:-translate-y-20
+                          transition-all duration-300"
                       >
                         <div
                           className="flex items-center gap-x-2
-                        text-[13px] tracking-[0.2em]"
+                            text-[13px] tracking-[0.2em]"
                         >
                           {/* title part 1  */}
                           <div className="delay-100">LIVE</div>
@@ -114,22 +125,21 @@ const WorkSlider = () => {
                           {/* title part 2  */}
                           <div
                             className="translate-y-[500%] group-hover:translate-y-0 transition-all
-                          duration-300 delay-100"
+                              duration-300 delay-100"
                           >
                             PROJECT
                           </div>
                           {/* icon */}
                           <div
                             className="text-xl translate-y-[500%] group-hover:translate-y-0
-                        transition-all duration-300 delay-200"
+                              transition-all duration-300 delay-200"
                           >
                             <BsArrowRight />
                           </div>
                         </div>
                       </div>
                     </div>
-                    {/* <BsArrowRight /> */}
-                  </div>
+                  </a>
                 );
               })}
             </div>
