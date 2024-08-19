@@ -79,6 +79,7 @@ const WorkSlider = () => {
                   <div
                     className="relative rounded-lg overflow-hidden flex
                   items-center justify-center group"
+                    key={index}
                   >
                     <div
                       className="flex items-center justify-center relative
@@ -118,7 +119,10 @@ const WorkSlider = () => {
                             PROJECT
                           </div>
                           {/* icon */}
-                          <div>
+                          <div
+                            className="text-xl translate-y-[500%] group-hover:translate-y-0
+                        transition-all duration-300 delay-200"
+                          >
                             <BsArrowRight />
                           </div>
                         </div>
