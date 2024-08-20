@@ -70,7 +70,7 @@ const TestimonialSlider = () => {
                       width={100}
                       height={100}
                       alt="client images"
-                      className="md:w-[200px]"
+                      className="md:w-[150px]"
                     />
                   </div>
                   {/* name */}
