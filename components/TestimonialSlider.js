@@ -5,21 +5,21 @@ const testimonialSlider = [
     name: "Anne Smith",
     position: "Customer",
     message:
-      "The video editing and graphic design work was exceptional. Truly brought our vision to life!",
+      "As a videographer, the work and attention to detail that <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> brought to our project was truly exceptional. They effortlessly brought our vision to life with their creative flair and cinematic expertise. The final video surpassed our expectations and really made our project stand out.",
   },
   {
     image: "/t-avt-2.png",
     name: "Jane Doe",
     position: "Customer",
     message:
-      "Outstanding videography! Captured every moment perfectly. Highly recommend for any project.",
+      "<span class='text-xl xl:text-2xl  font-extrabold text-accent'>Elfarus</span> is a true master of their craft. Their videography skills are impeccable, capturing every moment with a keen eye and a creative touch. The professionalism and dedication they demonstrated throughout the project were truly impressive. I highly recommend <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> for any creative endeavor.",
   },
   {
     image: "/t-avt-3.png",
     name: "John Doe",
     position: "Customer",
     message:
-      "Professional and creative. The final product exceeded our expectations. Great job!",
+      "<span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> is a consummate professional. Their innovative approach and commitment to excellence made the entire process enjoyable and stress-free. The final product exceeded our expectations with its high-quality visuals and seamless editing. We're thrilled with the work <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> has done for us.",
   },
 ];
 
@@ -48,20 +48,14 @@ const TestimonialSlider = () => {
         clickable: true,
       }}
       modules={[Navigation, Pagination]}
-      className="h-[40vh] md:h-[30vh]"
+      className="h-[50vh]"
     >
       {testimonialSlider.map((person, index) => {
         return (
           <SwiperSlide key={index}>
-            <div
-              className="flex flex-col items-center md:flex-row gap-x-8 h-full
-            px-16"
-            >
+            <div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-16">
               {/* avatar, name, position */}
-              <div
-                className="w-full max-w-[300px] flex flex-col xl:justify-center
-              items-center relative mx-auto xl:mx-0"
-              >
+              <div className="w-full max-w-[300px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
                 <div className="flex flex-col justify-center text-center">
                   {/* avatar  */}
                   <div className="mb-2 mx-auto">
@@ -82,22 +76,16 @@ const TestimonialSlider = () => {
                 </div>
               </div>
               {/* quote & message */}
-              <div
-                className="flex-1 flex flex-col justify-center
-              before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0
-              xl:before:h-[200px] relative xl:pl-20"
-              >
+              <div className="flex-1 flex flex-col justify-center before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20">
                 {/* quote icon */}
                 <div>
-                  <FaQuoteLeft
-                    className="text-4xl xl:text-6xl text-white/20
-                  mx-auto md:mx-0"
-                  />
+                  <FaQuoteLeft className="text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0" />
                 </div>
                 {/* message  */}
-                <div className="xl:text-lg text-center md:text-left">
-                  {person.message}
-                </div>
+                <div
+                  className="xl:text-lg text-center md:text-left"
+                  dangerouslySetInnerHTML={{ __html: person.message }}
+                />
               </div>
             </div>
           </SwiperSlide>
