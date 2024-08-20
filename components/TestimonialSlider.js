@@ -1,14 +1,14 @@
 // testimonial data
 const testimonialSlider = [
   {
-    image: "/t-avt-1.png",
+    image: "/bese.jpg",
     name: "Anne Smith",
     position: "Customer",
     message:
       "The video editing and graphic design work was exceptional. Truly brought our vision to life!",
   },
   {
-    image: "/t-avt-2.png",
+    image: "/moni.jpg",
     name: "Jane Doe",
     position: "Customer",
     message:
