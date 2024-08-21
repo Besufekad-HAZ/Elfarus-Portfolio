@@ -18,7 +18,7 @@ const Contact = () => {
       flex items-center h-full"
       >
         {/* Text and form  */}
-        <div className="flex flex-col w-full max-w-[700px] bg-pink-500/10">
+        <div className="flex flex-col w-full max-w-[700px]">
           {/* text */}
           <h2 className="h2 text-center mb-12">
             Let's <span className="text-accent">connect.</span>
@@ -26,7 +26,7 @@ const Contact = () => {
           {/* form  */}
           <form>
             {/* input group */}
-            <div className="flex">
+            <div className="flex gap-x-6 w-full">
               <input type="text" placeholder="name" className="input" />
               <input type="text" placeholder="email" className="input" />
             </div>
