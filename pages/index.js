@@ -41,8 +41,8 @@ const Home = () => {
             // my touch on text-justify
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-justify"
           >
-            Elevate your brand's visual presence with captivating videos that
-            connect, inspire, and engage your audience. As a versatile
+            Elevate your brand&#39;s visual presence with captivating videos
+            that connect, inspire, and engage your audience. As a versatile
             videographer and video editor, I bring your ideas to life with
             cinematic storytelling and unparalleled technical expertise.!
           </motion.p>

@@ -31,7 +31,7 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-white"
             >
-              Elevate your brand's visual presence with my comprehensive
+              Elevate your brand&#39;s visual presence with my comprehensive
               videography and video editing services. From captivating corporate
               videos and dynamic promotional reels to cinematic event coverage
               and polished post-production, I bring your ideas to life with an
