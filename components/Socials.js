@@ -13,32 +13,53 @@ import {
 const Socials = () => {
   return (
     <div className="flex items-center gap-x-5 text-xl">
-      <Link
-        href="https://www.youtube.com/@ELFARUS7"
-        className="hover:text-accent transition-all duration-300"
-      >
-        <RiYoutubeLine />
+      <Link href="https://www.youtube.com/@ELFARUS7" passHref>
+        <a
+          target="_blank"
+          className="hover:text-accent transition-all duration-300"
+        >
+          <RiYoutubeLine />
+        </a>
       </Link>
-      <Link
-        href="https://www.facebook.com/elfarus7"
-        className="hover:text-accent transition-all duration-300"
-      >
-        <RiFacebookLine />
+      <Link href="https://www.facebook.com/elfarus7" passHref>
+        <a
+          target="_blank"
+          className="hover:text-accent transition-all duration-300"
+        >
+          <RiFacebookLine />
+        </a>
       </Link>
-      <Link
-        href="https://www.instagram.com/elfarus7"
-        className="hover:text-accent transition-all duration-300"
-      >
-        <RiInstagramLine />
+      <Link href="https://www.instagram.com/elfarus7" passHref>
+        <a
+          target="_blank"
+          className="hover:text-accent transition-all duration-300"
+        >
+          <RiInstagramLine />
+        </a>
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiDribbbleLine />
+      <Link href="" passHref>
+        <a
+          target="_blank"
+          className="hover:text-accent transition-all duration-300"
+        >
+          <RiDribbbleLine />
+        </a>
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiBehanceLine />
+      <Link href="" passHref>
+        <a
+          target="_blank"
+          className="hover:text-accent transition-all duration-300"
+        >
+          <RiBehanceLine />
+        </a>
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiPinterestLine />
+      <Link href="" passHref>
+        <a
+          target="_blank"
+          className="hover:text-accent transition-all duration-300"
+        >
+          <RiPinterestLine />
+        </a>
       </Link>
     </div>
   );
