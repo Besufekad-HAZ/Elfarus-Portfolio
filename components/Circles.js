@@ -11,6 +11,7 @@ const Circles = () => {
         src={"/circles.png"}
         width={260}
         height={200}
+        alt="Circle Image"
         className="w-full h-full"
       />
     </div>
