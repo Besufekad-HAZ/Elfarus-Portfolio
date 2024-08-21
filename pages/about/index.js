@@ -17,7 +17,7 @@ import {
   SiAdobephotoshop,
 } from "react-icons/si";
 
-//components
+// components
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 
@@ -25,10 +25,10 @@ import Circles from "../../components/Circles";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
-//counter
+// counter
 import CountUp from "react-countup";
 
-//  data
+// data
 const aboutData = [
   {
     title: "skills",
@@ -36,18 +36,22 @@ const aboutData = [
       {
         title: "Web Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          <FaHtml5 key="html5" />,
+          <FaCss3 key="css3" />,
+          <FaJs key="js" />,
+          <FaReact key="react" />,
+          <SiNextdotjs key="nextjs" />,
+          <SiFramer key="framer" />,
+          <FaWordpress key="wordpress" />,
         ],
       },
       {
         title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          <FaFigma key="figma" />,
+          <SiAdobexd key="adobexd" />,
+          <SiAdobephotoshop key="photoshop" />,
+        ],
       },
     ],
   },
@@ -116,10 +120,7 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-      <div
-        className="container mx-auto h-full flex flex-col items-center xl:flex-row
-        gap-x-6"
-      >
+      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
@@ -155,10 +156,7 @@ const About = () => {
           >
             <div className="flex flex-1 xl:gap-x-5">
               {/* experience */}
-              <div
-                className="relative flex-1 after:w-[1px] after:h-full
-              after:bg-white/10 after:absolute after:top-0 after:right-0"
-              >
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={10} duration={5} /> +
                 </div>
@@ -167,10 +165,7 @@ const About = () => {
                 </div>
               </div>
               {/* Clients */}
-              <div
-                className="relative flex-1 after:w-[1px] after:h-full
-              after:bg-white/10 after:absolute after:top-0 after:right-0"
-              >
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={100} duration={5} /> +
                 </div>
@@ -179,10 +174,7 @@ const About = () => {
                 </div>
               </div>
               {/* Projects */}
-              <div
-                className="relative flex-1 after:w-[1px] after:h-full
-              after:bg-white/10 after:absolute after:top-0 after:right-0"
-              >
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={200} duration={5} /> +
                 </div>
@@ -225,10 +217,7 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div
-            className="py-2 xl:py-6 flex flex-col gap-y-2
-          xl:gap-y-4 items-center xl:items-start"
-          >
+          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => (
               <div
                 key={itemIndex}
