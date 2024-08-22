@@ -31,12 +31,10 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-white"
             >
-              Elevate your brand&#39;s visual presence with my comprehensive
-              videography and video editing services. From captivating corporate
-              videos and dynamic promotional reels to cinematic event coverage
-              and polished post-production, I bring your ideas to life with an
-              unparalleled eye for detail and a collaborative approach tailored
-              to your unique needs.
+              Boost your brand&#39;s visual impact with my videography and
+              editing services. From corporate videos and promo reels to event
+              coverage and post-production, I bring your ideas to life with
+              attention to every detail and a personalized touch.
             </motion.p>
           </motion.div>
           <motion.div

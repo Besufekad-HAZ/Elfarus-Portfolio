@@ -39,7 +39,7 @@ const Home = () => {
             animate="show"
             exit="hidden"
             // my touch on text-justify
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-justify"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-5 xl:mb-16 text-justify"
           >
             Elevate your brand&#39;s visual presence with captivating videos
             that connect, inspire, and engage your audience. As a versatile
