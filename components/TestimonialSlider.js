@@ -15,9 +15,9 @@ const testimonialSlider = [
       "<span class='text-xl xl:text-2xl  font-extrabold text-accent'>Elfarus</span> is a true master of their craft. Their videography skills are impeccable, capturing every moment with a keen eye and a creative touch. The professionalism and dedication they demonstrated throughout the project were truly impressive. I highly recommend <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> for any creative endeavor.",
   },
   {
-    image: "/t-avt-3.png",
-    name: "John Doe",
-    position: "Customer",
+    image: "/moni1.jpg",
+    name: "Yohannes Mengesha",
+    position: "Cinematographer",
     message:
       "<span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> is a consummate professional. Their innovative approach and commitment to excellence made the entire process enjoyable and stress-free. The final product exceeded our expectations with its high-quality visuals and seamless editing. We're thrilled with the work <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> has done for us.",
   },
