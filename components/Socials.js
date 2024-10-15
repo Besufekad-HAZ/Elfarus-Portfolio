@@ -5,9 +5,9 @@ import {
   RiYoutubeLine,
   RiInstagramLine,
   RiFacebookLine,
-  RiDribbbleLine,
   RiBehanceLine,
   RiPinterestLine,
+  RiTiktokLine,
 } from "react-icons/ri";
 
 const Socials = () => {
@@ -40,13 +40,13 @@ const Socials = () => {
           <RiInstagramLine />
         </a>
       </Link>
-      <Link href="" legacyBehavior passHref>
+      <Link href="https://www.tiktok.com/@elfarus" legacyBehavior passHref>
         <a
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-accent transition-all duration-300"
         >
-          <RiDribbbleLine />
+          <RiTiktokLine />
         </a>
       </Link>
       <Link href="" legacyBehavior passHref>
