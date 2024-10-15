@@ -49,7 +49,7 @@ const Socials = () => {
           <RiDribbbleLine />
         </a>
       </Link>
-      <Link href="" legacyBehavior passHref>
+      <Link href="https://www.tiktok.com/@elfarus" legacyBehavior passHref>
         <a
           target="_blank"
           rel="noopener noreferrer"
