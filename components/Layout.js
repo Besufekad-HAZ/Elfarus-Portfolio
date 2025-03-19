@@ -18,12 +18,17 @@ const poppins = Poppins({
 import Nav from "../components/Nav";
 import Header from "../components/Header";
 import TopLeftImg from "../components/TopLeftImg";
+import AdSense from "./AdSense";
+import Head from "next/head";
 
 const Layout = ({ children }) => {
   return (
     <div
       className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora realtive`}
     >
+      <Head>
+        <AdSense />
+      </Head>
       <TopLeftImg />
       <Nav />
       <Header />
