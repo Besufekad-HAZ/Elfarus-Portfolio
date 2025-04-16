@@ -2,19 +2,23 @@ import React, { useState } from "react";
 
 // icons
 import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaWordpress,
+  // FaHtml5,
+  // FaCss3,
+  // FaJs,
+  // FaReact,
+  // FaWordpress,
   FaFigma,
 } from "react-icons/fa";
 
 import {
-  SiNextdotjs,
-  SiFramer,
   SiAdobexd,
   SiAdobephotoshop,
+  SiAdobeaftereffects,
+  SiAdobeillustrator,
+  SiAdobeindesign,
+  SiAdobepremierepro,
+  SiAdobeaudition,
+  SiDavinciresolve, // <-- ADD THIS
 } from "react-icons/si";
 
 // components
@@ -34,23 +38,21 @@ const aboutData = [
     title: "skills",
     info: [
       {
-        title: "Web Development",
+        title: "Video editing",
         icons: [
-          <FaHtml5 key="html5" />,
-          <FaCss3 key="css3" />,
-          <FaJs key="js" />,
-          <FaReact key="react" />,
-          <SiNextdotjs key="nextjs" />,
-          <SiFramer key="framer" />,
-          <FaWordpress key="wordpress" />,
+          <SiAdobeaftereffects key="aftereffects" />,
+          <SiAdobeaudition key="adobeaudition" />,
+          <SiAdobepremierepro key="premierepro" />,
+          <SiDavinciresolve key="davinciresolve" />,
         ],
       },
       {
-        title: "UI/UX Design",
+        title: "Graphic Design",
         icons: [
-          <FaFigma key="figma" />,
-          <SiAdobexd key="adobexd" />,
           <SiAdobephotoshop key="photoshop" />,
+          <SiAdobexd key="xd" />,
+          <SiAdobeillustrator key="illustrator" />,
+          <SiAdobeindesign key="indesign" />,
         ],
       },
     ],
@@ -230,7 +232,10 @@ const About = () => {
                 <div className="flex gap-x-4">
                   {/* icons */}
                   {item.icons?.map((icon, iconIndex) => (
-                    <div key={iconIndex} className="text-2xl text-white">
+                    <div
+                      key={iconIndex}
+                      className="text-2xl text-white hover:text-accent transition-all duration-300"
+                    >
                       {icon}
                     </div>
                   ))}
