@@ -61,12 +61,12 @@ const aboutData = [
     title: "awards",
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        title: "Purpose Black Creative Innovation Award",
+        stage: "2024",
       },
       {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        title: "RDX Delta Rabbit Operational Excellence Award",
+        stage: "2021",
       },
     ],
   },
@@ -90,7 +90,7 @@ const aboutData = [
         stage: "Jan. 2021 - Feb. 2021",
       },
       {
-        title: "Reseller, PC Builder, Driver - Tessema Zirgua Importing (RDX)",
+        title: "Agent, PC Builder, Driver - (RDX Delta Rabbit)",
         stage: "Aug. 2019 - Present",
       },
     ],
@@ -99,16 +99,33 @@ const aboutData = [
     title: "credentials",
     info: [
       {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
+        title:
+          "Cinematography - Tom Videography & Photography Training Center / Addis Ababa, AA, Ethiopia",
+        stage: "Dec. 2020 - Dec. 2021",
       },
       {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
+        title:
+          "Software Engineering - Wolkite University / Gubre, SN, Ethiopia",
+        stage: "Nov. 2013 - July 2017",
       },
       {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "IT Essentials - Cisco Networking Academy / Gubre, SN, Ethiopia",
+        stage: "Oct. 2015 - July 2016",
+      },
+      {
+        title:
+          "Cisco Certified Networking Associate (CCNA) - Cisco Networking Academy / Gubre, SN, Ethiopia",
+        stage: "Oct. 2014 - July 2015",
+      },
+      {
+        title:
+          "Advanced Computer Maintenance & Networking - SATCOM Institute of Technology / Addis Ababa, AA, Ethiopia",
+        stage: "Jun. 2012 - Nov. 2012",
+      },
+      {
+        title:
+          "Cell-Phone Maintenance - SATCOM Institute of Technology / Addis Ababa, AA, Ethiopia",
+        stage: "Apr. 2012 - Sept. 2012",
       },
     ],
   },
@@ -168,7 +185,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp start={0} end={4} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] mb-2">
                   Years of experience
@@ -195,7 +212,7 @@ const About = () => {
               {/* Awards */}
               <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={5} duration={5} /> +
+                  <CountUp start={0} end={3} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Awards
