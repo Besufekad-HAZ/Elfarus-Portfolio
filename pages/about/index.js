@@ -74,16 +74,24 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Video Editor & Graphics - Purpose Black Ethiopia",
+        stage: "Sept. 2023 - Sept. 2024",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "Video Editor - Black Future Consultancy S.C",
+        stage: "Aug. 2023 - Oct. 2023",
       },
       {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Video Editor - Ethio Negari",
+        stage: "July 2022 - Dec. 2022",
+      },
+      {
+        title: "Video Editor & Graphics - Anointing TV WORLD WIDE",
+        stage: "Jan. 2021 - Feb. 2021",
+      },
+      {
+        title: "Reseller, PC Builder, Driver - Tessema Zirgua Importing (RDX)",
+        stage: "Aug. 2019 - Present",
       },
     ],
   },
@@ -219,27 +227,34 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          <div className="py-4 xl:py-6 flex flex-col gap-4">
             {aboutData[index].info.map((item, itemIndex) => (
               <div
                 key={itemIndex}
-                className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                className="w-full flex flex-col md:flex-row items-start md:items-center justify-between"
               >
-                {/* title */}
-                <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                <div className="hidden md:flex">-</div>
-                <div>{item.stage}</div>
-                <div className="flex gap-x-4">
-                  {/* icons */}
-                  {item.icons?.map((icon, iconIndex) => (
-                    <div
-                      key={iconIndex}
-                      className="text-2xl text-white hover:text-accent transition-all duration-300"
-                    >
-                      {icon}
-                    </div>
-                  ))}
+                <div className="flex flex-col">
+                  {/* Experience Title */}
+                  <span className="font-light text-base md:text-lg">
+                    {item.title}
+                  </span>
+                  {/* Experience Duration */}
+                  <span className="text-sm md:text-base text-gray-300">
+                    {item.stage}
+                  </span>
                 </div>
+                {item.icons && (
+                  <div className="flex gap-4 mt-2 md:mt-0">
+                    {item.icons.map((icon, iconIndex) => (
+                      <div
+                        key={iconIndex}
+                        className="text-2xl text-white hover:text-accent transition-all duration-300"
+                      >
+                        {icon}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
