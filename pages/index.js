@@ -14,71 +14,74 @@ import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full ">
-      {/* Text */}
+    <div className="bg-primary/60 min-h-screen overflow-x-hidden">
+      {/* Text Section */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div
-          className="text-center flex flex-col justify-center xl:pt-40 xl:text-left
-        h-full container mx-auto"
-        >
-          {/* title */}
+        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Title */}
           <motion.h1
             variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1"
+            className="h1 text-[28px] leading-tight md:text-[40px] lg:text-[60px]"
           >
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>
+            <span className="block md:inline">Transforming Ideas</span>{" "}
+            <br className="hidden md:block" />
+            Into{" "}
+            <span className="text-accent block md:inline mt-2 md:mt-0">
+              Digital Reality
+            </span>
           </motion.h1>
+
           {/* Subtitle */}
           <motion.p
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            // my touch on text-justify
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-5 xl:mb-16 text-justify"
+            className="max-w-[90%] md:max-w-[80%] lg:max-w-xl mx-auto xl:mx-0 my-6 lg:my-10 text-base md:text-lg text-left md:text-justify"
           >
-            Elevate your brand&#39;s visual presence with captivating videos
-            that connect, inspire, and engage your audience. As a versatile
+            Elevate your brand's visual presence with captivating videos that
+            connect, inspire, and engage your audience. As a versatile
             videographer and video editor, I bring your ideas to life with
-            cinematic storytelling and unparalleled technical expertise.!
+            cinematic storytelling and unparalleled technical expertise!
           </motion.p>
-          {/* button */}
-          <div className="flex justify-center xl:hidden relative">
-            <ProjectsBtn />
+
+          {/* Button Container */}
+          <div className="flex flex-col items-center space-y-4 md:space-y-6">
+            <div className="flex justify-center xl:hidden">
+              <ProjectsBtn />
+            </div>
+            <motion.div
+              variants={fadeIn("down", 0.4)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="hidden xl:flex"
+            >
+              <ProjectsBtn />
+            </motion.div>
           </div>
-          <motion.div
-            variants={fadeIn("down", 0.4)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="hidden xl:flex"
-          >
-            <ProjectsBtn />
-          </motion.div>
         </div>
       </div>
-      {/* Image */}
-      <div className="w-[1200px] h-full absolute right-0 bottom-0">
-        {/* bg img */}
-        <div
-          className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat
-          w-full h-full absolute mix-blend-color-dodge translate-z-0"
-        ></div>
-        {/* particles */}
+
+      {/* Image Section */}
+      <div className="w-full h-full absolute right-0 bottom-0 overflow-hidden">
+        {/* Background Image */}
+        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0" />
+
+        {/* Particles */}
         <ParticlesContainer />
-        {/* avatar img */}
+
+        {/* Avatar Image */}
         <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32
-        lg:bottom-0 lg:right-[8%]"
+          className="w-full h-full max-w-[300px] max-h-[300px] sm:max-w-[400px] sm:max-h-[400px] md:max-w-[500px] md:max-h-[500px] lg:max-w-[737px] lg:max-h-[678px] absolute -bottom-20 sm:-bottom-32 lg:bottom-0 lg:right-[8%]"
         >
           <Avatar />
         </motion.div>
