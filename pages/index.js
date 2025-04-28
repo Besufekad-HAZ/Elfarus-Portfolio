@@ -15,16 +15,18 @@ import { fadeIn } from "../variants";
 const Home = () => {
   return (
     <div className="bg-primary/60 min-h-screen overflow-x-hidden">
-      {/* Text Section */}
-      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Title */}
+      {/* Header with logo and social icons */}
+
+      {/* Main Content */}
+      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 pt-36 sm:pt-40 md:pt-20">
+        <div className="text-center flex flex-col justify-center xl:pt-20 xl:text-left h-full container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Title with responsive spacing */}
           <motion.h1
             variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-[28px] leading-tight md:text-[40px] lg:text-[60px]"
+            className="h1 text-[28px] leading-tight md:text-[40px] lg:text-[60px] mt-0 md:mt-6 lg:mt-0"
           >
             <span className="block md:inline">Transforming Ideas</span>{" "}
             <br className="hidden md:block" />
@@ -34,7 +36,7 @@ const Home = () => {
             </span>
           </motion.h1>
 
-          {/* Subtitle */}
+          {/* Rest of your content remains the same */}
           <motion.p
             variants={fadeIn("down", 0.3)}
             initial="hidden"
@@ -42,8 +44,8 @@ const Home = () => {
             exit="hidden"
             className="max-w-[90%] md:max-w-[80%] lg:max-w-xl mx-auto xl:mx-0 my-6 lg:my-10 text-base md:text-lg text-left md:text-justify"
           >
-            Elevate your brand's visual presence with captivating videos that
-            connect, inspire, and engage your audience. As a versatile
+            Elevate your brand&apos;s visual presence with captivating videos
+            that connect, inspire, and engage your audience. As a versatile
             videographer and video editor, I bring your ideas to life with
             cinematic storytelling and unparalleled technical expertise!
           </motion.p>
@@ -66,8 +68,8 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Image Section */}
-      <div className="w-full h-full absolute right-0 bottom-0 overflow-hidden">
+      {/* Image Section - remains the same */}
+      <div className="w-full h-full absolute right-0 bottom-0 overflow-hidden pointer-events-none ">
         {/* Background Image */}
         <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0" />
 
