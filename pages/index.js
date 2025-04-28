@@ -60,7 +60,7 @@ const Home = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="hidden xl:flex"
+              className="hidden xl:flex justify-center" // Added justify-center here
             >
               <ProjectsBtn />
             </motion.div>
