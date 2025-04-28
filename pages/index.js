@@ -51,8 +51,9 @@ const Home = () => {
           </motion.p>
 
           {/* Button Container */}
-          <div className="flex flex-col items-center space-y-4 md:space-y-6">
-            <div className="flex justify-center xl:hidden">
+          <div className="flex flex-col items-start space-y-4 md:space-y-6">
+            {/* Changed from items-center to items-start */}
+            <div className="flex xl:hidden">
               <ProjectsBtn />
             </div>
             <motion.div
@@ -60,7 +61,7 @@ const Home = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="hidden xl:flex justify-center" // Added justify-center here
+              className="hidden xl:flex"
             >
               <ProjectsBtn />
             </motion.div>
