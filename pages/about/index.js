@@ -74,6 +74,10 @@ const aboutData = [
     title: "experience",
     info: [
       {
+        title: "Deputy & Editor Manager - Eagle pictures Ethiopia ",
+        stage: "Aug 2023 - Present",
+      },
+      {
         title: "Video Editor & Graphics - Purpose Black Ethiopia",
         stage: "Sept. 2023 - Sept. 2024",
       },
@@ -168,10 +172,19 @@ const About = () => {
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-white"
           >
             My journey into the world of computers began 15 years ago with
-            gaming. This initial spark ignited a lifelong passion for
-            understanding how these machines work, leading me to delve into
-            computer support, maintenance, graphic design, and eventually, the
-            dynamic world of video editing.
+            gaming, fueling my passion for technology and creativity. From
+            computer support and graphic design to video editing, I’ve always
+            loved telling stories—both as a creator and a gamer. Curious about
+            my gaming side?
+            <a
+              href="https://www.youtube.com/c/elfarus7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent underline hover:text-white transition"
+            >
+              Check out my YouTube channel
+            </a>{" "}
+            for gameplay, tips, and more!
           </motion.p>
           {/* counters */}
           <motion.div

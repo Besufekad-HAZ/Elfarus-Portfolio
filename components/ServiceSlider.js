@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-// icons
 import {
   RxVideo,
   RxImage,
@@ -21,83 +20,74 @@ import { FreeMode, Pagination } from "swiper";
 // data
 const serviceData = [
   {
+    key: "Corporate",
     icon: <RxVideo />,
     title: "Corporate Videos",
     description:
       "Engaging, brand-aligned videos to elevate your company's image.",
   },
   {
+    key: "Promotional",
     icon: <RxImage />,
     title: "Promotional Reels",
     description:
       "Dynamic, visually compelling videos to showcase your products or services.",
   },
   {
+    key: "Event",
     icon: <RxCamera />,
     title: "Event Videography",
     description:
       "Captivating coverage of your events, conferences, and live streams.",
   },
   {
+    key: "Cinematic",
     icon: <RxDesktop />,
     title: "Cinematic Editing",
     description:
       "Polished, cinematic post-production to bring your vision to life.",
   },
   {
+    key: "Motion",
     icon: <RxMagicWand />,
     title: "Motion Graphics",
     description:
       "Impactful visual effects and animations to elevate your videos.",
   },
 ];
-const ServiceSlider = () => {
+
+const ServiceSlider = ({ onServiceClick }) => {
   return (
     <Swiper
       breakpoints={{
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 15,
-        },
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-        },
+        320: { slidesPerView: 1, spaceBetween: 15 },
+        640: { slidesPerView: 3, spaceBetween: 15 },
       }}
       freeMode={true}
-      pagination={{
-        clickable: true,
-      }}
+      pagination={{ clickable: true }}
       modules={[FreeMode, Pagination]}
       className="h-[240px] sm:h-[340px]"
     >
-      {serviceData.map((item, index) => {
-        return (
-          <SwiperSlide key={index}>
-            <div
-              className="bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col
-            gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
-            >
-              {/* icon */}
-              <div className="text-4xl text-accent mb-4">{item.icon}</div>
-              {/* title & desc */}
-              <div className="mb-8">
-                <div className="mb-2 text-lg">{item.title}</div>
-                <p className="maxw-[350px] leading-normal">
-                  {item.description}
-                </p>
-              </div>
-              {/* arrow */}
-              <div className="text-3xl">
-                <RxArrowTopRight
-                  className="group-hover:rotate-45 group-hover:text-accent
-                transition-all duration-300"
-                />
-              </div>
+      {serviceData.map((item, index) => (
+        <SwiperSlide key={index}>
+          <div
+            className="bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
+            onClick={() => onServiceClick(item.key)}
+          >
+            {/* icon */}
+            <div className="text-4xl text-accent mb-4">{item.icon}</div>
+            {/* title & desc */}
+            <div className="mb-8">
+              <div className="mb-2 text-lg">{item.title}</div>
+              <p className="maxw-[350px] leading-normal">{item.description}</p>
             </div>
-          </SwiperSlide>
-        );
-      })}
+            {/* arrow */}
+            <div className="text-3xl">
+              <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300" />
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
