@@ -3,108 +3,134 @@ import Image from "next/image";
 import ServiceSlider from "../../components/ServiceSlider";
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { motion, AnimatePresence } from "framer-motion";
+import ProjectsModal from "../../components/ProjectsModal"; // Import the new component
+
+import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
-// Example data for each service
-const serviceProjects = {
-  Corporate: [
-    {
-      title: "Corporate Video 1",
-      thumbnail: "https://img.youtube.com/vi/78aXOBBf2z4/maxresdefault.jpg",
-    },
-    {
-      title: "Corporate Video 2",
-      thumbnail: "https://i.ytimg.com/vi/7EmmywKOukk/maxresdefault.jpg",
-    },
-  ],
-  Promotional: [
-    {
-      title: "Promo Reel 1",
-      thumbnail:
-        "https://store.donanimhaber.com/da/25/b3/da25b36436f69fb44f93bd5a98592898.jpeg",
-    },
-    {
-      title: "Promo Reel 2",
-      thumbnail: "https://www.youtube.com/watch?v=hScJxQmr-vY",
-    },
-  ],
-  Event: [
-    {
-      title: "Event Coverage 1",
-      thumbnail: "https://www.youtube.com/watch?v=hScJxQmr-vY",
-    },
-    {
-      title: "Event Coverage 2",
-      thumbnail: "https://www.youtube.com/watch?v=FobrlKKwt0c",
-    },
-  ],
-  Cinematic: [],
-  Motion: [],
+// Helper to extract YouTube video ID from various URL formats
+const getYoutubeVideoId = (url) => {
+  let videoId;
+  if (url.includes("youtu.be/")) {
+    videoId = url.split("youtu.be/")[1].split("?")[0];
+  } else if (url.includes("watch?v=")) {
+    videoId = url.split("watch?v=")[1].split("&")[0];
+  } else if (url.includes("/shorts/")) {
+    videoId = url.split("/shorts/")[1].split("?")[0];
+  }
+  return videoId;
 };
 
-// --- Modal Component ---
-const ProjectsModal = ({ open, onClose, projects, title }) => {
-  if (!open) return null;
-  return (
-    <AnimatePresence>
-      <motion.div
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
-        <motion.div
-          className="bg-primary rounded-2xl shadow-2xl border border-accent/30 p-8 max-w-3xl w-full relative mx-4"
-          initial={{ scale: 0.95, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.95, opacity: 0 }}
-        >
-          <button
-            className="absolute top-4 right-4 text-white text-3xl hover:text-accent transition"
-            onClick={onClose}
-            aria-label="Close"
-          >
-            &times;
-          </button>
-          <h3 className="text-2xl font-bold mb-6 text-accent text-center tracking-wide">
-            {title} Projects
-          </h3>
-          {projects.length === 0 ? (
-            <div className="text-white text-center py-12 text-lg">
-              No projects yet.
-            </div>
-          ) : (
-            <Swiper spaceBetween={30} slidesPerView={1}>
-              {projects.map((project, idx) => (
-                <SwiperSlide key={idx}>
-                  <div className="flex flex-col items-center">
-                    <div className="w-full flex justify-center">
-                      <Image
-                        src={project.thumbnail}
-                        alt={project.title}
-                        width={700}
-                        height={394}
-                        className="rounded-xl mb-4 max-h-[400px] object-cover border border-accent/20 shadow-lg"
-                        style={{ width: "100%", height: "auto" }}
-                      />
-                    </div>
-                    <div className="text-white font-semibold text-lg text-center">
-                      {project.title}
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          )}
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  );
+// Updated and categorized project data
+const serviceProjectsData = {
+  Events: [
+    { title: "Ebenezer and Yab Wedding", link: "https://youtu.be/2FAa0p3TsX0" },
+    {
+      title: "የጥምቀት በዓልን ከጸሐፊ ተውኔት እና ባለ ቅኔ አያለነህ ሙላቱ ጋር",
+      link: "https://youtu.be/zwEloqcXdWA",
+    },
+    { title: "ዓለም አቀፍ የውሃ ቀን", link: "https://youtu.be/wdw9AkC7k4w" },
+    {
+      title: "የፐርፐዝብላክ ኢትዮጵያ የገና ቆይታ በሲዳማ",
+      link: "https://youtu.be/0Wjh-fG78zw",
+    },
+    {
+      title: "Labor day at PurposeBlack Ethiopia Head office",
+      link: "https://youtu.be/hJ2BmpkRZ9k",
+    },
+    {
+      title: "ኢድ አል ፈጥር በዓል አከባበር በኢትዮጵያ",
+      link: "https://youtu.be/d4HFb6Xu3I8",
+    },
+    { title: "ልዩ የትንሳኤ መዝናኛ ዝግጅት", link: "https://youtu.be/qEN302aorgA" },
+    {
+      title: "Water Day 2024 On PurposeBlack Company",
+      link: "https://youtu.be/yOXhdwO25i8",
+    },
+  ],
+  News: [
+    {
+      title: "Amharic news TTV 24 NEWS (12-4-2024)",
+      link: "https://youtu.be/hwE2YLhP_1c",
+    },
+    {
+      title: "Amharic news TTV 24 NEWS (12-18-2024)",
+      link: "https://youtu.be/6enJkogoKOA",
+    },
+    { title: "መጋቢት 29 ሳምንታዊ ዜና", link: "https://youtu.be/GeliAWMPKKw" },
+    { title: "AUGUST 3 WEEKLY NEWS", link: "https://youtu.be/pAR7vhs4Rs0" },
+  ],
+  Documentaries: [
+    { title: "የኩታ ገጠም ዶክመንተሪ", link: "https://youtu.be/xyMBx1cQ7m8" },
+    {
+      title: "CLUSTER ENGLISH DOCUMENTRY PurposeBlack",
+      link: "https://youtu.be/KSFmKKdi4jU",
+    },
+    { title: "የባለ ራዕዮች ጉዞ", link: "https://youtu.be/zwnq3zGXyFk" },
+  ],
+  Corporate: [
+    {
+      title: "Investors Corner: የምርት አሰባሰባችን እና ብክነት",
+      link: "https://youtu.be/BJm1V1jGzZU",
+    },
+    {
+      title: "ፐርፐዝብላክ ኢትዮጵያ ወደ ቡና ኢንቨስትመንት",
+      link: "https://youtu.be/xHCkkRCYlwU",
+    },
+    {
+      title: "Investors Corner: ፐርፐዝብላክ የምርት ቆይታ ጊዜን ለማሳጠር",
+      link: "https://youtu.be/VbHVDXdmylc",
+    },
+    {
+      title: "Inverters corner: በኢትዮጵያ በዓመት አንድ ሰው ከአንድ ኪሎ ያነሰ አሣ ነው የሚያገኘው",
+      link: "https://youtu.be/cIKsynZwMyo",
+    },
+    { title: "NEWAYE ENQB 9TH tv", link: "https://youtu.be/egg8G47YrUc" },
+  ],
+  Promotional: [
+    { title: "የእንስሳት ስሞችና የከተሜው መልሶቻቸው", link: "https://youtu.be/WJsiaaBtV5M" },
+    { title: "የምግብ ስሞችና የከተሜው መልሶቻቸው", link: "https://youtu.be/mSwh8nr2TrI" },
+    { title: "Promotional Video", link: "https://youtu.be/N7Re49KtEAw" },
+    { title: "Promotional Video", link: "https://youtu.be/qdE4DDJVmOc" },
+    { title: "Promotional Video", link: "https://youtu.be/WK1sfmhhohU" },
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/K6aCfrXwH9o",
+    },
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/SBt-q0DO8F8",
+    },
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/y3EyRtEB5Zk",
+    },
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/HtQnMRGt4_c",
+    },
+  ],
+  Billboards: [
+    { title: "Billboard Project 1", link: "https://youtu.be/3208BhwbFxU" },
+    { title: "Billboard Project 2", link: "https://youtu.be/w8AN8DElWpI" },
+    { title: "Billboard Project 3", link: "https://youtu.be/JNgy-8kvN84" },
+    { title: "Billboard Project 4", link: "https://youtu.be/C5PVULspuU0" },
+    { title: "Billboard Project 5", link: "https://youtu.be/ieWUIc9I8wM" },
+    { title: "Billboard Project 6", link: "https://youtu.be/TRqchRODNJg" },
+  ],
 };
-// --- End Modal Component ---
+
+const serviceProjects = Object.fromEntries(
+  Object.entries(serviceProjectsData).map(([category, projects]) => [
+    category,
+    projects.map((project) => ({
+      ...project,
+      thumbnail: `https://i.ytimg.com/vi/${getYoutubeVideoId(
+        project.link
+      )}/maxresdefault.jpg`,
+    })),
+  ])
+);
 
 const Services = () => {
   const [modalOpen, setModalOpen] = useState(false);

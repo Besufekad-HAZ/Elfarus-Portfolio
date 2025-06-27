@@ -7,11 +7,12 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import {
   RxVideo,
-  RxImage,
+  RxRocket,
   RxCamera,
-  RxMagicWand,
-  RxArrowTopRight,
   RxDesktop,
+  RxArrowTopRight,
+  RxArchive,
+  RxReader,
 } from "react-icons/rx";
 
 // import required modules
@@ -20,39 +21,43 @@ import { FreeMode, Pagination } from "swiper";
 // data
 const serviceData = [
   {
-    key: "Corporate",
+    key: "News",
+    icon: <RxReader />,
+    title: "News Coverage",
+    description: "Professional news-style reporting and video packages.",
+  },
+  {
+    key: "Events",
+    icon: <RxCamera />,
+    title: "Event Videography",
+    description:
+      "Captivating coverage of your events, weddings, and live streams.",
+  },
+  {
+    key: "Documentaries",
     icon: <RxVideo />,
+    title: "Documentaries",
+    description: "Compelling, story-driven documentary filmmaking.",
+  },
+  {
+    key: "Promotional",
+    icon: <RxRocket />,
+    title: "Promotional Reels",
+    description:
+      "Dynamic short videos and reels for social media and marketing.",
+  },
+  {
+    key: "Corporate",
+    icon: <RxDesktop />,
     title: "Corporate Videos",
     description:
       "Engaging, brand-aligned videos to elevate your company's image.",
   },
   {
-    key: "Promotional",
-    icon: <RxImage />,
-    title: "Promotional Reels",
-    description:
-      "Dynamic, visually compelling videos to showcase your products or services.",
-  },
-  {
-    key: "Event",
-    icon: <RxCamera />,
-    title: "Event Videography",
-    description:
-      "Captivating coverage of your events, conferences, and live streams.",
-  },
-  {
-    key: "Cinematic",
-    icon: <RxDesktop />,
-    title: "Cinematic Editing",
-    description:
-      "Polished, cinematic post-production to bring your vision to life.",
-  },
-  {
-    key: "Motion",
-    icon: <RxMagicWand />,
-    title: "Motion Graphics",
-    description:
-      "Impactful visual effects and animations to elevate your videos.",
+    key: "Billboards",
+    icon: <RxArchive />,
+    title: "Billboards",
+    description: "Creative and eye-catching digital billboard advertisements.",
   },
 ];
 
