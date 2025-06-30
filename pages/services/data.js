@@ -1,5 +1,5 @@
 // Updated and categorized project data
-export const serviceProjectsData = {
+const serviceProjectsData = {
   Events: [
     { title: "Ebenezer and Yab Wedding", link: "https://youtu.be/2FAa0p3TsX0" },
     {
@@ -98,3 +98,5 @@ export const serviceProjectsData = {
     { title: "የምግብ ስሞችና የከተሜው መልሶቻቸው", link: "https://youtu.be/mSwh8nr2TrI" },
   ],
 };
+
+export default serviceProjectsData;

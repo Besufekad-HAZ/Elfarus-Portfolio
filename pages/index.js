@@ -18,7 +18,7 @@ const Home = () => {
       {/* Header with logo and social icons */}
 
       {/* Main Content */}
-      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 pt-36 sm:pt-40 md:pt-20">
+      <div className="w-full h-[100vh] bg-gradient-to-r from-primary/10 via-black/30 to-black/10 pt-36 sm:pt-40 md:pt-20">
         <div className="text-center flex flex-col justify-center xl:pt-20 xl:text-left h-full container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Title with responsive spacing */}
           <motion.h1
@@ -51,7 +51,7 @@ const Home = () => {
           </motion.p>
 
           {/* Button Container */}
-          <div className="flex flex-col items-start space-y-4 md:space-y-6">
+          <div className="flex flex-col items-center xl:items-start space-y-4 md:space-y-6">
             {/* Changed from items-center to items-start */}
             <div className="flex xl:hidden">
               <ProjectsBtn />

@@ -1,5 +1,5 @@
 // fonts
-import { Sora, Poppins } from "@next/font/google";
+import { Sora, Poppins } from "next/font/google";
 
 // font settings
 const sora = Sora({

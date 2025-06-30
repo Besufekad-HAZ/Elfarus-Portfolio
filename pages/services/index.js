@@ -4,7 +4,7 @@ import ServiceSlider from "../../components/ServiceSlider";
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 import ProjectsModal from "../../components/ProjectsModal"; // Import the new component
-import { serviceProjectsData } from "./data"; // Import the service projects data
+import serviceProjectsData from "./data"; // Import the service projects data
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
@@ -43,7 +43,7 @@ const Services = () => {
   };
 
   return (
-    <div className="h-full bg-primary/30 py-36 flex items-center">
+    <div className="h-[100vh] bg-primary/30 py-36 flex items-center">
       <Circles />
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">

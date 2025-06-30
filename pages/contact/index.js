@@ -35,7 +35,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="h-full bg-primary/30">
+    <div className="h-[100vh] bg-primary/30">
       <div
         className="container mx-auto py-32 text-center xl:text-left
         flex items-center justify-center h-full"

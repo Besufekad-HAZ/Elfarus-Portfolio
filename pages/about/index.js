@@ -1,25 +1,5 @@
 import React, { useState } from "react";
-
-// icons
-import {
-  // FaHtml5,
-  // FaCss3,
-  // FaJs,
-  // FaReact,
-  // FaWordpress,
-  FaFigma,
-} from "react-icons/fa";
-
-import {
-  SiAdobexd,
-  SiAdobephotoshop,
-  SiAdobeaftereffects,
-  SiAdobeillustrator,
-  SiAdobeindesign,
-  SiAdobepremierepro,
-  SiAdobeaudition,
-  SiDavinciresolve, // <-- ADD THIS
-} from "react-icons/si";
+import aboutData from "./data";
 
 // components
 import Avatar from "../../components/Avatar";
@@ -32,114 +12,11 @@ import { fadeIn } from "../../variants";
 // counter
 import CountUp from "react-countup";
 
-// data
-const aboutData = [
-  {
-    title: "skills",
-    info: [
-      {
-        title: "Video editing",
-        icons: [
-          <SiAdobeaftereffects key="aftereffects" />,
-          <SiAdobeaudition key="adobeaudition" />,
-          <SiAdobepremierepro key="premierepro" />,
-          <SiDavinciresolve key="davinciresolve" />,
-        ],
-      },
-      {
-        title: "Graphic Design",
-        icons: [
-          <SiAdobephotoshop key="photoshop" />,
-          <SiAdobexd key="xd" />,
-          <SiAdobeillustrator key="illustrator" />,
-          <SiAdobeindesign key="indesign" />,
-        ],
-      },
-    ],
-  },
-  {
-    title: "awards",
-    info: [
-      {
-        title: "Purpose Black Creative Innovation Award",
-        stage: "2024",
-      },
-      {
-        title: "RDX Delta Rabbit Operational Excellence Award",
-        stage: "2021",
-      },
-    ],
-  },
-  {
-    title: "experience",
-    info: [
-      {
-        title: "Deputy & Editor Manager - Eagle pictures Ethiopia ",
-        stage: "Aug 2023 - Present",
-      },
-      {
-        title: "Video Editor & Graphics - Purpose Black Ethiopia",
-        stage: "Sept. 2023 - Sept. 2024",
-      },
-      {
-        title: "Video Editor - Black Future Consultancy S.C",
-        stage: "Aug. 2023 - Oct. 2023",
-      },
-      {
-        title: "Video Editor - Ethio Negari",
-        stage: "July 2022 - Dec. 2022",
-      },
-      {
-        title: "Video Editor & Graphics - Anointing TV WORLD WIDE",
-        stage: "Jan. 2021 - Feb. 2021",
-      },
-      {
-        title: "Agent, PC Builder, Driver - (RDX Delta Rabbit)",
-        stage: "Aug. 2019 - Present",
-      },
-    ],
-  },
-  {
-    title: "credentials",
-    info: [
-      {
-        title:
-          "Cinematography - Tom Videography & Photography Training Center / Addis Ababa, AA, Ethiopia",
-        stage: "Dec. 2020 - Dec. 2021",
-      },
-      {
-        title:
-          "Software Engineering - Wolkite University / Gubre, SN, Ethiopia",
-        stage: "Nov. 2013 - July 2017",
-      },
-      {
-        title: "IT Essentials - Cisco Networking Academy / Gubre, SN, Ethiopia",
-        stage: "Oct. 2015 - July 2016",
-      },
-      {
-        title:
-          "Cisco Certified Networking Associate (CCNA) - Cisco Networking Academy / Gubre, SN, Ethiopia",
-        stage: "Oct. 2014 - July 2015",
-      },
-      {
-        title:
-          "Advanced Computer Maintenance & Networking - SATCOM Institute of Technology / Addis Ababa, AA, Ethiopia",
-        stage: "Jun. 2012 - Nov. 2012",
-      },
-      {
-        title:
-          "Cell-Phone Maintenance - SATCOM Institute of Technology / Addis Ababa, AA, Ethiopia",
-        stage: "Apr. 2012 - Sept. 2012",
-      },
-    ],
-  },
-];
-
 const About = () => {
   const [index, setIndex] = useState(0);
   console.log(index);
   return (
-    <div className="h-full bg-primary/30 mt-6 xl:mt-0 py-32 text-center xl:text-left">
+    <div className="h-[100vh] bg-primary/30 mt-6 xl:mt-0 py-32 text-center xl:text-left">
       <Circles />
       {/* Avatar img */}
       <motion.div
@@ -169,21 +46,21 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-white"
+            className="max-w-[500px] mx-auto text-justify xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-white"
           >
             My journey into the world of computers began 15 years ago with
             gaming, fueling my passion for technology and creativity. From
             computer support and graphic design to video editing, I’ve always
             loved telling stories—both as a creator and a gamer. Curious about
-            my gaming side?
+            my gaming side? Check out my
             <a
               href="https://www.youtube.com/c/elfarus7"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent underline hover:text-white transition"
+              className="text-accent underline hover:text-white transition mx-2"
             >
-              Check out my YouTube channel
-            </a>{" "}
+              YouTube channel
+            </a>
             for gameplay, tips, and more!
           </motion.p>
           {/* counters */}
