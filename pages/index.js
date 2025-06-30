@@ -56,7 +56,7 @@ const Home = () => {
             <div className="flex xl:hidden">
               <ProjectsBtn />
             </div>
-            <motion.div
+        <motion.div
               variants={fadeIn("down", 0.4)}
               initial="hidden"
               animate="show"

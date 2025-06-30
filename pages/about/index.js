@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import aboutData from "./data";
+import aboutData from "../../data/about/data";
 
 // components
 import Avatar from "../../components/Avatar";

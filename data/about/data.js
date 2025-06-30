@@ -16,7 +16,7 @@ import {
   SiAdobeindesign,
   SiAdobepremierepro,
   SiAdobeaudition,
-  SiDavinciresolve, // <-- ADD THIS
+  SiDavinciresolve,
 } from "react-icons/si";
 
 const aboutData = [

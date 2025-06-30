@@ -4,7 +4,7 @@ import ServiceSlider from "../../components/ServiceSlider";
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 import ProjectsModal from "../../components/ProjectsModal"; // Import the new component
-import serviceProjectsData from "./data"; // Import the service projects data
+import serviceProjectsData from "../../data/services/data"; // Import the service projects data
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
