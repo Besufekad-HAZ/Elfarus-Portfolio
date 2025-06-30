@@ -9,12 +9,12 @@ import { fadeIn } from "../../variants";
 
 const Work = () => {
   return (
-    <div className="h-[100vh] bg-primary/30 py-36 flex items-center">
+    <div className="min-h-screen bg-primary/30 py-24 md:py-36 flex items-center">
       <Circles />
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
           {/* text */}
-          <motion.div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4">
+          <motion.div className="text-center flex flex-col xl:w-[30vw] xl:text-left mb-8 xl:mb-0">
             <motion.h2
               variants={fadeIn("up", 0.3)}
               initial="hidden"
@@ -29,7 +29,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-white"
+              className="mb-4 max-w-[400px] mx-auto text-white"
             >
               Boost your brand&#39;s visual impact with my videography and
               editing services. From corporate videos and promo reels to event
