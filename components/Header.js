@@ -13,14 +13,14 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-3 py-4 sm:py-6 lg:py-8">
           {/* Logo */}
-          <Link href={"/"}>
+          <Link href={"/"} style={{ marginTop: 10 }}>
             <Image
-              src="/logo.png"
+              src="/logo1.png"
               alt="Logo"
-              width={180}
-              height={40}
+              width={100}
+              height={20}
               priority={true}
-              className="cursor-pointer mix-blend-color-dodge z-10 sm:w-[200px] md:w-[220px]"
+              className="mt-3 cursor-pointer mix-blend-color-dodge z-10 w-[100px] md:w-[120px] h-auto"
             />
           </Link>
           {/* Socials */}
