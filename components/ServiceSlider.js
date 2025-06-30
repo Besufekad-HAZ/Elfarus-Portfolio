@@ -13,6 +13,7 @@ import {
   RxArrowTopRight,
   RxArchive,
   RxReader,
+  RxSection,
 } from "react-icons/rx";
 
 // import required modules
@@ -58,6 +59,12 @@ const serviceData = [
     icon: <RxArchive />,
     title: "Billboards",
     description: "Creative and eye-catching digital billboard advertisements.",
+  },
+  {
+    key: "Entertainment",
+    icon: <RxSection />,
+    title: "Entertainment",
+    description: "Engaging entertainment content for various platforms.",
   },
 ];
 
