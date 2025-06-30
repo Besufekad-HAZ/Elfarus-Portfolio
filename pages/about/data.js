@@ -25,6 +25,7 @@ const aboutData = [
     info: [
       {
         title: "Video editing",
+        stage: "",
         icons: [
           <SiAdobeaftereffects key="aftereffects" />,
           <SiAdobeaudition key="adobeaudition" />,
@@ -34,6 +35,7 @@ const aboutData = [
       },
       {
         title: "Graphic Design",
+        stage: "",
         icons: [
           <SiAdobephotoshop key="photoshop" />,
           <SiAdobexd key="xd" />,

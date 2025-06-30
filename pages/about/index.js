@@ -117,7 +117,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+          className="flex flex-col w-full xl:max-w-[48%] h-auto xl:h-[480px]"
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => (
@@ -134,32 +134,34 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div className="py-4 xl:py-6 flex flex-col gap-4">
+          <div className="py-2 xl:py-6 flex flex-col gap-y-4 xl:gap-y-6 items-center xl:items-start overflow-y-auto max-h-[250px] xl:max-h-[340px] pr-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-white/10 [&::-webkit-scrollbar-thumb]:bg-accent [&::-webkit-scrollbar-thumb]:rounded-full">
             {aboutData[index].info.map((item, itemIndex) => (
               <div
                 key={itemIndex}
-                className="w-full flex flex-col md:flex-row items-start md:items-center justify-between"
+                className="flex flex-col xl:flex-row gap-x-2 items-start text-white/80 w-full"
               >
-                <div className="flex flex-col">
-                  {/* Experience Title */}
-                  <span className="font-light text-base md:text-lg">
-                    {item.title}
-                  </span>
-                  {/* Experience Duration */}
-                  <span className="text-sm md:text-base text-gray-300">
-                    {item.stage}
-                  </span>
+                {/* Title and Icons */}
+                <div className="flex-1 text-left">
+                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                  {/* Icons for Skills */}
+                  {item.icons && (
+                    <div className="flex gap-x-4 mt-2">
+                      {item.icons.map((icon, iconIndex) => (
+                        <div
+                          key={iconIndex}
+                          className="text-2xl text-white hover:text-accent transition-all duration-300"
+                        >
+                          {icon}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
-                {item.icons && (
-                  <div className="flex gap-4 mt-2 md:mt-0">
-                    {item.icons.map((icon, iconIndex) => (
-                      <div
-                        key={iconIndex}
-                        className="text-2xl text-white hover:text-accent transition-all duration-300"
-                      >
-                        {icon}
-                      </div>
-                    ))}
+
+                {/* Stage (Date) */}
+                {item.stage && (
+                  <div className="w-full xl:w-auto text-left xl:text-right text-white/60 text-sm mt-2 xl:mt-0">
+                    {item.stage}
                   </div>
                 )}
               </div>
