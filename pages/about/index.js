@@ -28,7 +28,7 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 relative">
+      <div className="container mx-auto mt-12 pt-10 lg:mt-0 lg:pt-2 h-full flex flex-col items-center xl:flex-row gap-x-6 relative">
         {/* text */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
@@ -59,9 +59,9 @@ const About = () => {
               rel="noopener noreferrer"
               className="text-accent underline hover:text-white transition mx-2"
             >
-              YouTube channel
+              YouTube Channel
             </a>
-            for gameplay, tips, and more!
+            for gameplay, tips, and more.
           </motion.p>
           {/* counters */}
           <motion.div

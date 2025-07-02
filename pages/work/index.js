@@ -11,7 +11,7 @@ const Work = () => {
   return (
     <div className="min-h-screen bg-primary/30 py-24 md:py-36 flex items-center">
       <Circles />
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-12 pt-10 lg:mt-0 lg:pt-2">
         <div className="flex flex-col xl:flex-row gap-x-8">
           {/* text */}
           <motion.div className="text-center flex flex-col xl:w-[30vw] xl:text-left mb-8 xl:mb-0">

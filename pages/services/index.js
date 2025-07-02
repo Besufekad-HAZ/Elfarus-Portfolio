@@ -45,7 +45,7 @@ const Services = () => {
   return (
     <div className="h-[100vh] bg-primary/30 py-36 flex items-center">
       <Circles />
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-7 pt-8 lg:mt-0 lg:pt-2">
         <div className="flex flex-col xl:flex-row gap-x-8">
           {/* text */}
           <motion.div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4">

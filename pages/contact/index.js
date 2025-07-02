@@ -38,10 +38,10 @@ const Contact = () => {
     <div className="h-[100vh] bg-primary/30">
       <div
         className="container mx-auto py-32 text-center xl:text-left
-        flex items-center justify-center h-full"
+        flex items-center justify-center h-full "
       >
         <Bulb />
-        <div className="flex flex-col w-full max-w-[700px]">
+        <div className="flex flex-col w-full max-w-[700px] mt-5 pt-5 md:mt-10 md:pt-10 xl:mt-0 xl:pt-0">
           <motion.h2
             variants={fadeIn("up", 0.2)}
             initial="hidden"
