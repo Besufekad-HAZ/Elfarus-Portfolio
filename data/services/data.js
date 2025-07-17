@@ -6,15 +6,17 @@ const serviceProjectsData = {
       title: "የጥምቀት በዓልን ከጸሐፊ ተውኔት እና ባለ ቅኔ አያለነህ ሙላቱ ጋር",
       link: "https://youtu.be/zwEloqcXdWA",
     },
-    { title: "ዓለም አቀፍ የውሃ ቀን", link: "https://youtu.be/wdw9AkC7k4w" },
-    {
-      title: "የፐርፐዝብላክ ኢትዮጵያ የገና ቆይታ በሲዳማ",
-      link: "https://youtu.be/0Wjh-fG78zw",
-    },
+    { title: "AU Meeting 2024", link: "https://youtu.be/WK1sfmhhohU" },
     {
       title: "Labor day at PurposeBlack Ethiopia Head office",
       link: "https://youtu.be/hJ2BmpkRZ9k",
     },
+    { title: "AU Meeting 2024", link: "https://youtu.be/qdE4DDJVmOc" },
+    {
+      title: "የፐርፐዝብላክ ኢትዮጵያ የገና ቆይታ በሲዳማ",
+      link: "https://youtu.be/0Wjh-fG78zw",
+    },
+    { title: "ዓለም አቀፍ የውሃ ቀን", link: "https://youtu.be/wdw9AkC7k4w" },
     {
       title: "ኢድ አል ፈጥር በዓል አከባበር በኢትዮጵያ",
       link: "https://youtu.be/d4HFb6Xu3I8",
@@ -44,6 +46,7 @@ const serviceProjectsData = {
       link: "https://youtu.be/KSFmKKdi4jU",
     },
     { title: "የባለ ራዕዮች ጉዞ", link: "https://youtu.be/zwnq3zGXyFk" },
+    { title: "Tele GENA 2017 EXPO", link: "https://youtu.be/awF_xN0neTw" },
   ],
   Corporate: [
     {
@@ -66,8 +69,6 @@ const serviceProjectsData = {
   ],
   Promotional: [
     { title: "Promotional Video", link: "https://youtu.be/N7Re49KtEAw" },
-    { title: "Promotional Video", link: "https://youtu.be/qdE4DDJVmOc" },
-    { title: "Promotional Video", link: "https://youtu.be/WK1sfmhhohU" },
     {
       title: "Promotional Reel",
       link: "https://youtube.com/shorts/K6aCfrXwH9o",
@@ -83,6 +84,47 @@ const serviceProjectsData = {
     {
       title: "Promotional Reel",
       link: "https://youtube.com/shorts/HtQnMRGt4_c",
+    },
+    // New entries below
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/yRU-GZaNCIs",
+    },
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/4HvXxOQCliE",
+    },
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/sHz6qS1-nwc",
+    },
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/r91dQ-gvvgQ",
+    },
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/2wjU4nNqffI",
+    },
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/7OLNbBziKQw",
+    },
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/M8l5OC8XBJc",
+    },
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/a3ugiaWuCFk",
+    },
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/kUiqlG9-Xjk",
+    },
+    {
+      title: "Promotional Reel",
+      link: "https://youtube.com/shorts/Vbn2ItZ4k4c",
     },
   ],
   Billboards: [

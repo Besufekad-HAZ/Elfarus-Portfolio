@@ -12,6 +12,8 @@ const TopLeftImg = () => {
         width={400}
         height={400}
         alt="Top left image shape"
+        priority={true}
+        className="w-full h-auto"
       />
     </div>
   );

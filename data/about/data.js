@@ -62,11 +62,11 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Deputy & Editor Manager - Eagle pictures Ethiopia ",
+        title: "Deputy Manager & Video Editor - Eagle pictures Ethiopia ",
         stage: "Aug 2023 - Present",
       },
       {
-        title: "Video Editor & Graphics - Purpose Black Ethiopia",
+        title: "Video Editor, Graphics Designer & Social Media Manager - Purpose Black Ethiopia",
         stage: "Sept. 2023 - Sept. 2024",
       },
       {
@@ -74,15 +74,15 @@ const aboutData = [
         stage: "Aug. 2023 - Oct. 2023",
       },
       {
-        title: "Video Editor - Ethio Negari",
+        title: "Video Editor & Graphics Designer - Ethio Negari",
         stage: "July 2022 - Dec. 2022",
       },
       {
-        title: "Video Editor & Graphics - Anointing TV WORLD WIDE",
+        title: "Video Editor & Graphics Designer - Anointing TV WORLD WIDE",
         stage: "Jan. 2021 - Feb. 2021",
       },
       {
-        title: "Agent, PC Builder, Driver - (RDX Delta Rabbit)",
+        title: "Sales Agent & Consultant - (RDX Delta Rabbit)",
         stage: "Aug. 2019 - Present",
       },
     ],

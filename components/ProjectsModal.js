@@ -130,9 +130,9 @@ const ProjectsModal = ({ open, onClose, projects, title }) => {
                           <Image
                             src={project.thumbnail}
                             alt={project.title}
-                            layout="fill"
-                            objectFit="cover"
-                            className="rounded-xl"
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 60vw"
+                            className="rounded-xl object-cover"
                           />
                           <div
                             className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl cursor-pointer"
@@ -174,8 +174,9 @@ const ProjectsModal = ({ open, onClose, projects, title }) => {
                       <Image
                         src={project.thumbnail}
                         alt={project.title}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        sizes="(max-width: 768px) 25vw, 20vw"
+                        className="object-cover"
                       />
                     </SwiperSlide>
                   ))}

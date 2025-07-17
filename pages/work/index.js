@@ -1,5 +1,5 @@
 // components
-import WorkSlider from "../../components/WorkSlider";
+import DesignWorkSlider from "../../components/DesignWorkSlider";
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 
@@ -22,7 +22,7 @@ const Work = () => {
               exit="hidden"
               className="h2 xl:mt-12"
             >
-              My Works <span className="text-accent">.</span>{" "}
+              My Design <span className="text-accent">Portfolio</span>{" "}
             </motion.h2>
             <motion.p
               variants={fadeIn("up", 0.4)}
@@ -31,10 +31,9 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto text-white"
             >
-              Boost your brand&#39;s visual impact with my videography and
-              editing services. From corporate videos and promo reels to event
-              coverage and post-production, I bring your ideas to life with
-              attention to every detail and a personalized touch.
+              Explore my design work across various disciplines including UI/UX design,
+              brand identity, print design, and digital marketing. Each project includes
+              detailed documentation and case studies.
             </motion.p>
           </motion.div>
           <motion.div
@@ -44,8 +43,8 @@ const Work = () => {
             exit="hidden"
             className="w-full xl:max-w-[65%]"
           >
-            {/* slider */}
-            <WorkSlider />
+            {/* Design Work Slider */}
+            <DesignWorkSlider />
           </motion.div>
         </div>
       </div>

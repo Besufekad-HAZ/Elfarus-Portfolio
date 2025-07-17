@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@formspree/react": "^2.5.1",
+    "@heroicons/react": "^2.2.0",
+    "cloudinary-react": "^1.8.1",
     "framer-motion": "^10.12.16",
     "next": "13.4.3",
+    "next-cloudinary": "^6.16.0",
     "react": "18.2.0",
     "react-countup": "^6.4.2",
     "react-dom": "18.2.0",
