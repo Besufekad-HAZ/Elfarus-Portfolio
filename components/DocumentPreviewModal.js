@@ -1,47 +1,47 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { IoClose, IoDownload, IoChevronBack, IoChevronForward, IoExpand, IoContract } from 'react-icons/io5';
+import Image from 'next/image';
 
 const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex = 0 }) => {
   const [currentDocIndex, setCurrentDocIndex] = useState(currentDocumentIndex);
   const [zoom, setZoom] = useState(1);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  if (!isOpen || !project) return null;
+  const currentDocument = project?.documents?.[currentDocIndex];
+  const totalDocuments = project?.documents?.length || 0;
 
-  const currentDocument = project.documents[currentDocIndex];
-  const totalDocuments = project.documents.length;
-
-  const handlePrevious = () => {
+  const handlePrevious = useCallback(() => {
     setCurrentDocIndex(prev => (prev > 0 ? prev - 1 : totalDocuments - 1));
     setZoom(1);
-  };
+  }, [totalDocuments]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentDocIndex(prev => (prev < totalDocuments - 1 ? prev + 1 : 0));
     setZoom(1);
-  };
+  }, [totalDocuments]);
 
-  const handleZoomIn = () => setZoom(prev => Math.min(prev + 0.25, 3));
-  const handleZoomOut = () => setZoom(prev => Math.max(prev - 0.25, 0.5));
-  const handleResetZoom = () => setZoom(1);
+  const handleZoomIn = useCallback(() => setZoom(prev => Math.min(prev + 0.25, 3)), []);
+  const handleZoomOut = useCallback(() => setZoom(prev => Math.max(prev - 0.25, 0.5)), []);
+  const handleResetZoom = useCallback(() => setZoom(1), []);
 
-  const handleDownload = () => {
+  const handleDownload = useCallback(() => {
+    if (!currentDocument) return;
     const link = document.createElement('a');
     link.href = currentDocument.file;
     link.download = `${project.title}-${currentDocument.title}`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  };
+  }, [currentDocument, project?.title]);
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = useCallback((e) => {
     if (e.key === 'Escape') onClose();
     if (e.key === 'ArrowLeft') handlePrevious();
     if (e.key === 'ArrowRight') handleNext();
-  };
+  }, [onClose, handlePrevious, handleNext]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isOpen) {
       document.addEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'hidden';
@@ -50,7 +50,10 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
       document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen]);
+  }, [isOpen, handleKeyDown]);
+
+  // Early return after all hooks
+  if (!isOpen || !project || !currentDocument) return null;
 
   return (
     <AnimatePresence>
@@ -158,11 +161,14 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
                 </div>
               ) : currentDocument.type === 'image' ? (
                 <div className="w-full h-full overflow-auto bg-gray-100 flex items-center justify-center">
-                  <img
+                  <Image
                     src={currentDocument.file}
                     alt={currentDocument.title}
+                    width={800}
+                    height={600}
                     className="max-w-full max-h-full object-contain"
                     style={{ transform: `scale(${zoom})` }}
+                    unoptimized
                   />
                 </div>
               ) : (

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeftIcon, ChevronRightIcon, EyeIcon, DocumentIcon, PhotoIcon } from '@heroicons/react/24/outline';
 import { designWorkData } from '../data/work/designData';
+import Image from 'next/image';
 
 const DesignWorkSlider = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -119,10 +120,13 @@ const DesignWorkSlider = () => {
           <div className="grid lg:grid-cols-2 gap-8 p-8">
             {/* Project Image */}
             <div className="relative">
-              <img
+              <Image
                 src={currentProject.thumbnail}
                 alt={currentProject.title}
+                width={800}
+                height={600}
                 className="w-full h-80 object-cover rounded-xl shadow-lg"
+                unoptimized
               />
               <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                 {currentProject.category}
@@ -295,10 +299,13 @@ const DesignWorkSlider = () => {
                         </a>
                       </div>
                     ) : (
-                      <img
+                      <Image
                         src={previewModal.document?.file}
                         alt={previewModal.document?.title}
+                        width={800}
+                        height={600}
                         className="w-full h-auto rounded-lg shadow-lg"
+                        unoptimized
                         onError={(e) => {
                           e.target.src = previewModal.document?.preview || '/placeholder-image.jpg';
                         }}
