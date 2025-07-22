@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
-import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 import { IoEye, IoDocument, IoFolder } from 'react-icons/io5';
 
 // Import swiper styles
@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // Import data
-import designWorkData from '../data/work/designData';
+import designWorkData from '../data/work/clean-designData';
 import DocumentPreviewModal from './DocumentPreviewModal';
 
 const DesignWorkSlider = () => {
@@ -67,7 +67,7 @@ const DesignWorkSlider = () => {
           >
             {/* Project Thumbnail */}
             <div className="relative h-48 overflow-hidden">
-              <Image
+              <OptimizedImage
                 src={project.thumbnail}
                 alt={project.title}
                 fill

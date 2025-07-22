@@ -48,11 +48,11 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto text-justify xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-white"
           >
-            My journey into the world of computers began 15 years ago with
-            gaming, fueling my passion for technology and creativity. From
-            computer support and graphic design to video editing, I’ve always
-            loved telling stories—both as a creator and a gamer. Curious about
-            my gaming side? Check out my
+            My journey into the world of computers began since I was 15 years
+            old with gaming, fueling my passion for technology and creativity.
+            From computer support and graphic design to video editing, I’ve
+            always loved telling stories both as a creator and a gamer. Curious
+            about my gaming side? Check out my
             <a
               href="https://www.youtube.com/c/elfarus7"
               target="_blank"

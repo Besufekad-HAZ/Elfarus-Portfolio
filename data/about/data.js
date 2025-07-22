@@ -66,7 +66,8 @@ const aboutData = [
         stage: "Aug 2023 - Present",
       },
       {
-        title: "Video Editor, Graphics Designer & Social Media Manager - Purpose Black Ethiopia",
+        title:
+          "Video Editor, Graphics Designer & Social Media Manager - Purpose Black Ethiopia",
         stage: "Sept. 2023 - Sept. 2024",
       },
       {
@@ -97,7 +98,7 @@ const aboutData = [
       },
       {
         title:
-          "Software Engineering - Wolkite University / Gubre, SN, Ethiopia",
+          "Software Engineering - Wolkite University / Gubre, Wabe Bridge, Welkite",
         stage: "Nov. 2013 - July 2017",
       },
       {

@@ -20,6 +20,15 @@ const nextConfig = {
       "i.ytimg.com",
       "store.donanimhaber.com",
     ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+    unoptimized: true, // Disable optimization for Cloudinary images
   },
 };
 

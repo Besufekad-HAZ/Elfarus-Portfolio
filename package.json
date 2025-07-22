@@ -6,12 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "update-designs": "node scripts/update-design-data.js"
   },
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "@heroicons/react": "^2.2.0",
+    "cloudinary": "^2.7.0",
     "cloudinary-react": "^1.8.1",
+    "dotenv": "^17.2.0",
     "framer-motion": "^10.12.16",
     "next": "13.4.3",
     "next-cloudinary": "^6.16.0",

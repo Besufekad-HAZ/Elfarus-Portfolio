@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { IoClose, IoDownload, IoChevronBack, IoChevronForward, IoExpand, IoContract } from 'react-icons/io5';
-import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 
 const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex = 0 }) => {
   const [currentDocIndex, setCurrentDocIndex] = useState(currentDocumentIndex);
@@ -70,8 +70,8 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className={`relative bg-white rounded-lg shadow-2xl ${
-              isFullscreen ? 'w-full h-full' : 'w-[95%] max-w-6xl h-[90%] max-h-[800px]'
+            className={`relative bg-white rounded-lg shadow-2xl flex flex-col ${
+              isFullscreen ? 'w-full h-full' : 'w-[95%] max-w-6xl h-[90%] max-h-[90vh]'
             }`}
             onClick={(e) => e.stopPropagation()}
           >
@@ -128,6 +128,11 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
                 >
                   Reset
                 </button>
+                {zoom > 1 && (
+                  <span className="text-xs text-gray-500 ml-2">
+                    Scroll to navigate
+                  </span>
+                )}
               </div>
 
               {/* Action Buttons */}
@@ -150,7 +155,7 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
             </div>
 
             {/* Document Viewer */}
-            <div className="flex-1 overflow-hidden">
+            <div className="flex-1 overflow-hidden min-h-0">
               {currentDocument.type === 'pdf' ? (
                 <div className="w-full h-full">
                   <iframe
@@ -160,16 +165,21 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
                   />
                 </div>
               ) : currentDocument.type === 'image' ? (
-                <div className="w-full h-full overflow-auto bg-gray-100 flex items-center justify-center">
-                  <Image
-                    src={currentDocument.file}
-                    alt={currentDocument.title}
-                    width={800}
-                    height={600}
-                    className="max-w-full max-h-full object-contain"
-                    style={{ transform: `scale(${zoom})` }}
-                    unoptimized
-                  />
+                <div className="w-full h-full overflow-auto bg-gray-100">
+                  <div className="min-h-full flex items-center justify-center p-4">
+                    <div className="relative">
+                      <OptimizedImage
+                        src={currentDocument.file}
+                        alt={currentDocument.title}
+                        width={800}
+                        height={600}
+                        className="max-w-full max-h-full object-contain transition-transform duration-200"
+                        style={{ transform: `scale(${zoom})` }}
+                        unoptimized
+                        priority
+                      />
+                    </div>
+                  </div>
                 </div>
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-gray-100">

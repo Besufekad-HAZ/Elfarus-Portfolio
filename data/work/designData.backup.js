@@ -1,5 +1,5 @@
 // Auto-generated from Cloudinary uploads
-// Generated on: 2025-07-18T12:01:50.890Z
+// Generated on: 2025-07-18T11:59:58.661Z
 
 export const designWorkData = {
   "categories": [
