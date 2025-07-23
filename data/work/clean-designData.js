@@ -94,14 +94,14 @@ export const designWorkData = {
       description:
         "Annual report design for PurposeBlack Ethiopia featuring agricultural themes, modern layout with circular image cutouts, and bilingual content in English and Amharic. The design showcases agricultural development with combine harvesters, grain processing, and corporate activities.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753258162/Company_magazine_amharic_img_neagba.png",
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753258162/Company_Report_jiwqdk.png",
       documents: [
         {
           type: "pdf",
           title: "PurposeBlack Ethiopia Annual Report",
           file: "https://collection.cloudinary.com/dy233t3yl/18b28156c1d1343f7a4cc8330a9e9632",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/v1753258162/Company_magazine_amharic_img_neagba.png",
+            "https://res.cloudinary.com/dy233t3yl/image/upload/v1753259061/Company_Report_jiwqdk.png",
           size: "4.2 MB",
           dimensions: "595x841px",
         },
