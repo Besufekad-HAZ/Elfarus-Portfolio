@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { IoClose, IoDownload, IoChevronBack, IoChevronForward, IoExpand, IoContract } from 'react-icons/io5';
 import OptimizedImage from './OptimizedImage';
+import Image from 'next/image';
 
 const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex = 0 }) => {
   const [currentDocIndex, setCurrentDocIndex] = useState(currentDocumentIndex);
@@ -14,16 +15,70 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
   const handlePrevious = useCallback(() => {
     setCurrentDocIndex(prev => (prev > 0 ? prev - 1 : totalDocuments - 1));
     setZoom(1);
+    // Reset image transform for new document
+    setTimeout(() => {
+      const img = document.querySelector('.document-preview-image');
+      if (img) {
+        img.style.transform = 'scale(1)';
+      }
+    }, 100);
   }, [totalDocuments]);
 
   const handleNext = useCallback(() => {
     setCurrentDocIndex(prev => (prev < totalDocuments - 1 ? prev + 1 : 0));
     setZoom(1);
+    // Reset image transform for new document
+    setTimeout(() => {
+      const img = document.querySelector('.document-preview-image');
+      if (img) {
+        img.style.transform = 'scale(1)';
+      }
+    }, 100);
   }, [totalDocuments]);
 
-  const handleZoomIn = useCallback(() => setZoom(prev => Math.min(prev + 0.25, 3)), []);
-  const handleZoomOut = useCallback(() => setZoom(prev => Math.max(prev - 0.25, 0.5)), []);
-  const handleResetZoom = useCallback(() => setZoom(1), []);
+  const handleZoomIn = useCallback(() => {
+    setZoom(prev => {
+      const newZoom = Math.min(prev + 0.25, 5);
+      // Update image transform if it exists
+      const img = document.querySelector('.document-preview-image');
+      if (img) {
+        const currentTransform = img.style.transform;
+        const baseScale = currentTransform.includes('scale(') ?
+          parseFloat(currentTransform.match(/scale\(([^)]+)\)/)?.[1] || 1) : 1;
+        const newScale = baseScale * (newZoom / prev);
+        img.style.transform = currentTransform.replace(/scale\([^)]+\)/, `scale(${newScale})`);
+      }
+      return newZoom;
+    });
+  }, []);
+
+  const handleZoomOut = useCallback(() => {
+    setZoom(prev => {
+      const newZoom = Math.max(prev - 0.25, 0.5);
+      // Update image transform if it exists
+      const img = document.querySelector('.document-preview-image');
+      if (img) {
+        const currentTransform = img.style.transform;
+        const baseScale = currentTransform.includes('scale(') ?
+          parseFloat(currentTransform.match(/scale\(([^)]+)\)/)?.[1] || 1) : 1;
+        const newScale = baseScale * (newZoom / prev);
+        img.style.transform = currentTransform.replace(/scale\([^)]+\)/, `scale(${newScale})`);
+      }
+      return newZoom;
+    });
+  }, []);
+
+  const handleResetZoom = useCallback(() => {
+    setZoom(1);
+    // Reset image transform
+    const img = document.querySelector('.document-preview-image');
+    if (img) {
+      const currentTransform = img.style.transform;
+      const baseScale = currentTransform.includes('scale(') ?
+        parseFloat(currentTransform.match(/scale\(([^)]+)\)/)?.[1] || 1) : 1;
+      img.style.transform = currentTransform.replace(/scale\([^)]+\)/, `scale(${baseScale})`);
+    }
+  }, []);
 
   const handleDownload = useCallback(() => {
     if (!currentDocument) return;
@@ -55,6 +110,8 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
   // Early return after all hooks
   if (!isOpen || !project || !currentDocument) return null;
 
+
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -71,7 +128,7 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             className={`relative bg-white rounded-lg shadow-2xl flex flex-col ${
-              isFullscreen ? 'w-full h-full' : 'w-[95%] max-w-6xl h-[90%] max-h-[90vh]'
+              isFullscreen ? 'w-full h-full' : 'w-[98%] max-w-7xl h-[95%] max-h-[95vh]'
             }`}
             onClick={(e) => e.stopPropagation()}
           >
@@ -86,17 +143,17 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
               <div className="flex items-center gap-2 mr-4">
                 <button
                   onClick={handlePrevious}
-                  className="p-2 hover:bg-gray-200 rounded-full transition-colors"
+                  className="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors shadow-md"
                   title="Previous document"
                 >
                   <IoChevronBack className="w-5 h-5" />
                 </button>
-                <span className="text-sm text-gray-600">
+                <span className="text-sm text-gray-600 font-medium">
                   {currentDocIndex + 1} / {totalDocuments}
                 </span>
                 <button
                   onClick={handleNext}
-                  className="p-2 hover:bg-gray-200 rounded-full transition-colors"
+                  className="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors shadow-md"
                   title="Next document"
                 >
                   <IoChevronForward className="w-5 h-5" />
@@ -107,29 +164,29 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
               <div className="flex items-center gap-2 mr-4">
                 <button
                   onClick={handleZoomOut}
-                  className="p-2 hover:bg-gray-200 rounded-full transition-colors"
+                  className="p-2 bg-gray-700 hover:bg-gray-800 text-white rounded-full transition-colors shadow-md"
                   title="Zoom out"
                 >
                   <IoContract className="w-4 h-4" />
                 </button>
-                <span className="text-sm text-gray-600 min-w-[60px] text-center">
+                <span className="text-sm text-gray-700 font-medium min-w-[60px] text-center bg-white px-2 py-1 rounded border">
                   {Math.round(zoom * 100)}%
                 </span>
                 <button
                   onClick={handleZoomIn}
-                  className="p-2 hover:bg-gray-200 rounded-full transition-colors"
+                  className="p-2 bg-gray-700 hover:bg-gray-800 text-white rounded-full transition-colors shadow-md"
                   title="Zoom in"
                 >
                   <IoExpand className="w-4 h-4" />
                 </button>
                 <button
                   onClick={handleResetZoom}
-                  className="px-3 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded transition-colors"
+                  className="px-3 py-1 text-xs bg-green-600 hover:bg-green-700 text-white rounded transition-colors shadow-md font-medium"
                 >
                   Reset
                 </button>
                 {zoom > 1 && (
-                  <span className="text-xs text-gray-500 ml-2">
+                  <span className="text-xs text-gray-500 ml-2 bg-yellow-100 px-2 py-1 rounded">
                     Scroll to navigate
                   </span>
                 )}
@@ -139,14 +196,14 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
               <div className="flex items-center gap-2">
                 <button
                   onClick={handleDownload}
-                  className="p-2 hover:bg-gray-200 rounded-full transition-colors"
+                  className="p-2 bg-green-600 hover:bg-green-700 text-white rounded-full transition-colors shadow-md"
                   title="Download document"
                 >
                   <IoDownload className="w-5 h-5" />
                 </button>
                 <button
                   onClick={onClose}
-                  className="p-2 hover:bg-gray-200 rounded-full transition-colors"
+                  className="p-2 bg-red-600 hover:bg-red-700 text-white rounded-full transition-colors shadow-md"
                   title="Close"
                 >
                   <IoClose className="w-6 h-6" />
@@ -156,6 +213,7 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
 
             {/* Document Viewer */}
             <div className="flex-1 overflow-hidden min-h-0">
+
               {currentDocument.type === 'pdf' ? (
                 <div className="w-full h-full">
                   <iframe
@@ -164,19 +222,65 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
                     title={currentDocument.title}
                   />
                 </div>
-              ) : currentDocument.type === 'image' ? (
+                                          ) : currentDocument.type === 'image' ? (
                 <div className="w-full h-full overflow-auto bg-gray-100">
-                  <div className="min-h-full flex items-center justify-center p-4">
-                    <div className="relative">
-                      <OptimizedImage
+                  <div className="w-full h-full flex items-center justify-center p-4">
+                    <div className="relative w-full h-full flex items-center justify-center min-h-[400px]">
+                      {/* Try main file first, then preview as fallback */}
+                      <img
                         src={currentDocument.file}
                         alt={currentDocument.title}
-                        width={800}
-                        height={600}
-                        className="max-w-full max-h-full object-contain transition-transform duration-200"
-                        style={{ transform: `scale(${zoom})` }}
-                        unoptimized
-                        priority
+                        className="document-preview-image w-auto h-auto max-w-[98%] max-h-[98%] object-contain transition-transform duration-200 shadow-lg"
+                        style={{
+                          transform: `scale(${zoom})`,
+                          opacity: 0,
+                          transition: 'opacity 0.3s ease-in-out',
+                          minWidth: '300px',
+                          minHeight: '200px'
+                        }}
+                        onLoad={(e) => {
+                          e.target.style.opacity = '1';
+                          // For smaller images (thumbnails, banners), scale them up appropriately
+                          const img = e.target;
+                          const naturalWidth = img.naturalWidth;
+                          const naturalHeight = img.naturalHeight;
+                          const containerWidth = img.parentElement.clientWidth;
+                          const containerHeight = img.parentElement.clientHeight;
+
+                          // If image is smaller than container, scale it up
+                          if (naturalWidth < containerWidth * 0.8 || naturalHeight < containerHeight * 0.8) {
+                            const scaleX = (containerWidth * 0.8) / naturalWidth;
+                            const scaleY = (containerHeight * 0.8) / naturalHeight;
+                            const scale = Math.min(scaleX, scaleY, 3); // Max scale of 3x
+                            img.style.transform = `scale(${scale * zoom})`;
+                          }
+                        }}
+                        onError={(e) => {
+                          console.error('Error loading main image:', currentDocument.file);
+                          // Try preview URL as fallback
+                          if (currentDocument.preview && currentDocument.preview !== currentDocument.file) {
+                            console.log('Trying preview URL as fallback:', currentDocument.preview);
+                            e.target.src = currentDocument.preview;
+                          } else {
+                            // Show error message
+                            e.target.style.display = 'none';
+                            const errorDiv = document.createElement('div');
+                            errorDiv.className = 'text-center text-gray-600';
+                            errorDiv.innerHTML = `
+                              <div class="mb-4">
+                                <svg class="w-16 h-16 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                              </div>
+                              <p class="text-lg font-medium mb-2">Image not available</p>
+                              <p class="text-sm">The image could not be loaded.</p>
+                              <button onclick="window.open('${currentDocument.file}', '_blank')" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+                                Open Image in New Tab
+                              </button>
+                            `;
+                            e.target.parentNode.appendChild(errorDiv);
+                          }
+                        }}
                       />
                     </div>
                   </div>

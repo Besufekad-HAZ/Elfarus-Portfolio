@@ -14,7 +14,7 @@ import CountUp from "react-countup";
 
 const About = () => {
   const [index, setIndex] = useState(0);
-  console.log(index);
+
   return (
     <div className="min-h-screen bg-primary/30 py-24 md:py-32 text-center xl:text-left">
       <Circles />

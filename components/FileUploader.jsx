@@ -27,7 +27,7 @@ const FileUploader = ({ onUploadComplete, category = 'designs' }) => {
 
   // Handle upload success
   const handleUploadSuccess = (result) => {
-    console.log('Upload result:', result); // Debug log
+
 
     setUploading(false);
     setProgress(0);

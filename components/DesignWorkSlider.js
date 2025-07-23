@@ -66,13 +66,11 @@ const DesignWorkSlider = () => {
             onClick={() => handleProjectClick(project)}
           >
             {/* Project Thumbnail */}
-            <div className="relative h-48 overflow-hidden">
+            <div className="relative w-full h-48 overflow-hidden">
               <OptimizedImage
                 src={project.thumbnail}
                 alt={project.title}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
+                className="group-hover:scale-110 transition-transform duration-500"
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
