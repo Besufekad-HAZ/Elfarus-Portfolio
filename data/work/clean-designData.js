@@ -413,151 +413,344 @@ export const designWorkData = {
     // Thumbnail category
     {
       id: 15,
-      title: "Social Media Design",
+      title: "Gaming Content Thumbnail 3",
       category: "Thumbnail",
       client: "Content Creator",
       duration: "1 week",
       tools: ["Adobe Photoshop", "Canva"],
       description:
-        "Social media thumbnail design optimized for various platforms.",
+        "Dynamic gaming thumbnail featuring vibrant colors and engaging visual elements designed to capture viewer attention for gaming content.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1752757785/social_media_lebii7.png",
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178127/3_m6kfqx.png",
       documents: [
         {
           type: "image",
-          title: "Social Media Design",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1752757785/social_media_lebii7.png",
+          title: "Gaming Content Thumbnail 3",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178127/3_m6kfqx.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1752757785/social_media_lebii7.png",
-          size: "3.25 MB",
-          dimensions: "2000x2000px",
-        },
-      ],
-      tags: ["Thumbnail", "Social Media"],
-    },
-    {
-      id: 16,
-      title: "YouTube Thumbnail",
-      category: "Thumbnail",
-      client: "Content Creator",
-      duration: "1 week",
-      tools: ["Adobe Photoshop", "Canva"],
-      description: "YouTube video thumbnail with engaging visual elements.",
-      thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1752757780/maxresdefault_xqse2x.jpg",
-      documents: [
-        {
-          type: "image",
-          title: "YouTube Thumbnail",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1752757780/maxresdefault_xqse2x.jpg",
-          preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1752757780/maxresdefault_xqse2x.jpg",
-          size: "39.61 KB",
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178127/3_m6kfqx.png",
+          size: "2.1 MB",
           dimensions: "1280x720px",
         },
       ],
-      tags: ["Thumbnail", "YouTube"],
+      tags: ["Thumbnail", "Gaming", "Content"],
     },
-
-    // Banner category
+    {
+      id: 16,
+      title: "Social Media Thumbnail 47",
+      category: "Thumbnail",
+      client: "Content Creator",
+      duration: "1 week",
+      tools: ["Adobe Photoshop", "Canva"],
+      description:
+        "Eye-catching social media thumbnail with modern design elements and compelling visual hierarchy for maximum engagement.",
+      thumbnail:
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178125/47_pvyism.png",
+      documents: [
+        {
+          type: "image",
+          title: "Social Media Thumbnail 47",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178125/47_pvyism.png",
+          preview:
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178125/47_pvyism.png",
+          size: "1.8 MB",
+          dimensions: "1280x720px",
+        },
+      ],
+      tags: ["Thumbnail", "Social Media", "Content"],
+    },
     {
       id: 17,
-      title: "Blood Donor Campaign",
-      category: "Banner",
-      client: "Health Organization",
-      duration: "1 week",
-      tools: ["Adobe Photoshop", "Illustrator"],
-      description:
-        "Blood donation awareness banner with compelling call-to-action design.",
-      thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1752757780/Blood_Donor_Social_Media_Post_epq6wk.png",
-      documents: [
-        {
-          type: "image",
-          title: "Blood Donor Campaign",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1752757780/Blood_Donor_Social_Media_Post_epq6wk.png",
-          preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1752757780/Blood_Donor_Social_Media_Post_epq6wk.png",
-          size: "1.26 MB",
-          dimensions: "1080x1080px",
-        },
-      ],
-      tags: ["Banner", "Health", "Campaign"],
-    },
-    {
-      id: 18,
-      title: "Hero Banner Design",
-      category: "Banner",
-      client: "Marketing Agency",
-      duration: "1 week",
-      tools: ["Adobe Photoshop", "Illustrator"],
-      description:
-        "Hero banner design for web applications with modern aesthetics.",
-      thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1752757782/heros_pa5xwn.png",
-      documents: [
-        {
-          type: "image",
-          title: "Hero Banner Design",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1752757782/heros_pa5xwn.png",
-          preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1752757782/heros_pa5xwn.png",
-          size: "3.26 MB",
-          dimensions: "3508x2480px",
-        },
-      ],
-      tags: ["Banner", "Web Design"],
-    },
-
-    // Others category (numbered files that appear to be thumbnails)
-    {
-      id: 19,
       title: "Gaming Thumbnail 48",
       category: "Thumbnail",
       client: "Content Creator",
       duration: "1 week",
       tools: ["Adobe Photoshop", "Canva"],
-      description: "Gaming content thumbnail with dynamic visual elements.",
+      description:
+        "High-energy gaming thumbnail with bold typography and dynamic visual effects designed to attract gaming audience attention.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1752757928/48_l7help.png",
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178122/48_kwumjf.png",
       documents: [
         {
           type: "image",
           title: "Gaming Thumbnail 48",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1752757928/48_l7help.png",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178122/48_kwumjf.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1752757928/48_l7help.png",
-          size: "1.21 MB",
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178122/48_kwumjf.png",
+          size: "2.3 MB",
           dimensions: "1280x720px",
         },
       ],
-      tags: ["Thumbnail", "Gaming"],
+      tags: ["Thumbnail", "Gaming", "Content"],
     },
     {
-      id: 20,
-      title: "Content Thumbnail 47",
+      id: 18,
+      title: "Content Thumbnail 47B",
       category: "Thumbnail",
       client: "Content Creator",
       duration: "1 week",
       tools: ["Adobe Photoshop", "Canva"],
-      description: "Social media content thumbnail with engaging visuals.",
+      description:
+        "Alternative version of content thumbnail with different color scheme and layout variations for A/B testing and content optimization.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1752757926/47_dygrz4.png",
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178120/47_b_c7b6ln.png",
       documents: [
         {
           type: "image",
-          title: "Content Thumbnail 47",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1752757926/47_dygrz4.png",
+          title: "Content Thumbnail 47B",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178120/47_b_c7b6ln.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1752757926/47_dygrz4.png",
-          size: "1.08 MB",
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178120/47_b_c7b6ln.png",
+          size: "1.9 MB",
           dimensions: "1280x720px",
         },
       ],
-      tags: ["Thumbnail", "Social Media"],
+      tags: ["Thumbnail", "Content", "A/B Testing"],
+    },
+    {
+      id: 19,
+      title: "Gaming Thumbnail 5",
+      category: "Thumbnail",
+      client: "Content Creator",
+      duration: "1 week",
+      tools: ["Adobe Photoshop", "Canva"],
+      description:
+        "Action-packed gaming thumbnail with dramatic lighting effects and compelling call-to-action elements for maximum click-through rates.",
+      thumbnail:
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178117/5_o3reiv.png",
+      documents: [
+        {
+          type: "image",
+          title: "Gaming Thumbnail 5",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178117/5_o3reiv.png",
+          preview:
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178117/5_o3reiv.png",
+          size: "2.0 MB",
+          dimensions: "1280x720px",
+        },
+      ],
+      tags: ["Thumbnail", "Gaming", "Action"],
+    },
+    {
+      id: 20,
+      title: "Content Thumbnail 60",
+      category: "Thumbnail",
+      client: "Content Creator",
+      duration: "1 week",
+      tools: ["Adobe Photoshop", "Canva"],
+      description:
+        "Versatile content thumbnail with clean design and professional appearance suitable for various content types and platforms.",
+      thumbnail:
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178115/60_apumge.png",
+      documents: [
+        {
+          type: "image",
+          title: "Content Thumbnail 60",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178115/60_apumge.png",
+          preview:
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178115/60_apumge.png",
+          size: "1.7 MB",
+          dimensions: "1280x720px",
+        },
+      ],
+      tags: ["Thumbnail", "Content", "Professional"],
     },
     {
       id: 21,
+      title: "Gaming Thumbnail 62",
+      category: "Thumbnail",
+      client: "Content Creator",
+      duration: "1 week",
+      tools: ["Adobe Photoshop", "Canva"],
+      description:
+        "Intense gaming thumbnail with dark theme and dramatic visual effects designed to create excitement and anticipation for gaming content.",
+      thumbnail:
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178113/62_wqrd5w.png",
+      documents: [
+        {
+          type: "image",
+          title: "Gaming Thumbnail 62",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178113/62_wqrd5w.png",
+          preview:
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178113/62_wqrd5w.png",
+          size: "2.2 MB",
+          dimensions: "1280x720px",
+        },
+      ],
+      tags: ["Thumbnail", "Gaming", "Dark Theme"],
+    },
+    {
+      id: 22,
+      title: "Content Thumbnail 50",
+      category: "Thumbnail",
+      client: "Content Creator",
+      duration: "1 week",
+      tools: ["Adobe Photoshop", "Canva"],
+      description:
+        "Modern content thumbnail with contemporary design elements and engaging visual composition for social media platforms.",
+      thumbnail:
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178111/50_tap1vr.png",
+      documents: [
+        {
+          type: "image",
+          title: "Content Thumbnail 50",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178111/50_tap1vr.png",
+          preview:
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178111/50_tap1vr.png",
+          size: "1.6 MB",
+          dimensions: "1280x720px",
+        },
+      ],
+      tags: ["Thumbnail", "Content", "Modern"],
+    },
+    {
+      id: 23,
+      title: "Dagi Recovered Content",
+      category: "Thumbnail",
+      client: "Content Creator",
+      duration: "1 week",
+      tools: ["Adobe Photoshop", "Canva"],
+      description:
+        "Recovered and restored content thumbnail with enhanced visual quality and optimized design for better viewer engagement.",
+      thumbnail:
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178109/dagi-Recovered_ye8zym.jpg",
+      documents: [
+        {
+          type: "image",
+          title: "Dagi Recovered Content",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178109/dagi-Recovered_ye8zym.jpg",
+          preview:
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178109/dagi-Recovered_ye8zym.jpg",
+          size: "2.4 MB",
+          dimensions: "1280x720px",
+        },
+      ],
+      tags: ["Thumbnail", "Content", "Recovered"],
+    },
+
+    // Banner category
+    {
+      id: 24,
+      title: "Nutrition Facts Banner 2",
+      category: "Banner",
+      client: "Health Organization",
+      duration: "1 week",
+      tools: ["Adobe Photoshop", "Illustrator"],
+      description:
+        "Second version of nutrition awareness banner featuring healthy food elements and educational content about proper nutrition and dietary choices.",
+      thumbnail:
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178180/2_nut__pk6o7y.jpg",
+      documents: [
+        {
+          type: "image",
+          title: "Nutrition Facts Banner 2",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178180/2_nut__pk6o7y.jpg",
+          preview:
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178180/2_nut__pk6o7y.jpg",
+          size: "2.8 MB",
+          dimensions: "1280x720px",
+        },
+      ],
+      tags: ["Banner", "Health", "Nutrition", "Education"],
+    },
+    {
+      id: 25,
+      title: "Nutrition Facts Banner 3",
+      category: "Banner",
+      client: "Health Organization",
+      duration: "1 week",
+      tools: ["Adobe Photoshop", "Illustrator"],
+      description:
+        "Third iteration of nutrition banner with enhanced visual elements and comprehensive information about healthy eating habits and food choices.",
+      thumbnail:
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178177/3_nut_sx9gxa.jpg",
+      documents: [
+        {
+          type: "image",
+          title: "Nutrition Facts Banner 3",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178177/3_nut_sx9gxa.jpg",
+          preview:
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178177/3_nut_sx9gxa.jpg",
+          size: "3.1 MB",
+          dimensions: "1280x720px",
+        },
+      ],
+      tags: ["Banner", "Health", "Nutrition", "Wellness"],
+    },
+    {
+      id: 26,
+      title: "Monthly Staff Motivation Banner",
+      category: "Banner",
+      client: "PurposeBlack Ethiopia",
+      duration: "1 week",
+      tools: ["Adobe Photoshop", "Illustrator"],
+      description:
+        "Corporate motivation banner designed for monthly staff events featuring encouraging messages, team spirit elements, and professional design suitable for workplace environments.",
+      thumbnail:
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178174/banner_for_graphics_Monthely_Staff_Motivation_2_v015aa.jpg",
+      documents: [
+        {
+          type: "image",
+          title: "Monthly Staff Motivation Banner",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178174/banner_for_graphics_Monthely_Staff_Motivation_2_v015aa.jpg",
+          preview:
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178174/banner_for_graphics_Monthely_Staff_Motivation_2_v015aa.jpg",
+          size: "3.5 MB",
+          dimensions: "1920x1080px",
+        },
+      ],
+      tags: ["Banner", "Corporate", "Motivation", "Staff", "Event"],
+    },
+    {
+      id: 27,
+      title: "World Water Day Banner",
+      category: "Banner",
+      client: "Environmental Organization",
+      duration: "1 week",
+      tools: ["Adobe Photoshop", "Illustrator"],
+      description:
+        "Environmental awareness banner for World Water Day featuring water conservation themes, blue color schemes, and educational content about water sustainability and conservation efforts.",
+      thumbnail:
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178171/water_day_pvmotg.jpg",
+      documents: [
+        {
+          type: "image",
+          title: "World Water Day Banner",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178171/water_day_pvmotg.jpg",
+          preview:
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178171/water_day_pvmotg.jpg",
+          size: "2.9 MB",
+          dimensions: "1280x720px",
+        },
+      ],
+      tags: ["Banner", "Environmental", "Water Day", "Conservation"],
+    },
+    {
+      id: 28,
+      title: "Mother's Day Celebration Banner 2",
+      category: "Banner",
+      client: "PurposeBlack Ethiopia",
+      duration: "1 week",
+      tools: ["Adobe Photoshop", "Illustrator"],
+      description:
+        "Second version of Mother's Day celebration banner featuring warm colors, family themes, and appreciation messages for mothers. Includes Amharic text and cultural elements celebrating maternal figures.",
+      thumbnail:
+        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178167/mom_day_2_qx29am.jpg",
+      documents: [
+        {
+          type: "image",
+          title: "Mother's Day Celebration Banner 2",
+          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178167/mom_day_2_qx29am.jpg",
+          preview:
+            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178167/mom_day_2_qx29am.jpg",
+          size: "3.2 MB",
+          dimensions: "1920x1080px",
+        },
+      ],
+      tags: ["Banner", "Mother's Day", "Celebration", "Amharic", "Family"],
+    },
+    {
+      id: 29,
       title: "የሞስጋና ሞስክር ወረቀት - Certificate of Appreciation",
       category: "Others",
       client: "PurposeBlack Ethiopia",

@@ -7,6 +7,17 @@ const OptimizedImage = ({ src, alt, className, ...props }) => {
 
   const handleError = (e) => {
     console.error('OptimizedImage: Error loading image:', src, e);
+
+    // Try to use a different Cloudinary transformation as fallback
+    if (src.includes('cloudinary.com')) {
+      const originalUrl = src.replace('/c_scale,w_400/', '/');
+      if (originalUrl !== src) {
+        console.log('Trying original URL as fallback:', originalUrl);
+        e.target.src = originalUrl;
+        return;
+      }
+    }
+
     setImageError(true);
     setImageLoading(false);
   };
@@ -36,8 +47,9 @@ const OptimizedImage = ({ src, alt, className, ...props }) => {
         }`}
         onError={handleError}
         onLoad={handleLoad}
-        unoptimized={src.includes('cloudinary.com')}
+        unoptimized={true}
         priority={false}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
       {imageLoading && (
         <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center">
