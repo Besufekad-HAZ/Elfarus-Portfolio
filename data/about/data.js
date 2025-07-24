@@ -62,7 +62,8 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Sales Agent & Consultant - (RDX Delta Rabbit)",
+        title:
+          "Sales Agent & Consultant - Delta Electron Trading  (RDX Delta Rabbit)",
         stage: "Aug. 2019 - Present",
       },
       {
@@ -103,12 +104,13 @@ const aboutData = [
         stage: "Nov. 2013 - July 2017",
       },
       {
-        title: "IT Essentials - Cisco Networking Academy / Gubre, SN, Ethiopia",
+        title:
+          "IT Essentials - Cisco Networking Academy / Gubre, Wabe Bridge, Welkite",
         stage: "Oct. 2015 - July 2016",
       },
       {
         title:
-          "Cisco Certified Networking Associate (CCNA) - Cisco Networking Academy / Gubre, SN, Ethiopia",
+          "Cisco Certified Networking Associate (CCNA) - Cisco Networking Academy / Gubre, Wabe Bridge, Welkite",
         stage: "Oct. 2014 - July 2015",
       },
       {
