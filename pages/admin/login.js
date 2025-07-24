@@ -1,44 +1,47 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import { motion } from 'framer-motion';
-import { fadeIn } from '../../variants';
-import { FaUser, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useState } from "react";
+import { useRouter } from "next/router";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
+import { FaUser, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 
 const AdminLogin = () => {
   const [credentials, setCredentials] = useState({
-    username: '',
-    password: ''
+    username: "",
+    password: "",
   });
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setCredentials(prev => ({
+    setCredentials((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
     // Clear error when user starts typing
-    if (error) setError('');
+    if (error) setError("");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setError('');
+    setError("");
 
     // Simple authentication check
-    if (credentials.username === 'Elfarus' && credentials.password === 'Elfarus7') {
+    if (
+      credentials.username === "Elfarus" &&
+      credentials.password === "ELFA7@me"
+    ) {
       // Store authentication in sessionStorage
-      sessionStorage.setItem('adminAuthenticated', 'true');
-      sessionStorage.setItem('adminLoginTime', Date.now().toString());
+      sessionStorage.setItem("adminAuthenticated", "true");
+      sessionStorage.setItem("adminLoginTime", Date.now().toString());
 
       // Redirect to admin panel
-      router.push('/admin');
+      router.push("/admin");
     } else {
-      setError('Invalid username or password');
+      setError("Invalid username or password");
       setIsLoading(false);
     }
   };
@@ -86,7 +89,10 @@ const AdminLogin = () => {
           >
             {/* Username Field */}
             <div>
-              <label htmlFor="username" className="block text-sm font-medium text-white/80 mb-2">
+              <label
+                htmlFor="username"
+                className="block text-sm font-medium text-white/80 mb-2"
+              >
                 Username
               </label>
               <div className="relative">
@@ -108,7 +114,10 @@ const AdminLogin = () => {
 
             {/* Password Field */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-white/80 mb-2">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-white/80 mb-2"
+              >
                 Password
               </label>
               <div className="relative">
@@ -118,7 +127,7 @@ const AdminLogin = () => {
                 <input
                   id="password"
                   name="password"
-                  type={showPassword ? 'text' : 'password'}
+                  type={showPassword ? "text" : "password"}
                   required
                   value={credentials.password}
                   onChange={handleInputChange}
@@ -130,7 +139,11 @@ const AdminLogin = () => {
                   onClick={togglePasswordVisibility}
                   className="absolute inset-y-0 right-0 pr-3 flex items-center text-white/50 hover:text-white/70 transition-colors"
                 >
-                  {showPassword ? <FaEyeSlash className="h-5 w-5" /> : <FaEye className="h-5 w-5" />}
+                  {showPassword ? (
+                    <FaEyeSlash className="h-5 w-5" />
+                  ) : (
+                    <FaEye className="h-5 w-5" />
+                  )}
                 </button>
               </div>
             </div>

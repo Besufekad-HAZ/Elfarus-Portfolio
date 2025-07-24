@@ -22,18 +22,21 @@ A modern, responsive portfolio website showcasing design work, testimonials, and
 ## Quick Start
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd Elfarus-Portfolio
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Set up environment variables**
    Create a `.env.local` file with your Cloudinary credentials:
+
    ```
    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
    CLOUDINARY_API_KEY=your_api_key
@@ -41,6 +44,7 @@ A modern, responsive portfolio website showcasing design work, testimonials, and
    ```
 
 4. **Run the development server**
+
    ```bash
    npm run dev
    ```
@@ -52,7 +56,7 @@ A modern, responsive portfolio website showcasing design work, testimonials, and
 
 - **URL**: `/admin`
 - **Username**: `Elfarus`
-- **Password**: `Elfarus7`
+- **Password**: `ELFA7@me`
 
 ## Deployment
 
