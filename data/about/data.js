@@ -62,6 +62,10 @@ const aboutData = [
     title: "experience",
     info: [
       {
+        title: "Sales Agent & Consultant - (RDX Delta Rabbit)",
+        stage: "Aug. 2019 - Present",
+      },
+      {
         title: "Deputy Manager & Video Editor - Eagle pictures Ethiopia ",
         stage: "Aug 2023 - Present",
       },
@@ -71,7 +75,8 @@ const aboutData = [
         stage: "Sept. 2023 - Sept. 2024",
       },
       {
-        title: "Video Editor - Black Future Consultancy S.C",
+        title:
+          "Video Editor & Graphics Designer - Black Future Consultancy S.C",
         stage: "Aug. 2023 - Oct. 2023",
       },
       {
@@ -81,10 +86,6 @@ const aboutData = [
       {
         title: "Video Editor & Graphics Designer - Anointing TV WORLD WIDE",
         stage: "Jan. 2021 - Feb. 2021",
-      },
-      {
-        title: "Sales Agent & Consultant - (RDX Delta Rabbit)",
-        stage: "Aug. 2019 - Present",
       },
     ],
   },
