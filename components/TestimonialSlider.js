@@ -1,23 +1,23 @@
 // testimonial data
 const testimonialSlider = [
   {
-    image: "/t-avt-1.png",
-    name: "Anne Smith",
-    position: "Customer",
+    image: "/John.jpg",
+    name: "Yohannes Mengesha",
+    position: "Professional Videographer",
     message:
       "As a videographer, the work and attention to detail that <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> brought to our project was truly exceptional. They effortlessly brought our vision to life with their creative flair and cinematic expertise. The final video surpassed our expectations and really made our project stand out.",
   },
   {
-    image: "/t-avt-2.png",
-    name: "Jane Doe",
+    image: "/moni.jpg",
+    name: "Yonathan Mebrate",
     position: "Customer",
     message:
       "<span class='text-xl xl:text-2xl  font-extrabold text-accent'>Elfarus</span> is a true master of their craft. Their videography skills are impeccable, capturing every moment with a keen eye and a creative touch. The professionalism and dedication they demonstrated throughout the project were truly impressive. I highly recommend <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> for any creative endeavor.",
   },
   {
-    image: "/moni1.jpg",
-    name: "Yohannes Mengesha",
-    position: "Cinematographer",
+    image: "/bese.jpg",
+    name: "Besufekad Alemu",
+    position: "Web Developer",
     message:
       "<span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> is a consummate professional. Their innovative approach and commitment to excellence made the entire process enjoyable and stress-free. The final product exceeded our expectations with its high-quality visuals and seamless editing. We're thrilled with the work <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> has done for us.",
   },
@@ -64,7 +64,7 @@ const TestimonialSlider = () => {
                       width={100}
                       height={100}
                       alt="client images"
-                      className="md:w-[150px]"
+                      className="md:w-[150px] rounded-full"
                     />
                   </div>
                   {/* name */}

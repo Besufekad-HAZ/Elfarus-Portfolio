@@ -49,7 +49,7 @@ const Socials = () => {
           <RiTiktokLine />
         </a>
       </Link>
-      <Link href="https://www.twitch.tv/lefarus" legacyBehavior passHref>
+      <Link href="https://www.twitch.tv/elfarus5" legacyBehavior passHref>
         <a
           target="_blank"
           rel="noopener noreferrer"
