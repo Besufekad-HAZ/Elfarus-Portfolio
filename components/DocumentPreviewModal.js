@@ -227,7 +227,7 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
                   <div className="w-full h-full flex items-center justify-center p-4">
                     <div className="relative w-full h-full flex items-center justify-center min-h-[400px]">
                       {/* Try main file first, then preview as fallback */}
-                      <img
+                      <Image
                         src={currentDocument.file}
                         alt={currentDocument.title}
                         className="document-preview-image w-auto h-auto max-w-[98%] max-h-[98%] object-contain transition-transform duration-200 shadow-lg"
@@ -238,10 +238,11 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
                           minWidth: '300px',
                           minHeight: '200px'
                         }}
-                        onLoad={(e) => {
-                          e.target.style.opacity = '1';
+                        width={800}
+                        height={600}
+                        onLoadingComplete={(img) => {
+                          img.style.opacity = '1';
                           // For smaller images (thumbnails, banners), scale them up appropriately
-                          const img = e.target;
                           const naturalWidth = img.naturalWidth;
                           const naturalHeight = img.naturalHeight;
                           const containerWidth = img.parentElement.clientWidth;
@@ -281,6 +282,8 @@ const DocumentPreviewModal = ({ isOpen, onClose, project, currentDocumentIndex =
                             e.target.parentNode.appendChild(errorDiv);
                           }
                         }}
+                        unoptimized
+                        priority
                       />
                     </div>
                   </div>

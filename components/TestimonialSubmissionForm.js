@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import { FaUpload, FaUser, FaQuoteLeft, FaTimes } from 'react-icons/fa';
@@ -188,10 +189,12 @@ const TestimonialSubmissionForm = ({ onSubmit, onClose }) => {
             <div className="flex items-center space-x-4">
               <div className="relative">
                 {avatarPreview ? (
-                  <div className="relative">
-                    <img
+                  <>
+                    <Image
                       src={avatarPreview}
                       alt="Avatar preview"
+                      width={80}
+                      height={80}
                       className="w-20 h-20 rounded-full object-cover border-2 border-accent"
                     />
                     <button
@@ -201,7 +204,7 @@ const TestimonialSubmissionForm = ({ onSubmit, onClose }) => {
                     >
                       <FaTimes />
                     </button>
-                  </div>
+                  </>
                 ) : (
                   <div className="w-20 h-20 rounded-full border-2 border-dashed border-white/30 flex items-center justify-center bg-white/5">
                     <FaUser className="w-8 h-8 text-white/50" />
