@@ -31,7 +31,7 @@ const AdminLogin = () => {
 
     // Simple authentication check
     if (
-      credentials.username === "Elfarus" &&
+      credentials.username === "ELFARUS" &&
       credentials.password === "ELFA7@me"
     ) {
       // Store authentication in sessionStorage

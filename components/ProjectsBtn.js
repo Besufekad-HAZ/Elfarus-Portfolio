@@ -10,10 +10,9 @@ import { HiArrowRight } from "react-icons/hi2";
 const ProjectsBtn = () => {
   return (
     <div className="mx-auto">
-      {" "}
       {/* Use mx-auto for always centering */}
       <Link
-        href="/work"
+        href="/services"
         className="relative w-[170px] h-[170px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group"
       >
         <Image
