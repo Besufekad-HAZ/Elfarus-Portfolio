@@ -35,19 +35,19 @@ const Contact = () => {
   }
 
   return (
-    <div className="h-[100vh] bg-primary/30">
+    <div className="min-h-[100vh] bg-primary/30">
       <div
         className="container mx-auto py-32 text-center xl:text-left
-        flex items-center justify-center h-full "
+        flex items-center justify-center h-full"
       >
         <Bulb />
-        <div className="flex flex-col w-full max-w-[700px] mt-5 pt-5 md:mt-10 md:pt-10 xl:mt-0 xl:pt-0">
+        <div className="flex flex-col w-full max-w-[700px] mt-11 pt-5 md:mt-10 md:pt-10 xl:mt-0 xl:pt-0 px-4">
           <motion.h2
             variants={fadeIn("up", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 text-center mb-12"
+            className="text-center mb-12"
           >
             Let&#39;s <span className="text-accent">connect.</span>
           </motion.h2>
@@ -59,19 +59,19 @@ const Contact = () => {
             exit="hidden"
             className="flex-1 flex flex-col gap-6 w-full mx-auto"
           >
-            <div className="flex gap-x-6 w-full">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-x-6 w-full">
               <input
                 type="text"
                 name="name"
                 placeholder="name"
-                className="input"
+                className="input flex-1"
                 required
               />
               <input
                 type="email"
                 name="email"
                 placeholder="email"
-                className="input"
+                className="input flex-1"
                 required
               />
               <ValidationError
@@ -102,7 +102,7 @@ const Contact = () => {
               type="submit"
               disabled={state.submitting}
               className="btn rounded-full border border-white/50
-              max-w-[170px] transition-all duration-300 flex items-center
+              w-full sm:max-w-[170px] transition-all duration-300 flex items-center
               justify-center overflow-hidden hover:border-accent group"
             >
               <span

@@ -26,7 +26,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-[28px] leading-tight md:text-[40px] lg:text-[60px] mt-0 md:mt-6 lg:mt-0"
+            className="h1 text-[24px] leading-tight sm:text-[28px] md:text-[40px] lg:text-[60px] mt-0 md:mt-6 lg:mt-0 px-2 sm:px-0"
           >
             <span className="block md:inline">Transforming Ideas</span>{" "}
             <br className="hidden md:block" />
@@ -42,7 +42,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[90%] md:max-w-[80%] lg:max-w-xl mx-auto xl:mx-0 my-6 lg:my-10 text-base md:text-lg text-left md:text-justify"
+            className="max-w-[90%] md:max-w-[80%] lg:max-w-xl mx-auto xl:mx-0 my-6 lg:my-10 text-sm sm:text-base md:text-lg text-left md:text-justify px-2 sm:px-0"
           >
             Elevate your brand&apos;s visual presence with captivating videos
             that connect, inspire, and engage your audience. As a versatile
@@ -84,7 +84,7 @@ const Home = () => {
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="w-full h-full max-w-[300px] max-h-[300px] sm:max-w-[400px] sm:max-h-[400px] md:max-w-[500px] md:max-h-[500px] lg:max-w-[737px] lg:max-h-[678px] absolute -bottom-20 sm:-bottom-32 lg:bottom-0 lg:right-[8%]"
+          className="w-full h-full max-w-[250px] max-h-[250px] sm:max-w-[300px] sm:max-h-[300px] md:max-w-[400px] md:max-h-[400px] lg:max-w-[500px] lg:max-h-[500px] xl:max-w-[737px] xl:max-h-[678px] absolute -bottom-16 sm:-bottom-20 md:-bottom-32 lg:bottom-0 lg:right-[8%]"
         >
           <Avatar />
         </motion.div>

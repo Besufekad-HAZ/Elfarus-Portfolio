@@ -50,15 +50,15 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="h-[105vh] bg-primary/30 py-32 text-center">
-      <div className="container mx-auto h-full flex flex-col justify-center">
+    <div className="min-h-[100vh] bg-primary/30 py-24 sm:py-32 text-center">
+      <div className="container mx-auto h-full flex flex-col justify-center px-4 mt-16 sm:mt-20">
         {/* title  */}
         <motion.h2
           variants={fadeIn("down", 0.2)}
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="h2 text-[30px] mt-5 sm:text-3xl lg:text-4xl mb-8 xl:mb-0"
+          className="h2 text-[24px] sm:text-[30px] md:text-3xl lg:text-4xl mt-5 mb-8 xl:mb-0 px-2"
         >
           What clients <span className="text-accent">say.</span>
         </motion.h2>
@@ -73,7 +73,7 @@ const Testimonials = () => {
         >
           <button
             onClick={() => setShowSubmissionForm(true)}
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-accent hover:bg-accent/80 text-white font-medium rounded-lg transition-colors shadow-lg hover:shadow-xl"
+            className="inline-flex items-center space-x-2 px-4 sm:px-6 py-3 bg-accent hover:bg-accent/80 text-white font-medium rounded-lg transition-colors shadow-lg hover:shadow-xl text-sm sm:text-base"
           >
             <FaPlus className="w-4 h-4" />
             <span>Share Your Experience</span>

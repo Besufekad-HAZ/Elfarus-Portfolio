@@ -28,7 +28,7 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-      <div className="container mx-auto mt-12 pt-10 lg:mt-0 lg:pt-2 h-full flex flex-col items-center xl:flex-row gap-x-6 relative">
+      <div className="container mx-auto mt-12 pt-10 lg:mt-0 lg:pt-2 h-full flex flex-col items-center xl:flex-row gap-x-6 relative px-4">
         {/* text */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
@@ -46,21 +46,21 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto text-justify xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-white"
+            className="max-w-[500px] mx-auto text-justify xl:mx-0 mb-6 xl:mb-12 px-4 xl:px-0 text-white text-sm sm:text-base"
           >
             My journey into the world of computers began since I was 15 years
             old with gaming, fueling my passion for technology and creativity.
             From computer support and graphic design to video editing, I’ve
             always loved telling stories both as a creator and a gamer. Curious
-            about my gaming side? Check out my
+            about my gaming side? Check out my{" "}
             <a
               href="https://www.youtube.com/c/elfarus7"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent underline hover:text-white transition mx-2"
+              className="text-accent underline hover:text-white transition break-words"
             >
               YouTube Channel
-            </a>
+            </a>{" "}
             for gameplay, tips, and more.
           </motion.p>
           {/* counters */}
@@ -69,9 +69,9 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8 overflow-x-auto"
           >
-            <div className="flex flex-1 xl:gap-x-5">
+            <div className="flex flex-1 xl:gap-x-5 gap-x-3 min-w-max">
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
@@ -126,7 +126,7 @@ const About = () => {
                 className={`${
                   index === itemIndex &&
                   "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                } cursor-pointer capitalize xl:text-lg relative after:w-8
+                } cursor-pointer capitalize text-sm sm:text-base xl:text-lg relative after:w-8
     after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                 onClick={() => setIndex(itemIndex)}
               >

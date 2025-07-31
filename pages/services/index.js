@@ -43,9 +43,9 @@ const Services = () => {
   };
 
   return (
-    <div className="h-[100vh] bg-primary/30 py-36 flex items-center">
+    <div className="min-h-[100vh] bg-primary/30 py-24 sm:py-36 flex items-center">
       <Circles />
-      <div className="container mx-auto mt-7 pt-8 lg:mt-0 lg:pt-2">
+      <div className="container mx-auto mt-7 pt-8 lg:mt-0 lg:pt-2 px-4">
         <div className="flex flex-col xl:flex-row gap-x-8">
           {/* text */}
           <motion.div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4">
@@ -63,7 +63,7 @@ const Services = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-white"
+              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-white text-sm sm:text-base px-2 lg:px-0"
             >
               Enhance your brand&#39;s visuals with my videography and editing
               services. From corporate videos and promo reels to event coverage
