@@ -2,47 +2,97 @@
 
 // Generate Cloudinary upload widget
 export const createUploadWidget = (callback, options = {}) => {
-  if (typeof window === 'undefined') return null;
+  if (typeof window === "undefined") return null;
+
+  // Basic runtime validation to give clearer errors when envs or scripts are missing
+  const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+  const uploadPreset =
+    process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET || "ml_default";
+
+  if (!cloudName) {
+    console.error(
+      "[Cloudinary] NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME is not set. Check your .env and restart the dev server."
+    );
+    callback &&
+      callback({
+        event: "error",
+        error: { message: "Missing NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME" },
+      });
+    return null;
+  }
+
+  if (!uploadPreset) {
+    console.warn(
+      '[Cloudinary] NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET is not set; using fallback preset "ml_default". Ensure the preset exists and is unsigned for client uploads.'
+    );
+  }
+
+  if (!window.cloudinary) {
+    console.warn(
+      "[Cloudinary] Cloudinary upload widget script not loaded. Call loadCloudinaryScript() before creating the widget or include the widget script in your page."
+    );
+    return null;
+  }
 
   const defaultOptions = {
-    cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-    uploadPreset: process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET || 'ml_default',
-    folder: options.folder || 'designs',
-    resourceType: 'auto',
+    cloudName,
+    uploadPreset,
+    folder: options.folder || "designs",
+    resourceType: "auto",
     maxFileSize: 50000000, // 50MB
-    allowedFormats: ['jpg', 'jpeg', 'png', 'gif', 'webp', 'pdf'],
-    ...options
+    allowedFormats: ["jpg", "jpeg", "png", "gif", "webp", "pdf"],
+    ...options,
   };
 
   // Create a wrapper callback to handle errors
   const wrappedCallback = (error, result) => {
     if (error) {
-      console.error('Cloudinary upload error:', error);
-      callback({ event: 'error', error });
+      console.error("Cloudinary upload error:", error);
+      callback({ event: "error", error });
       return;
     }
 
     if (result) {
       callback(result);
     } else {
-      callback({ event: 'error', error: { message: 'No result received from upload' } });
+      callback({
+        event: "error",
+        error: { message: "No result received from upload" },
+      });
     }
   };
 
-  return window.cloudinary.createUploadWidget(defaultOptions, wrappedCallback);
+  try {
+    return window.cloudinary.createUploadWidget(
+      defaultOptions,
+      wrappedCallback
+    );
+  } catch (err) {
+    console.error("[Cloudinary] Failed to create upload widget:", err);
+    callback && callback({ event: "error", error: err });
+    return null;
+  }
+};
+
+// Helper to check if client-side Cloudinary config is available
+export const isClientCloudinaryConfigured = () => {
+  return Boolean(
+    process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME &&
+      process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
+  );
 };
 
 // Generate preview URL
 export const getPreviewUrl = (url, width = 400) => {
-  if (!url) return '';
-  return url.replace('/upload/', `/upload/c_scale,w_${width}/`);
+  if (!url) return "";
+  return url.replace("/upload/", `/upload/c_scale,w_${width}/`);
 };
 
 // Generate optimized URL for different sizes
 export const getOptimizedUrl = (url, options = {}) => {
-  if (!url) return '';
+  if (!url) return "";
 
-  const { width, height, quality = 'auto:good', format = 'auto' } = options;
+  const { width, height, quality = "auto:good", format = "auto" } = options;
   let transformation = `c_scale`;
 
   if (width && height) {
@@ -53,16 +103,19 @@ export const getOptimizedUrl = (url, options = {}) => {
     transformation = `c_scale,h_${height}`;
   }
 
-  return url.replace('/upload/', `/upload/${transformation},q_${quality},f_${format}/`);
+  return url.replace(
+    "/upload/",
+    `/upload/${transformation},q_${quality},f_${format}/`
+  );
 };
 
 // Format file size for display
 export const formatFileSize = (bytes) => {
-  if (bytes === 0) return '0 Bytes';
+  if (bytes === 0) return "0 Bytes";
   const k = 1024;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+  const sizes = ["Bytes", "KB", "MB", "GB"];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
 };
 
 // Extract file info from Cloudinary result
@@ -74,7 +127,7 @@ export const extractFileInfo = (result) => {
     format: result.format,
     width: result.width,
     height: result.height,
-    created_at: result.created_at
+    created_at: result.created_at,
   };
 };
 
@@ -83,21 +136,26 @@ export const createDocumentObject = (result, originalName) => {
   const fileInfo = extractFileInfo(result);
 
   return {
-    type: fileInfo.format === 'pdf' ? 'pdf' : 'image',
-    title: originalName ? originalName.replace(/\.[^/.]+$/, '') : fileInfo.public_id.split('/').pop(),
+    type: fileInfo.format === "pdf" ? "pdf" : "image",
+    title: originalName
+      ? originalName.replace(/\.[^/.]+$/, "")
+      : fileInfo.public_id.split("/").pop(),
     file: fileInfo.url,
     preview: getPreviewUrl(fileInfo.url, 400),
     size: formatFileSize(fileInfo.size),
-    dimensions: fileInfo.width && fileInfo.height ? `${fileInfo.width}x${fileInfo.height}px` : 'Auto-detected',
-    public_id: fileInfo.public_id
+    dimensions:
+      fileInfo.width && fileInfo.height
+        ? `${fileInfo.width}x${fileInfo.height}px`
+        : "Auto-detected",
+    public_id: fileInfo.public_id,
   };
 };
 
 // Load Cloudinary script
 export const loadCloudinaryScript = () => {
   return new Promise((resolve, reject) => {
-    if (typeof window === 'undefined') {
-      reject(new Error('Cloudinary script can only be loaded in browser'));
+    if (typeof window === "undefined") {
+      reject(new Error("Cloudinary script can only be loaded in browser"));
       return;
     }
 
@@ -106,21 +164,25 @@ export const loadCloudinaryScript = () => {
       return;
     }
 
-    const script = document.createElement('script');
-    script.src = 'https://upload-widget.cloudinary.com/global/all.js';
+    const script = document.createElement("script");
+    script.src = "https://upload-widget.cloudinary.com/global/all.js";
     script.async = true;
     script.onload = () => resolve(window.cloudinary);
-    script.onerror = () => reject(new Error('Failed to load Cloudinary script'));
+    script.onerror = () =>
+      reject(new Error("Failed to load Cloudinary script"));
     document.head.appendChild(script);
   });
 };
 
-export default {
+const cloudinaryUtils = {
   createUploadWidget,
   getPreviewUrl,
   getOptimizedUrl,
   formatFileSize,
   extractFileInfo,
   createDocumentObject,
-  loadCloudinaryScript
+  loadCloudinaryScript,
+  isClientCloudinaryConfigured,
 };
+
+export default cloudinaryUtils;

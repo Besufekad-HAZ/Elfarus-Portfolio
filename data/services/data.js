@@ -26,6 +26,9 @@ const serviceProjectsData = {
       title: "Water Day 2024 On PurposeBlack Company",
       link: "https://youtu.be/yOXhdwO25i8",
     },
+    { title: "ANNUAL SYMPOSIUM ON MENTAL HEALTH AND BRAIN SCIENCE ALIBIRA FOUNDATION CONFERANCE DAY 1 Oct 6", link: "https://youtu.be/D6wycH5n_PI?si=hy69BivF78_jU1Rs" },
+    { title: "ANNUAL SYMPOSIUM ON MENTAL HEALTH AND BRAIN SCIENCE ALIBIRA FOUNDATION CONFERANCE DAY 2 | October 7", link: "https://youtu.be/P4dS3WOY6fE?si=fr2G020HhpHQidB5" },
+    { title: "AU MEDICAL HEALTH LIFE STYLE 10 10 2025", link: "https://youtu.be/aQecaXQIUK8?si=ToG0Eg4E4J9JOu-B" },
   ],
   News: [
     {

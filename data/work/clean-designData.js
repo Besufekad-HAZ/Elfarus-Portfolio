@@ -46,14 +46,14 @@ export const designWorkData = {
       description:
         "Professional company profile design featuring modern layout and branding elements.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753257698/Company_Profile_preview_img_deamz5.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779167/Company_Profile_preview_img_deamz5_aociab.png",
       documents: [
         {
           type: "pdf",
           title: "PurposeBlack Company Profile",
-          file: "https://collection.cloudinary.com/dy233t3yl/62e8b36492f7b06a86ed8b46b57b11a0",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779191/PurposeBlack_Company_Profile_English_ELFA_edepkf_g6e3z5.pdf",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/v1753257698/Company_Profile_preview_img_deamz5.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779167/Company_Profile_preview_img_deamz5_aociab.png",
           size: "3.18 MB",
           dimensions: "613x859px",
         },
@@ -70,14 +70,14 @@ export const designWorkData = {
       description:
         "Amharic company magazine design with traditional Ethiopian design elements.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753258162/Company_magazine_amharic_img_neagba.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779169/Company_magazine_amharic_img_neagba_gmzzi4.png",
       documents: [
         {
           type: "pdf",
           title: "የፐርፐዝብላክ የኩባንያ ዐማርኛ መጽሔት",
-          file: "https://collection.cloudinary.com/dy233t3yl/a75abc44cd033df4fd2c600f514c7fd6",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779192/%E1%8B%A8%E1%8D%90%E1%88%AD%E1%8D%90%E1%8B%9D%E1%89%A5%E1%88%8B%E1%8A%AD_%E1%8B%A8%E1%8A%A9%E1%89%A3%E1%8A%95%E1%8B%AB_%E1%8B%90%E1%88%9B%E1%88%AD%E1%8A%9B_%E1%88%98%E1%8C%BD%E1%88%94%E1%89%B5_%E1%8B%93.%E1%88%9D._mclkph_bqaean.pdf",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/v1753258162/Company_magazine_amharic_img_neagba.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779169/Company_magazine_amharic_img_neagba_gmzzi4.png",
           size: "4.02 MB",
           dimensions: "595x841px",
         },
@@ -94,15 +94,15 @@ export const designWorkData = {
       description:
         "Annual report design for PurposeBlack Ethiopia featuring agricultural themes, modern layout with circular image cutouts, and bilingual content in English and Amharic. The design showcases agricultural development with combine harvesters, grain processing, and corporate activities.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753258162/Company_Report_jiwqdk.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779168/Company_Report_jiwqdk_wtllfl.png",
       documents: [
         {
           type: "pdf",
           title: "PurposeBlack Ethiopia Annual Report",
-          file: "https://collection.cloudinary.com/dy233t3yl/18b28156c1d1343f7a4cc8330a9e9632",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779194/final_%E1%88%88%E1%88%A6%E1%88%B5%E1%89%B0%E1%8A%9B%E1%8B%8D_%E1%8B%A8%E1%89%A3%E1%88%88_%E1%8A%A0%E1%8A%AD%E1%88%B2%E1%8B%AE%E1%8A%96%E1%89%BD_%E1%8C%A0%E1%89%85%E1%88%8B%E1%88%8B_%E1%8C%89%E1%89%A3%E1%8A%A4_%E1%8B%A8%E1%88%9A%E1%89%80%E1%88%AD%E1%89%A5_%E1%8B%93%E1%88%98%E1%89%B3%E1%8B%8A_%E1%88%AA%E1%8D%96%E1%88%AD%E1%89%B5_m5ix4l_rqa21w.pdf",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/v1753259061/Company_Report_jiwqdk.png",
-          size: "4.2 MB",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779168/Company_Report_jiwqdk_wtllfl.png",
+          size: "7.55 MB",
           dimensions: "595x841px",
         },
       ],
@@ -127,14 +127,14 @@ export const designWorkData = {
       description:
         "Religious promotional poster featuring a male preacher in a dark suit, holding a microphone and pointing directly at the audience. The design includes a gradient background with religious themes and professional presentation elements.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178133/photo_2023-09-24_13-17-13_w0kcie.jpg",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779196/photo_2023-09-24_13-17-13_w0kcie_usdso1.jpg",
       documents: [
         {
           type: "image",
           title: "Preaching Man with Suit Pointing to Audience",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178133/photo_2023-09-24_13-17-13_w0kcie.jpg",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779196/photo_2023-09-24_13-17-13_w0kcie_usdso1.jpg",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178133/photo_2023-09-24_13-17-13_w0kcie.jpg",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779196/photo_2023-09-24_13-17-13_w0kcie_usdso1.jpg",
           size: "2.8 MB",
           dimensions: "1920x1080px",
         },
@@ -151,14 +151,14 @@ export const designWorkData = {
       description:
         "Blood donation awareness poster featuring a large red blood bag graphic with event details in both Amharic and English. Includes photos of participants, date (June 11, 2024), location at PurposeBlack Ethiopia Head Office, and slogan 'Donating Our Blood Witnesses Purposeblack's Familism'.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178130/Blood_Donor_Social_Media_Post_nfuaco.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779200/Blood_Donor_Social_Media_Post_nfuaco_gqtynj.png",
       documents: [
         {
           type: "image",
           title: "PurposeBlack Blood Donation Campaign",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178130/Blood_Donor_Social_Media_Post_nfuaco.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779200/Blood_Donor_Social_Media_Post_nfuaco_gqtynj.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178130/Blood_Donor_Social_Media_Post_nfuaco.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779200/Blood_Donor_Social_Media_Post_nfuaco_gqtynj.png",
           size: "2.5 MB",
           dimensions: "1624x1081px",
         },
@@ -182,14 +182,14 @@ export const designWorkData = {
       description:
         "Dark horror film poster with a black background featuring menacing figures, supernatural elements, and dramatic lighting. The design creates an atmosphere of suspense and terror typical of the horror genre.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178135/maxresdefault_elh225.jpg",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779195/maxresdefault_elh225_mqatdv.jpg",
       documents: [
         {
           type: "image",
           title: "Black Background Horror Movie Poster",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178135/maxresdefault_elh225.jpg",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779195/maxresdefault_elh225_mqatdv.jpg",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178135/maxresdefault_elh225.jpg",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779195/maxresdefault_elh225_mqatdv.jpg",
           size: "3.2 MB",
           dimensions: "2480x3508px",
         },
@@ -206,14 +206,14 @@ export const designWorkData = {
       description:
         "Vibrant event poster for PurposeBlack Ethiopia's monthly staff event featuring a collage of staff members, performers, and the Ethiopian flag colors (green, yellow, red). Includes organizer details and Amharic text for the special staff monthly event.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178138/social_media_coemvw.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779208/social_media_coemvw_ibafe5.png",
       documents: [
         {
           type: "image",
           title: "PurposeBlack Staff Monthly Event with Ethiopian Flag",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178138/social_media_coemvw.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779208/social_media_coemvw_ibafe5.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178138/social_media_coemvw.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779208/social_media_coemvw_ibafe5.png",
           size: "3.8 MB",
           dimensions: "2000x2000px",
         },
@@ -237,14 +237,14 @@ export const designWorkData = {
       description:
         "Yellow-themed recognition poster featuring four circular portraits of employees with dynamic concentric rings design. Amharic text 'በዓላማ ጽናት ስከፈላችሁት መስዋዕትነት TCTዝብላክ ያከብራችኋል።' (PurposeBlack honors you for your steadfast dedication and sacrifice) and 'ኮርተንባችኋል' (We are proud of you).",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178141/heros_cpokxe.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779207/heros_cpokxe_e9p9si.png",
       documents: [
         {
           type: "image",
           title: "PurposeBlack Ethiopia Heroes Recognition",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178141/heros_cpokxe.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779207/heros_cpokxe_e9p9si.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178141/heros_cpokxe.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779207/heros_cpokxe_e9p9si.png",
           size: "2.1 MB",
           dimensions: "1280x720px",
         },
@@ -261,14 +261,14 @@ export const designWorkData = {
       description:
         "Religious Easter poster with textured dark red background featuring three crosses with golden light emanating from the central cross. Amharic text includes 'እንኳን አደረሳችሁ።' (Happy holidays), 'ስቅለት' (Crucifixion), and 'አማናዊት ፀሀይ ልትወጣ አንድ ቀን ቀራት።' (The true sun is one day away from rising). Branded with ELFARUS logo.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178143/%E1%8A%A4%E1%88%8D%E1%8D%8B%E1%8A%A1%E1%88%B5_%E1%89%B5%E1%8A%95%E1%88%B3%E1%8A%A4_vi1vvd.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1753178143/%E1%8A%A4%E1%88%8D%E1%8D%8B%E1%8A%A1%E1%88%B5_%E1%89%B5%E1%8A%95%E1%88%B3%E1%8A%A4_vi1vvd.png",
       documents: [
         {
           type: "image",
           title: "Easter Crucifixion Commemoration",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178143/%E1%8A%A4%E1%88%8D%E1%8D%8B%E1%8A%A1%E1%88%B5_%E1%89%B5%E1%8A%95%E1%88%B3%E1%8A%A4_vi1vvd.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1753178143/%E1%8A%A4%E1%88%8D%E1%8D%8B%E1%8A%A1%E1%88%B5_%E1%89%B5%E1%8A%95%E1%88%B3%E1%8A%A4_vi1vvd.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178143/%E1%8A%A4%E1%88%8D%E1%8D%8B%E1%8A%A1%E1%88%B5_%E1%89%B5%E1%8A%95%E1%88%B3%E1%8A%A4_vi1vvd.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1753178143/%E1%8A%A4%E1%88%8D%E1%8D%8B%E1%8A%A1%E1%88%B5_%E1%89%B5%E1%8A%95%E1%88%B3%E1%8A%A4_vi1vvd.png",
           size: "2.8 MB",
           dimensions: "1080x1080px",
         },
@@ -285,14 +285,14 @@ export const designWorkData = {
       description:
         "International travel and visa services poster featuring a diverse group of people with the Eiffel Tower in the background. The design promotes global travel opportunities and visa assistance services with a modern, inclusive approach.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178146/visa_1_ptt2lu.jpg",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779221/visa_1_ptt2lu_lt0r45.jpg",
       documents: [
         {
           type: "image",
           title: "VISA GUIDE Travel Services - Many People and Eiffel Tower",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178146/visa_1_ptt2lu.jpg",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779221/visa_1_ptt2lu_lt0r45.jpg",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178146/visa_1_ptt2lu.jpg",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779221/visa_1_ptt2lu_lt0r45.jpg",
           size: "3.1 MB",
           dimensions: "3508x2480px",
         },
@@ -316,14 +316,14 @@ export const designWorkData = {
       description:
         "Vibrant nutrition awareness poster featuring a woman holding a salad bowl surrounded by fresh fruits and vegetables. Design includes falling salad elements, various produce (potatoes, cucumbers, mushrooms, carrots, peppers, peas), and promotes healthy eating with dynamic yellow wavy lines and scattered green/orange dots.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178149/1_NUT__ceoqwx.jpg",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779214/1_NUT__ceoqwx_wzwrjz.jpg",
       documents: [
         {
           type: "image",
           title: "Nutrition Facts Health Campaign",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178149/1_NUT__ceoqwx.jpg",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779214/1_NUT__ceoqwx_wzwrjz.jpg",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178149/1_NUT__ceoqwx.jpg",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779214/1_NUT__ceoqwx_wzwrjz.jpg",
           size: "2.7 MB",
           dimensions: "1280x720px",
         },
@@ -340,14 +340,14 @@ export const designWorkData = {
       description:
         "Travel services poster featuring passport imagery and two people, promoting international travel and visa assistance. The design emphasizes the personal aspect of travel planning and documentation services.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178152/visa_2_ysdqfp.jpg",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779237/visa_2_ysdqfp_p2y8ff.jpg",
       documents: [
         {
           type: "image",
           title: "VISA GUIDE Travel Services - Passport and Two People",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178152/visa_2_ysdqfp.jpg",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779237/visa_2_ysdqfp_p2y8ff.jpg",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178152/visa_2_ysdqfp.jpg",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779237/visa_2_ysdqfp_p2y8ff.jpg",
           size: "3.1 MB",
           dimensions: "3508x2480px",
         },
@@ -371,14 +371,14 @@ export const designWorkData = {
       description:
         "Travel services poster featuring passport imagery and a globe icon, symbolizing worldwide travel opportunities. The design promotes international visa services and global travel assistance with a professional, trustworthy appearance.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178154/visa_3_vdymny.jpg",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779230/visa_3_vdymny_zrfs9b.jpg",
       documents: [
         {
           type: "image",
           title: "VISA GUIDE Travel Services - Passport and Globe Icon",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178154/visa_3_vdymny.jpg",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779230/visa_3_vdymny_zrfs9b.jpg",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178154/visa_3_vdymny.jpg",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779230/visa_3_vdymny_zrfs9b.jpg",
           size: "3.1 MB",
           dimensions: "3508x2480px",
         },
@@ -395,14 +395,14 @@ export const designWorkData = {
       description:
         "Religious service poster featuring Prophet Deresse Lakew and Prophetess Sara Abdurehim holding microphones. Dark blue background with Amharic text 'ዘውትር' (Always) and 'አይቀርም' (It will not be absent). Includes ATV logo and indicates service availability.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178157/%E1%8B%98%E1%8B%8D%E1%89%B5%E1%88%AD_%E1%8A%A5%E1%88%81%E1%8B%B5_bjn4yn.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1753178157/%E1%8B%98%E1%8B%8D%E1%89%B5%E1%88%AD_%E1%8A%A5%E1%88%81%E1%8B%B5_bjn4yn.png",
       documents: [
         {
           type: "image",
           title: "The Anointed People of God Church Service",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178157/%E1%8B%98%E1%8B%8D%E1%89%B5%E1%88%AD_%E1%8A%A5%E1%88%81%E1%8B%B5_bjn4yn.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1753178157/%E1%8B%98%E1%8B%8D%E1%89%B5%E1%88%AD_%E1%8A%A5%E1%88%81%E1%8B%B5_bjn4yn.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178157/%E1%8B%98%E1%8B%8D%E1%89%B5%E1%88%AD_%E1%8A%A5%E1%88%81%E1%8B%B5_bjn4yn.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1753178157/%E1%8B%98%E1%8B%8D%E1%89%B5%E1%88%AD_%E1%8A%A5%E1%88%81%E1%8B%B5_bjn4yn.png",
           size: "2.3 MB",
           dimensions: "1280x720px",
         },
@@ -421,14 +421,14 @@ export const designWorkData = {
       description:
         "Dynamic gaming thumbnail featuring vibrant colors and engaging visual elements designed to capture viewer attention for gaming content.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178127/3_m6kfqx.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779217/3_m6kfqx_ehdopr.png",
       documents: [
         {
           type: "image",
           title: "Gaming Content Thumbnail 3",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178127/3_m6kfqx.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779217/3_m6kfqx_ehdopr.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178127/3_m6kfqx.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779217/3_m6kfqx_ehdopr.png",
           size: "2.1 MB",
           dimensions: "1280x720px",
         },
@@ -445,14 +445,14 @@ export const designWorkData = {
       description:
         "Eye-catching social media thumbnail with modern design elements and compelling visual hierarchy for maximum engagement.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178125/47_pvyism.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779228/47_pvyism_fjy1zq.png",
       documents: [
         {
           type: "image",
           title: "Social Media Thumbnail 47",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178125/47_pvyism.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779228/47_pvyism_fjy1zq.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178125/47_pvyism.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779228/47_pvyism_fjy1zq.png",
           size: "1.8 MB",
           dimensions: "1280x720px",
         },
@@ -469,14 +469,14 @@ export const designWorkData = {
       description:
         "High-energy gaming thumbnail with bold typography and dynamic visual effects designed to attract gaming audience attention.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178122/48_kwumjf.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779227/48_kwumjf_eyp9rz.png",
       documents: [
         {
           type: "image",
           title: "Gaming Thumbnail 48",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178122/48_kwumjf.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779227/48_kwumjf_eyp9rz.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178122/48_kwumjf.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779227/48_kwumjf_eyp9rz.png",
           size: "2.3 MB",
           dimensions: "1280x720px",
         },
@@ -493,14 +493,14 @@ export const designWorkData = {
       description:
         "Alternative version of content thumbnail with different color scheme and layout variations for A/B testing and content optimization.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178120/47_b_c7b6ln.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779223/47_b_c7b6ln_vlm59x.png",
       documents: [
         {
           type: "image",
           title: "Content Thumbnail 47B",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178120/47_b_c7b6ln.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779223/47_b_c7b6ln_vlm59x.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178120/47_b_c7b6ln.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779223/47_b_c7b6ln_vlm59x.png",
           size: "1.9 MB",
           dimensions: "1280x720px",
         },
@@ -517,14 +517,14 @@ export const designWorkData = {
       description:
         "Action-packed gaming thumbnail with dramatic lighting effects and compelling call-to-action elements for maximum click-through rates.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178117/5_o3reiv.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779228/5_o3reiv_gklfni.png",
       documents: [
         {
           type: "image",
           title: "Gaming Thumbnail 5",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178117/5_o3reiv.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779228/5_o3reiv_gklfni.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178117/5_o3reiv.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779228/5_o3reiv_gklfni.png",
           size: "2.0 MB",
           dimensions: "1280x720px",
         },
@@ -541,14 +541,14 @@ export const designWorkData = {
       description:
         "Versatile content thumbnail with clean design and professional appearance suitable for various content types and platforms.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178115/60_apumge.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779231/60_apumge_pwibwg.png",
       documents: [
         {
           type: "image",
           title: "Content Thumbnail 60",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178115/60_apumge.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779231/60_apumge_pwibwg.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178115/60_apumge.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779231/60_apumge_pwibwg.png",
           size: "1.7 MB",
           dimensions: "1280x720px",
         },
@@ -565,14 +565,14 @@ export const designWorkData = {
       description:
         "Intense gaming thumbnail with dark theme and dramatic visual effects designed to create excitement and anticipation for gaming content.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178113/62_wqrd5w.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779233/62_wqrd5w_kynfp7.png",
       documents: [
         {
           type: "image",
           title: "Gaming Thumbnail 62",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178113/62_wqrd5w.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779233/62_wqrd5w_kynfp7.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178113/62_wqrd5w.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779233/62_wqrd5w_kynfp7.png",
           size: "2.2 MB",
           dimensions: "1280x720px",
         },
@@ -589,14 +589,14 @@ export const designWorkData = {
       description:
         "Modern content thumbnail with contemporary design elements and engaging visual composition for social media platforms.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178111/50_tap1vr.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779225/50_tap1vr_xgfoax.png",
       documents: [
         {
           type: "image",
           title: "Content Thumbnail 50",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178111/50_tap1vr.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779225/50_tap1vr_xgfoax.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178111/50_tap1vr.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779225/50_tap1vr_xgfoax.png",
           size: "1.6 MB",
           dimensions: "1280x720px",
         },
@@ -613,14 +613,14 @@ export const designWorkData = {
       description:
         "Recovered and restored content thumbnail with enhanced visual quality and optimized design for better viewer engagement.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178109/dagi-Recovered_ye8zym.jpg",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779231/dagi-Recovered_ye8zym_ahrrd7.jpg",
       documents: [
         {
           type: "image",
           title: "Dagi Recovered Content",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178109/dagi-Recovered_ye8zym.jpg",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779231/dagi-Recovered_ye8zym_ahrrd7.jpg",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178109/dagi-Recovered_ye8zym.jpg",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779231/dagi-Recovered_ye8zym_ahrrd7.jpg",
           size: "2.4 MB",
           dimensions: "1280x720px",
         },
@@ -639,14 +639,14 @@ export const designWorkData = {
       description:
         "Second version of nutrition awareness banner featuring healthy food elements and educational content about proper nutrition and dietary choices.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178180/2_nut__pk6o7y.jpg",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779200/2_nut__pk6o7y_lztb61.jpg",
       documents: [
         {
           type: "image",
           title: "Nutrition Facts Banner 2",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178180/2_nut__pk6o7y.jpg",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779200/2_nut__pk6o7y_lztb61.jpg",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178180/2_nut__pk6o7y.jpg",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779200/2_nut__pk6o7y_lztb61.jpg",
           size: "2.8 MB",
           dimensions: "1280x720px",
         },
@@ -663,14 +663,14 @@ export const designWorkData = {
       description:
         "Third iteration of nutrition banner with enhanced visual elements and comprehensive information about healthy eating habits and food choices.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178177/3_nut_sx9gxa.jpg",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779193/3_nut_sx9gxa_a6mhrf.jpg",
       documents: [
         {
           type: "image",
           title: "Nutrition Facts Banner 3",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178177/3_nut_sx9gxa.jpg",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779193/3_nut_sx9gxa_a6mhrf.jpg",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178177/3_nut_sx9gxa.jpg",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779193/3_nut_sx9gxa_a6mhrf.jpg",
           size: "3.1 MB",
           dimensions: "1280x720px",
         },
@@ -687,14 +687,14 @@ export const designWorkData = {
       description:
         "Corporate motivation banner designed for monthly staff events featuring encouraging messages, team spirit elements, and professional design suitable for workplace environments.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178174/banner_for_graphics_Monthely_Staff_Motivation_2_v015aa.jpg",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779194/banner_for_graphics_Monthely_Staff_Motivation_2_v015aa_eowld8.jpg",
       documents: [
         {
           type: "image",
           title: "Monthly Staff Motivation Banner",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178174/banner_for_graphics_Monthely_Staff_Motivation_2_v015aa.jpg",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779194/banner_for_graphics_Monthely_Staff_Motivation_2_v015aa_eowld8.jpg",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178174/banner_for_graphics_Monthely_Staff_Motivation_2_v015aa.jpg",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779194/banner_for_graphics_Monthely_Staff_Motivation_2_v015aa_eowld8.jpg",
           size: "3.5 MB",
           dimensions: "1920x1080px",
         },
@@ -711,14 +711,14 @@ export const designWorkData = {
       description:
         "Environmental awareness banner for World Water Day featuring water conservation themes, blue color schemes, and educational content about water sustainability and conservation efforts.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178171/water_day_pvmotg.jpg",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779181/water_day_pvmotg_mja27r.jpg",
       documents: [
         {
           type: "image",
           title: "World Water Day Banner",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178171/water_day_pvmotg.jpg",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779181/water_day_pvmotg_mja27r.jpg",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178171/water_day_pvmotg.jpg",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779181/water_day_pvmotg_mja27r.jpg",
           size: "2.9 MB",
           dimensions: "1280x720px",
         },
@@ -735,14 +735,14 @@ export const designWorkData = {
       description:
         "Second version of Mother's Day celebration banner featuring warm colors, family themes, and appreciation messages for mothers. Includes Amharic text and cultural elements celebrating maternal figures.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178167/mom_day_2_qx29am.jpg",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779176/mom_day_2_qx29am_xhz57f.jpg",
       documents: [
         {
           type: "image",
           title: "Mother's Day Celebration Banner 2",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178167/mom_day_2_qx29am.jpg",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779176/mom_day_2_qx29am_xhz57f.jpg",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/c_scale,w_400/v1753178167/mom_day_2_qx29am.jpg",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1762779176/mom_day_2_qx29am_xhz57f.jpg",
           size: "3.2 MB",
           dimensions: "1920x1080px",
         },
@@ -759,14 +759,14 @@ export const designWorkData = {
       description:
         "Elegant certificate of appreciation design for Mother's Day event organized by PurposeBlack Ethiopia. Features a sophisticated black and gold color scheme with intricate decorative borders, mother and child illustration, and bilingual Amharic text. The certificate recognizes exemplary mothers and diligent workers, presented with great respect for their contributions to both family and workplace.",
       thumbnail:
-        "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178161/Artboard_1_copy_4_hqrfjk.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779193/Artboard_1_copy_4_hqrfjk_tc2t0c.png",
       documents: [
         {
           type: "image",
           title: "የሞስጋና ሞስክር ወረቀት - Certificate of Appreciation",
-          file: "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178161/Artboard_1_copy_4_hqrfjk.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779193/Artboard_1_copy_4_hqrfjk_tc2t0c.png",
           preview:
-            "https://res.cloudinary.com/dy233t3yl/image/upload/v1753178161/Artboard_1_copy_4_hqrfjk.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779193/Artboard_1_copy_4_hqrfjk_tc2t0c.png",
           size: "2.5 MB",
           dimensions: "2480x3508px",
         },
