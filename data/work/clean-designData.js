@@ -261,14 +261,14 @@ export const designWorkData = {
       description:
         "Religious Easter poster with textured dark red background featuring three crosses with golden light emanating from the central cross. Amharic text includes 'እንኳን አደረሳችሁ።' (Happy holidays), 'ስቅለት' (Crucifixion), and 'አማናዊት ፀሀይ ልትወጣ አንድ ቀን ቀራት።' (The true sun is one day away from rising). Branded with ELFARUS logo.",
       thumbnail:
-        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1753178143/%E1%8A%A4%E1%88%8D%E1%8D%8B%E1%8A%A1%E1%88%B5_%E1%89%B5%E1%8A%95%E1%88%B3%E1%8A%A4_vi1vvd.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779222/ኤልፋኡስ_ትንሳኤ_vi1vvd_hclcab.png",
       documents: [
         {
           type: "image",
           title: "Easter Crucifixion Commemoration",
-          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1753178143/%E1%8A%A4%E1%88%8D%E1%8D%8B%E1%8A%A1%E1%88%B5_%E1%89%B5%E1%8A%95%E1%88%B3%E1%8A%A4_vi1vvd.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779222/ኤልፋኡስ_ትንሳኤ_vi1vvd_hclcab.png",
           preview:
-            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1753178143/%E1%8A%A4%E1%88%8D%E1%8D%8B%E1%8A%A1%E1%88%B5_%E1%89%B5%E1%8A%95%E1%88%B3%E1%8A%A4_vi1vvd.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779222/ኤልፋኡስ_ትንሳኤ_vi1vvd_hclcab.png",
           size: "2.8 MB",
           dimensions: "1080x1080px",
         },
@@ -395,14 +395,14 @@ export const designWorkData = {
       description:
         "Religious service poster featuring Prophet Deresse Lakew and Prophetess Sara Abdurehim holding microphones. Dark blue background with Amharic text 'ዘውትር' (Always) and 'አይቀርም' (It will not be absent). Includes ATV logo and indicates service availability.",
       thumbnail:
-        "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1753178157/%E1%8B%98%E1%8B%8D%E1%89%B5%E1%88%AD_%E1%8A%A5%E1%88%81%E1%8B%B5_bjn4yn.png",
+        "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779196/photo_2023-09-24_13-17-13_w0kcie_usdso1.jpg",
       documents: [
         {
           type: "image",
           title: "The Anointed People of God Church Service",
-          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1753178157/%E1%8B%98%E1%8B%8D%E1%89%B5%E1%88%AD_%E1%8A%A5%E1%88%81%E1%8B%B5_bjn4yn.png",
+          file: "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779196/photo_2023-09-24_13-17-13_w0kcie_usdso1.jpg",
           preview:
-            "https://res.cloudinary.com/dqlrwvoao/image/upload/c_scale,w_400/v1753178157/%E1%8B%98%E1%8B%8D%E1%89%B5%E1%88%AD_%E1%8A%A5%E1%88%81%E1%8B%B5_bjn4yn.png",
+            "https://res.cloudinary.com/dqlrwvoao/image/upload/v1762779196/photo_2023-09-24_13-17-13_w0kcie_usdso1.jpg",
           size: "2.3 MB",
           dimensions: "1280x720px",
         },

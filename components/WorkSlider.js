@@ -122,6 +122,7 @@ const WorkSlider = () => {
                         width={500}
                         height={300}
                         alt="work slides image"
+                        className="w-full h-auto"
                       />
                       {/* overlay gradient */}
                       <div

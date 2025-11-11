@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import { motion } from 'framer-motion';
-import { fadeIn } from '../variants';
-import { FaSpinner } from 'react-icons/fa';
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
+import { FaSpinner } from "react-icons/fa";
 
 const AdminAuth = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -11,13 +11,14 @@ const AdminAuth = ({ children }) => {
 
   useEffect(() => {
     checkAuth();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const checkAuth = () => {
-    const authenticated = sessionStorage.getItem('adminAuthenticated');
-    const loginTime = sessionStorage.getItem('adminLoginTime');
+    const authenticated = sessionStorage.getItem("adminAuthenticated");
+    const loginTime = sessionStorage.getItem("adminLoginTime");
 
-    if (authenticated === 'true' && loginTime) {
+    if (authenticated === "true" && loginTime) {
       // Check if login is not older than 24 hours
       const loginTimestamp = parseInt(loginTime);
       const currentTime = Date.now();
@@ -27,21 +28,21 @@ const AdminAuth = ({ children }) => {
         setIsAuthenticated(true);
       } else {
         // Session expired
-        sessionStorage.removeItem('adminAuthenticated');
-        sessionStorage.removeItem('adminLoginTime');
-        router.push('/admin/login');
+        sessionStorage.removeItem("adminAuthenticated");
+        sessionStorage.removeItem("adminLoginTime");
+        router.push("/admin/login");
       }
     } else {
-      router.push('/admin/login');
+      router.push("/admin/login");
     }
 
     setIsLoading(false);
   };
 
   const handleLogout = () => {
-    sessionStorage.removeItem('adminAuthenticated');
-    sessionStorage.removeItem('adminLoginTime');
-    router.push('/admin/login');
+    sessionStorage.removeItem("adminAuthenticated");
+    sessionStorage.removeItem("adminLoginTime");
+    router.push("/admin/login");
   };
 
   if (isLoading) {

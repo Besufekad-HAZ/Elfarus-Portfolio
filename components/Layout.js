@@ -1,18 +1,5 @@
 // fonts
-import { Sora, Poppins } from "next/font/google";
-
-// font settings
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-sora",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  variable: "--font-poppins",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-});
+import { sora, poppins } from "../lib/fonts";
 
 // components
 import Nav from "../components/Nav";
@@ -24,7 +11,7 @@ import Head from "next/head";
 const Layout = ({ children }) => {
   return (
     <div
-      className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora realtive`}
+      className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} ${poppins.variable} font-sora relative`}
     >
       <Head>
         <AdSense />
