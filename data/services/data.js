@@ -26,9 +26,20 @@ const serviceProjectsData = {
       title: "Water Day 2024 On PurposeBlack Company",
       link: "https://youtu.be/yOXhdwO25i8",
     },
-    { title: "ANNUAL SYMPOSIUM ON MENTAL HEALTH AND BRAIN SCIENCE ALIBIRA FOUNDATION CONFERANCE DAY 1 Oct 6", link: "https://youtu.be/D6wycH5n_PI?si=hy69BivF78_jU1Rs" },
-    { title: "ANNUAL SYMPOSIUM ON MENTAL HEALTH AND BRAIN SCIENCE ALIBIRA FOUNDATION CONFERANCE DAY 2 | October 7", link: "https://youtu.be/P4dS3WOY6fE?si=fr2G020HhpHQidB5" },
-    { title: "AU MEDICAL HEALTH LIFE STYLE 10 10 2025", link: "https://youtu.be/aQecaXQIUK8?si=ToG0Eg4E4J9JOu-B" },
+    {
+      title:
+        "ANNUAL SYMPOSIUM ON MENTAL HEALTH AND BRAIN SCIENCE ALIBIRA FOUNDATION CONFERANCE DAY 1 Oct 6",
+      link: "https://youtu.be/D6wycH5n_PI?si=hy69BivF78_jU1Rs",
+    },
+    {
+      title:
+        "ANNUAL SYMPOSIUM ON MENTAL HEALTH AND BRAIN SCIENCE ALIBIRA FOUNDATION CONFERANCE DAY 2 | October 7",
+      link: "https://youtu.be/P4dS3WOY6fE?si=fr2G020HhpHQidB5",
+    },
+    {
+      title: "AU MEDICAL HEALTH LIFE STYLE 10 10 2025",
+      link: "https://youtu.be/aQecaXQIUK8?si=ToG0Eg4E4J9JOu-B",
+    },
   ],
   News: [
     {
@@ -71,63 +82,63 @@ const serviceProjectsData = {
     { title: "NEWAYE ENQB 9TH tv", link: "https://youtu.be/egg8G47YrUc" },
   ],
   Promotional: [
-    { title: "Promotional Video", link: "https://youtu.be/N7Re49KtEAw" },
+    { title: "AU Recap 2024 party", link: "https://youtu.be/N7Re49KtEAw" },
     {
-      title: "Promotional Reel",
-      link: "https://youtube.com/shorts/K6aCfrXwH9o",
-    },
-    {
-      title: "Promotional Reel",
-      link: "https://youtube.com/shorts/SBt-q0DO8F8",
-    },
-    {
-      title: "Promotional Reel",
-      link: "https://youtube.com/shorts/y3EyRtEB5Zk",
-    },
-    {
-      title: "Promotional Reel",
-      link: "https://youtube.com/shorts/HtQnMRGt4_c",
-    },
-    // New entries below
-    {
-      title: "Promotional Reel",
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Promo 1",
       link: "https://youtube.com/shorts/yRU-GZaNCIs",
     },
     {
-      title: "Promotional Reel",
-      link: "https://youtube.com/shorts/4HvXxOQCliE",
-    },
-    {
-      title: "Promotional Reel",
-      link: "https://youtube.com/shorts/sHz6qS1-nwc",
-    },
-    {
-      title: "Promotional Reel",
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Content 1",
       link: "https://youtube.com/shorts/r91dQ-gvvgQ",
     },
     {
-      title: "Promotional Reel",
-      link: "https://youtube.com/shorts/2wjU4nNqffI",
-    },
-    {
-      title: "Promotional Reel",
-      link: "https://youtube.com/shorts/7OLNbBziKQw",
-    },
-    {
-      title: "Promotional Reel",
-      link: "https://youtube.com/shorts/M8l5OC8XBJc",
-    },
-    {
-      title: "Promotional Reel",
-      link: "https://youtube.com/shorts/a3ugiaWuCFk",
-    },
-    {
-      title: "Promotional Reel",
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Last Videos 2",
       link: "https://youtube.com/shorts/kUiqlG9-Xjk",
     },
     {
-      title: "Promotional Reel",
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Content 2",
+      link: "https://youtube.com/shorts/2wjU4nNqffI",
+    },
+    // New entries below
+    {
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Promo 7",
+      link: "https://youtube.com/shorts/y3EyRtEB5Zk",
+    },
+    {
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Promo 3",
+      link: "https://youtube.com/shorts/4HvXxOQCliE",
+    },
+    {
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Last Videos 1",
+      link: "https://youtube.com/shorts/a3ugiaWuCFk",
+    },
+    {
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Content 4",
+      link: "https://youtube.com/shorts/M8l5OC8XBJc",
+    },
+    {
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Promo 5",
+      link: "https://youtube.com/shorts/HtQnMRGt4_c",
+    },
+    {
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Content 3",
+      link: "https://www.youtube.com/shorts/i4rjtpqpQTo",
+    },
+    {
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Last Videos 3",
       link: "https://youtube.com/shorts/Vbn2ItZ4k4c",
+    },
+    {
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Promo 4",
+      link: "https://youtube.com/shorts/sHz6qS1-nwc",
+    },
+    {
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Promo 6",
+      link: "https://youtube.com/shorts/K6aCfrXwH9o",
+    },
+    {
+      title: "Gena EXPO2024  አዲስ ገና ኤክስፖ 2017 | Promo 2",
+      link: "https://youtube.com/shorts/SBt-q0DO8F8",
     },
   ],
   Billboards: [
