@@ -21,16 +21,24 @@ const getYoutubeVideoId = (url) => {
   return videoId;
 };
 
+// Deduplicate by YouTube video ID so the same video never appears twice in a category
 const serviceProjects = Object.fromEntries(
-  Object.entries(serviceProjectsData).map(([category, projects]) => [
-    category,
-    projects.map((project) => ({
+  Object.entries(serviceProjectsData).map(([category, projects]) => {
+    const withThumbnails = projects.map((project) => ({
       ...project,
       thumbnail: `https://i.ytimg.com/vi/${getYoutubeVideoId(
         project.link
       )}/maxresdefault.jpg`,
-    })),
-  ])
+    }));
+    const seen = new Set();
+    const deduped = withThumbnails.filter((p) => {
+      const id = getYoutubeVideoId(p.link);
+      if (seen.has(id)) return false;
+      seen.add(id);
+      return true;
+    });
+    return [category, deduped];
+  })
 );
 
 const Services = () => {

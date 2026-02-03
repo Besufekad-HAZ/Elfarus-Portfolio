@@ -1,27 +1,4 @@
-// testimonial data
-const testimonialSlider = [
-  {
-    image: "/John.jpg",
-    name: "Yohannes Mengesha",
-    position: "Professional Videographer",
-    message:
-      "As a videographer, the work and attention to detail that <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> brought to our project was truly exceptional. They effortlessly brought our vision to life with their creative flair and cinematic expertise. The final video surpassed our expectations and really made our project stand out.",
-  },
-  {
-    image: "/moni.jpg",
-    name: "Yonathan Mebrate",
-    position: "Customer",
-    message:
-      "<span class='text-xl xl:text-2xl  font-extrabold text-accent'>Elfarus</span> is a true master of their craft. Their videography skills are impeccable, capturing every moment with a keen eye and a creative touch. The professionalism and dedication they demonstrated throughout the project were truly impressive. I highly recommend <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> for any creative endeavor.",
-  },
-  {
-    image: "/bese.jpg",
-    name: "Besufekad Alemu",
-    position: "Web Developer",
-    message:
-      "<span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> is a consummate professional. Their innovative approach and commitment to excellence made the entire process enjoyable and stress-free. The final product exceeded our expectations with its high-quality visuals and seamless editing. We're thrilled with the work <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> has done for us.",
-  },
-];
+import { useState, useEffect } from "react";
 
 // import swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -41,6 +18,60 @@ import { FaQuoteLeft } from "react-icons/fa";
 import Image from "next/image";
 
 const TestimonialSlider = () => {
+  const [testimonials, setTestimonials] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        setIsLoading(true);
+        const response = await fetch("/api/testimonials/list?status=approved");
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch testimonials");
+        }
+
+        const data = await response.json();
+        setTestimonials(data.testimonials || []);
+        setError(null);
+      } catch (err) {
+        console.error("Error fetching testimonials:", err);
+        setError(err.message);
+        // Fallback to empty array on error
+        setTestimonials([]);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchTestimonials();
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center h-[50vh]">
+        <div className="text-white/70">Loading testimonials...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center h-[50vh]">
+        <div className="text-red-400">Error loading testimonials: {error}</div>
+      </div>
+    );
+  }
+
+  if (testimonials.length === 0) {
+    return (
+      <div className="flex items-center justify-center h-[50vh]">
+        <div className="text-white/70">No testimonials available yet.</div>
+      </div>
+    );
+  }
+
   return (
     <Swiper
       navigation={true}
@@ -50,9 +81,9 @@ const TestimonialSlider = () => {
       modules={[Navigation, Pagination]}
       className="h-[50vh]"
     >
-      {testimonialSlider.map((person, index) => {
+      {testimonials.map((person) => {
         return (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={person.id}>
             <div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-16 overflow-scroll lg:overflow-hidden">
               {/* avatar, name, position */}
               <div className="w-full max-w-[300px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
@@ -60,17 +91,23 @@ const TestimonialSlider = () => {
                   {/* avatar  */}
                   <div className="mb-2 mx-auto">
                     <Image
-                      src={person.image}
+                      src={person.avatar}
                       width={100}
                       height={100}
-                      alt="client images"
-                      className="md:w-[150px] rounded-full"
+                      alt={`${person.name} avatar`}
+                      className="md:w-[150px] rounded-full object-cover"
+                      onError={(e) => {
+                        // Fallback to a default avatar if image fails to load
+                        e.target.src = "/t-avt-1.png";
+                      }}
                     />
                   </div>
                   {/* name */}
-                  <div className="text-lg font-semibold">{person.name}</div>
+                  <div className="text-lg font-semibold text-white">
+                    {person.name}
+                  </div>
                   {/* position  */}
-                  <div className="text-[12px] uppercase font-extralight tracking-widest">
+                  <div className="text-[12px] uppercase font-extralight tracking-widest text-white/70">
                     {person.position}
                   </div>
                 </div>
@@ -83,7 +120,7 @@ const TestimonialSlider = () => {
                 </div>
                 {/* message  */}
                 <div
-                  className="xl:text-lg text-center md:text-left"
+                  className="xl:text-lg text-center md:text-left text-white"
                   dangerouslySetInnerHTML={{ __html: person.message }}
                 />
               </div>

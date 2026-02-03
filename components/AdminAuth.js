@@ -69,10 +69,10 @@ const AdminAuth = ({ children }) => {
   return (
     <div className="relative">
       {/* Logout Button */}
-      <div className="fixed top-4 right-4 z-50">
+      <div className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
         <button
           onClick={handleLogout}
-          className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors shadow-lg"
+          className="bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg transition-colors shadow-lg text-sm sm:text-base"
         >
           Logout
         </button>

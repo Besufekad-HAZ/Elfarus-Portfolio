@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Yohannes Mengesha",
+    "position": "Professional Videographer",
+    "message": "As a videographer, the work and attention to detail that <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> brought to our project was truly exceptional. They effortlessly brought our vision to life with their creative flair and cinematic expertise. The final video surpassed our expectations and really made our project stand out.",
+    "avatar": "/John.jpg",
+    "status": "approved",
+    "submittedAt": "2024-01-01T10:00:00Z"
+  },
+  {
+    "id": 2,
+    "name": "Yonathan Mebrate",
+    "position": "Customer",
+    "message": "<span class='text-xl xl:text-2xl  font-extrabold text-accent'>Elfarus</span> is a true master of their craft. Their videography skills are impeccable, capturing every moment with a keen eye and a creative touch. The professionalism and dedication they demonstrated throughout the project were truly impressive. I highly recommend <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> for any creative endeavor.",
+    "avatar": "/moni.jpg",
+    "status": "approved",
+    "submittedAt": "2024-01-02T10:00:00Z"
+  },
+  {
+    "id": 3,
+    "name": "Besufekad Alemu",
+    "position": "Web Developer",
+    "message": "<span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> is a consummate professional. Their innovative approach and commitment to excellence made the entire process enjoyable and stress-free. The final product exceeded our expectations with its high-quality visuals and seamless editing. We're thrilled with the work <span class='text-xl xl:text-2xl font-extrabold text-accent'>Elfarus</span> has done for us.",
+    "avatar": "/bese.jpg",
+    "status": "approved",
+    "submittedAt": "2024-01-03T10:00:00Z"
+  }
+]

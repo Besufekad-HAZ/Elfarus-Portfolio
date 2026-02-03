@@ -29,11 +29,14 @@ const getYoutubeVideoId = (url) => {
 const ProjectsModal = ({ open, onClose, projects, title }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [playingVideo, setPlayingVideo] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const totalCount = projects?.length ?? 0;
 
   // Reset video state when modal is closed by parent
   useEffect(() => {
     if (!open) {
       setPlayingVideo(null);
+      setActiveIndex(0);
     }
   }, [open]);
 
@@ -71,11 +74,24 @@ const ProjectsModal = ({ open, onClose, projects, title }) => {
           </button>
 
           {/* Header Section */}
-          <div className="mb-6 h-8">
+          <div className="mb-6 h-8 flex items-center justify-between gap-4">
             {!playingVideo ? (
-              <h3 className="text-2xl font-bold text-accent text-center tracking-wide">
-                {title} Projects
-              </h3>
+              <>
+                <h3 className="text-2xl font-bold text-accent text-center tracking-wide flex-1">
+                  {title} Projects
+                </h3>
+                {totalCount > 0 && (
+                  <span
+                    className="text-sm font-medium text-white/80 tabular-nums shrink-0 px-3 py-1.5 rounded-full bg-white/10 border border-white/20"
+                    aria-label={`Showing item ${
+                      activeIndex + 1
+                    } of ${totalCount}`}
+                  >
+                    {activeIndex + 1} <span className="text-white/60">/</span>{" "}
+                    {totalCount}
+                  </span>
+                )}
+              </>
             ) : (
               <button
                 onClick={() => setPlayingVideo(null)}
@@ -120,6 +136,8 @@ const ProjectsModal = ({ open, onClose, projects, title }) => {
                         ? thumbsSwiper
                         : null,
                   }}
+                  onSwiper={(swiper) => setActiveIndex(swiper.realIndex)}
+                  onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                   modules={[FreeMode, Navigation, Thumbs]}
                   className="h-[300px] md:h-[450px] w-full rounded-lg"
                 >

@@ -1,6 +1,7 @@
 // components
 import TestimonialSlider from "../../components/TestimonialSlider";
 import TestimonialSubmissionForm from "../../components/TestimonialSubmissionForm";
+import ConfirmationModal from "../../components/ConfirmationModal";
 
 // import framer motion
 import { motion } from "framer-motion";
@@ -14,6 +15,10 @@ import { useState } from "react";
 
 const Testimonials = () => {
   const [showSubmissionForm, setShowSubmissionForm] = useState(false);
+  const [refreshKey, setRefreshKey] = useState(0);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleTestimonialSubmit = async (formData) => {
     try {
@@ -26,39 +31,45 @@ const Testimonials = () => {
 
       const submissionData = {
         ...formData,
-        avatar: avatarBase64
+        avatar: avatarBase64,
       };
 
-      const response = await fetch('/api/testimonials', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(submissionData)
+      const response = await fetch("/api/testimonials", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(submissionData),
       });
 
       if (response.ok) {
         const result = await response.json();
-        alert('Thank you for your testimonial! It will be reviewed and may be featured on our page.');
         setShowSubmissionForm(false);
+        setShowSuccessModal(true);
+        // Trigger refresh of testimonial slider
+        setRefreshKey((prev) => prev + 1);
       } else {
         const error = await response.json();
-        alert(`Error: ${error.message}`);
+        setErrorMessage(error.message || "An error occurred");
+        setShowErrorModal(true);
       }
     } catch (error) {
-      console.error('Error submitting testimonial:', error);
-      alert('There was an error submitting your testimonial. Please try again.');
+      console.error("Error submitting testimonial:", error);
+      setErrorMessage(
+        "There was an error submitting your testimonial. Please try again."
+      );
+      setShowErrorModal(true);
     }
   };
 
   return (
-    <div className="min-h-[100vh] bg-primary/30 py-24 sm:py-32 text-center">
-      <div className="container mx-auto h-full flex flex-col justify-center px-4 mt-16 sm:mt-20">
+    <div className="min-h-[100vh] bg-primary/30 pt-28 sm:pt-32 md:pt-32 lg:pt-28 xl:pt-24 pb-16 sm:pb-20 text-center">
+      <div className="container mx-auto h-full flex flex-col px-4">
         {/* title  */}
         <motion.h2
           variants={fadeIn("down", 0.2)}
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="h2 text-[24px] sm:text-[30px] md:text-3xl lg:text-4xl mt-5 mb-8 xl:mb-0 px-2"
+          className="h2 text-[24px] sm:text-[30px] md:text-3xl lg:text-4xl mb-4 sm:mb-6 md:mb-8 lg:mb-10 px-2"
         >
           What clients <span className="text-accent">say.</span>
         </motion.h2>
@@ -69,7 +80,7 @@ const Testimonials = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="mb-8"
+          className="mb-6 sm:mb-8 md:mb-10"
         >
           <button
             onClick={() => setShowSubmissionForm(true)}
@@ -86,6 +97,7 @@ const Testimonials = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
+          key={refreshKey}
         >
           <TestimonialSlider />
         </motion.div>
@@ -97,6 +109,24 @@ const Testimonials = () => {
             onClose={() => setShowSubmissionForm(false)}
           />
         )}
+
+        {/* Success Modal */}
+        <ConfirmationModal
+          isOpen={showSuccessModal}
+          onClose={() => setShowSuccessModal(false)}
+          type="success"
+          title="Thank You!"
+          message="Thank you for your testimonial! It will be reviewed and may be featured on our page."
+        />
+
+        {/* Error Modal */}
+        <ConfirmationModal
+          isOpen={showErrorModal}
+          onClose={() => setShowErrorModal(false)}
+          type="success"
+          title="Error"
+          message={errorMessage}
+        />
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { fadeIn } from "../../variants";
 import FileUploader from "../../components/FileUploader";
 import AdminAuth from "../../components/AdminAuth";
+import ConfirmationModal from "../../components/ConfirmationModal";
 import {
   FaUsers,
   FaUpload,
@@ -109,10 +110,9 @@ const AdminPage = () => {
       });
 
       if (response.ok) {
-        setTestimonials((prev) =>
-          prev.map((t) => (t.id === id ? { ...t, status: "approved" } : t))
-        );
         showNotification("Testimonial approved successfully!");
+        // Reload testimonials from API to ensure sync
+        await loadTestimonials();
       } else {
         const error = await response.json();
         showNotification(`Error: ${error.message}`);
@@ -132,10 +132,9 @@ const AdminPage = () => {
       });
 
       if (response.ok) {
-        setTestimonials((prev) =>
-          prev.map((t) => (t.id === id ? { ...t, status: "rejected" } : t))
-        );
         showNotification("Testimonial rejected");
+        // Reload testimonials from API to ensure sync
+        await loadTestimonials();
       } else {
         const error = await response.json();
         showNotification(`Error: ${error.message}`);
@@ -146,24 +145,36 @@ const AdminPage = () => {
     }
   };
 
-  const handleDeleteTestimonial = async (id) => {
-    if (confirm("Are you sure you want to delete this testimonial?")) {
-      try {
-        const response = await fetch(`/api/testimonials/${id}`, {
-          method: "DELETE",
-        });
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [testimonialToDelete, setTestimonialToDelete] = useState(null);
 
-        if (response.ok) {
-          setTestimonials((prev) => prev.filter((t) => t.id !== id));
-          showNotification("Testimonial deleted successfully!");
-        } else {
-          const error = await response.json();
-          showNotification(`Error: ${error.message}`);
-        }
-      } catch (error) {
-        console.error("Error deleting testimonial:", error);
-        showNotification("Error deleting testimonial");
+  const handleDeleteClick = (id) => {
+    setTestimonialToDelete(id);
+    setShowDeleteConfirm(true);
+  };
+
+  const handleDeleteConfirm = async () => {
+    if (!testimonialToDelete) return;
+
+    try {
+      const response = await fetch(`/api/testimonials/${testimonialToDelete}`, {
+        method: "DELETE",
+      });
+
+      if (response.ok) {
+        showNotification("Testimonial deleted successfully!");
+        // Reload testimonials from API to ensure sync
+        await loadTestimonials();
+      } else {
+        const error = await response.json();
+        showNotification(`Error: ${error.message}`);
       }
+    } catch (error) {
+      console.error("Error deleting testimonial:", error);
+      showNotification("Error deleting testimonial");
+    } finally {
+      setShowDeleteConfirm(false);
+      setTestimonialToDelete(null);
     }
   };
 
@@ -187,14 +198,14 @@ const AdminPage = () => {
 
   return (
     <AdminAuth>
-      <div className="admin-page bg-primary/30 py-24 md:py-36">
+      <div className="admin-page bg-primary/30 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-36">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-8">
           <motion.div
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl p-8 md:p-12"
+            className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12"
           >
             {/* Header */}
             <motion.div
@@ -202,12 +213,12 @@ const AdminPage = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="text-center mb-12"
+              className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12"
             >
-              <h1 className="h1 mb-4">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6">
                 Portfolio <span className="text-accent">Admin</span>
               </h1>
-              <p className="max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2 sm:px-4 text-white/80 leading-relaxed">
                 Manage your design portfolio files and client testimonials.
                 Upload new content and approve user submissions.
               </p>
@@ -219,12 +230,12 @@ const AdminPage = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="flex justify-center mb-8"
+              className="flex justify-center mb-6 sm:mb-8 md:mb-10"
             >
-              <div className="bg-white/10 rounded-lg p-1">
+              <div className="bg-white/10 rounded-lg p-1 flex flex-col sm:flex-row gap-2 sm:gap-1 w-full sm:w-auto">
                 <button
                   onClick={() => setActiveTab("upload")}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 ${
+                  className={`flex items-center justify-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-300 text-sm sm:text-base ${
                     activeTab === "upload"
                       ? "bg-accent text-white shadow-lg"
                       : "text-white/70 hover:text-white hover:bg-white/10"
@@ -235,7 +246,7 @@ const AdminPage = () => {
                 </button>
                 <button
                   onClick={() => setActiveTab("testimonials")}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 ${
+                  className={`flex items-center justify-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-300 text-sm sm:text-base ${
                     activeTab === "testimonials"
                       ? "bg-accent text-white shadow-lg"
                       : "text-white/70 hover:text-white hover:bg-white/10"
@@ -261,14 +272,14 @@ const AdminPage = () => {
                   exit="hidden"
                 >
                   {/* Category Selection */}
-                  <div className="mb-8">
-                    <label className="block text-sm font-medium text-white/80 mb-3">
+                  <div className="mb-6 sm:mb-8">
+                    <label className="block text-sm sm:text-base font-medium text-white/80 mb-2 sm:mb-3">
                       Upload Category
                     </label>
                     <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="w-full px-4 py-3 bg-transparent border border-white/20 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent text-white placeholder:text-white/30"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-transparent border border-white/20 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent text-white placeholder:text-white/30 text-sm sm:text-base"
                     >
                       <option value="designs/posters">🎭 Posters</option>
                       <option value="designs/thumbnails">📺 Thumbnails</option>
@@ -279,8 +290,8 @@ const AdminPage = () => {
                   </div>
 
                   {/* File Uploader */}
-                  <div className="mb-12">
-                    <h2 className="h2 mb-6 text-center">
+                  <div className="mb-8 sm:mb-10 md:mb-12">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 sm:mb-5 md:mb-6 text-center">
                       Upload <span className="text-accent">Design Files</span>
                     </h2>
                     <FileUploader
@@ -432,28 +443,42 @@ const AdminPage = () => {
                   animate="show"
                   exit="hidden"
                 >
-                  <div className="mb-8">
-                    <h2 className="h2 text-center mb-6">
+                  <div className="mb-6 sm:mb-8">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-4 sm:mb-5 md:mb-6">
                       Manage <span className="text-accent">Testimonials</span>
                     </h2>
-                    <p className="text-center text-white/70 mb-8">
+                    <p className="text-sm sm:text-base text-center text-white/70 mb-6 sm:mb-8 px-2">
                       Review and approve client testimonials submitted through
                       your portfolio.
                     </p>
                   </div>
 
-                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6">
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-white">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-3 sm:p-4 md:p-6">
+                    <div className="overflow-x-auto -mx-3 sm:-mx-4 md:-mx-6 px-3 sm:px-4 md:px-6">
+                      <table className="w-full text-white min-w-[800px] sm:min-w-0">
                         <thead>
                           <tr className="border-b border-white/20">
-                            <th className="text-left py-3 px-4">Avatar</th>
-                            <th className="text-left py-3 px-4">Name</th>
-                            <th className="text-left py-3 px-4">Position</th>
-                            <th className="text-left py-3 px-4">Message</th>
-                            <th className="text-left py-3 px-4">Status</th>
-                            <th className="text-left py-3 px-4">Date</th>
-                            <th className="text-left py-3 px-4">Actions</th>
+                            <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm">
+                              Avatar
+                            </th>
+                            <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm">
+                              Name
+                            </th>
+                            <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm hidden md:table-cell">
+                              Position
+                            </th>
+                            <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm hidden lg:table-cell">
+                              Message
+                            </th>
+                            <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm">
+                              Status
+                            </th>
+                            <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm hidden sm:table-cell">
+                              Date
+                            </th>
+                            <th className="text-left py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm">
+                              Actions
+                            </th>
                           </tr>
                         </thead>
                         <tbody>
@@ -462,27 +487,30 @@ const AdminPage = () => {
                               key={testimonial.id}
                               className="border-b border-white/10"
                             >
-                              <td className="py-3 px-4">
+                              <td className="py-2 sm:py-3 px-2 sm:px-4">
                                 <Image
                                   src={testimonial.avatar}
                                   alt={testimonial.name}
                                   width={48}
                                   height={48}
-                                  className="w-12 h-12 rounded-full object-cover"
+                                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                                 />
                               </td>
-                              <td className="py-3 px-4 font-medium">
+                              <td className="py-2 sm:py-3 px-2 sm:px-4 font-medium text-xs sm:text-sm">
                                 {testimonial.name}
                               </td>
-                              <td className="py-3 px-4">
+                              <td className="py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm hidden md:table-cell">
                                 {testimonial.position}
                               </td>
-                              <td className="py-3 px-4">
+                              <td className="py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm hidden lg:table-cell">
                                 <div className="max-w-xs truncate">
-                                  {testimonial.message}
+                                  {testimonial.message
+                                    .replace(/<[^>]*>/g, "")
+                                    .substring(0, 50)}
+                                  ...
                                 </div>
                               </td>
-                              <td className="py-3 px-4">
+                              <td className="py-2 sm:py-3 px-2 sm:px-4">
                                 <span
                                   className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusBadge(
                                     testimonial.status
@@ -491,19 +519,19 @@ const AdminPage = () => {
                                   {testimonial.status}
                                 </span>
                               </td>
-                              <td className="py-3 px-4 text-sm">
+                              <td className="py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm hidden sm:table-cell">
                                 {new Date(
                                   testimonial.submittedAt
                                 ).toLocaleDateString()}
                               </td>
-                              <td className="py-3 px-4">
-                                <div className="flex space-x-2">
+                              <td className="py-2 sm:py-3 px-2 sm:px-4">
+                                <div className="flex flex-wrap gap-1 sm:gap-2">
                                   <button
                                     onClick={() => viewTestimonial(testimonial)}
-                                    className="p-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+                                    className="p-1.5 sm:p-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
                                     title="View Details"
                                   >
-                                    <FaEye className="w-4 h-4" />
+                                    <FaEye className="w-3 h-3 sm:w-4 sm:h-4" />
                                   </button>
 
                                   {testimonial.status === "pending" && (
@@ -514,10 +542,10 @@ const AdminPage = () => {
                                             testimonial.id
                                           )
                                         }
-                                        className="p-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
+                                        className="p-1.5 sm:p-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
                                         title="Approve"
                                       >
-                                        <FaCheck className="w-4 h-4" />
+                                        <FaCheck className="w-3 h-3 sm:w-4 sm:h-4" />
                                       </button>
                                       <button
                                         onClick={() =>
@@ -525,22 +553,22 @@ const AdminPage = () => {
                                             testimonial.id
                                           )
                                         }
-                                        className="p-2 bg-red-600 hover:bg-red-700 rounded-lg transition-colors"
+                                        className="p-1.5 sm:p-2 bg-red-600 hover:bg-red-700 rounded-lg transition-colors"
                                         title="Reject"
                                       >
-                                        <FaTimes className="w-4 h-4" />
+                                        <FaTimes className="w-3 h-3 sm:w-4 sm:h-4" />
                                       </button>
                                     </>
                                   )}
 
                                   <button
                                     onClick={() =>
-                                      handleDeleteTestimonial(testimonial.id)
+                                      handleDeleteClick(testimonial.id)
                                     }
-                                    className="p-2 bg-gray-600 hover:bg-gray-700 rounded-lg transition-colors"
+                                    className="p-1.5 sm:p-2 bg-gray-600 hover:bg-gray-700 rounded-lg transition-colors"
                                     title="Delete"
                                   >
-                                    <FaTrash className="w-4 h-4" />
+                                    <FaTrash className="w-3 h-3 sm:w-4 sm:h-4" />
                                   </button>
                                 </div>
                               </td>
@@ -559,6 +587,21 @@ const AdminPage = () => {
                 </motion.div>
               )}
             </AnimatePresence>
+
+            {/* Delete Confirmation Modal */}
+            <ConfirmationModal
+              isOpen={showDeleteConfirm}
+              onClose={() => {
+                setShowDeleteConfirm(false);
+                setTestimonialToDelete(null);
+              }}
+              type="confirm"
+              title="Delete Testimonial"
+              message="Are you sure you want to delete this testimonial? This action cannot be undone."
+              confirmText="Delete"
+              cancelText="Cancel"
+              onConfirm={handleDeleteConfirm}
+            />
 
             {/* Testimonial Detail Modal */}
             {showTestimonialModal && selectedTestimonial && (

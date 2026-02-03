@@ -29,9 +29,9 @@ const AdminLogin = () => {
     setIsLoading(true);
     setError("");
 
-    // Simple authentication check
+    // Simple authentication check (username case-insensitive to match ADMIN_GUIDE)
     if (
-      credentials.username === "ELFARUS" &&
+      credentials.username.trim().toLowerCase() === "elfarus" &&
       credentials.password === "ELFA7@me"
     ) {
       // Store authentication in sessionStorage
@@ -51,21 +51,21 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-primary/30 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-primary/30 flex items-center justify-center py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32">
       <motion.div
         variants={fadeIn("up", 0.3)}
         initial="hidden"
         animate="show"
-        className="max-w-md w-full space-y-8"
+        className="max-w-md w-full space-y-8 z-10 relative"
       >
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl p-8">
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl p-6 sm:p-8">
           {/* Header */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-6 sm:mb-8">
             <motion.h2
               variants={fadeIn("down", 0.4)}
               initial="hidden"
               animate="show"
-              className="text-3xl font-bold text-white mb-2"
+              className="text-2xl sm:text-3xl font-bold text-white mb-2"
             >
               Admin <span className="text-accent">Login</span>
             </motion.h2>
@@ -73,7 +73,7 @@ const AdminLogin = () => {
               variants={fadeIn("down", 0.5)}
               initial="hidden"
               animate="show"
-              className="text-white/70"
+              className="text-sm sm:text-base text-white/70"
             >
               Access your portfolio admin panel
             </motion.p>

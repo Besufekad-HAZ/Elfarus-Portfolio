@@ -40,6 +40,25 @@ const serviceProjectsData = {
       title: "AU MEDICAL HEALTH LIFE STYLE 10 10 2025",
       link: "https://youtu.be/aQecaXQIUK8?si=ToG0Eg4E4J9JOu-B",
     },
+    { title: "Event", link: "https://www.youtube.com/watch?v=S3pJ9lXQvoo" },
+    {
+      title: "Event",
+      link: "https://youtu.be/kcXVxaC8Ti0?si=4iF25DuZ8cKTIOnq",
+    },
+    {
+      title:
+        "ANNUAL SYMPOSIUM ON MENTAL HEALTH AND BRAIN SCIENCE ALIBIRA FOUNDATION CONFERANCE DAY 1 Oct 6",
+      link: "https://youtu.be/D6wycH5n_PI?si=wTmg9qt8S3xdC6Mq",
+    },
+    {
+      title:
+        "ANNUAL SYMPOSIUM ON MENTAL HEALTH AND BRAIN SCIENCE ALIBIRA FOUNDATION CONFERANCE DAY 2 | October 7",
+      link: "https://youtu.be/P4dS3WOY6fE?si=m5NTB8H75DXuRLm-",
+    },
+    {
+      title: "AU MEDICAL HEALTH LIFE STYLE 10 10 2025",
+      link: "https://youtu.be/aQecaXQIUK8?si=ejAGOvS0SBFRAI7F",
+    },
   ],
   News: [
     {
