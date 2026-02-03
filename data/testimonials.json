@@ -25,5 +25,15 @@
     "avatar": "/bese.jpg",
     "status": "approved",
     "submittedAt": "2024-01-03T10:00:00Z"
+  },
+  {
+    "id": 4,
+    "name": "Desalegn Worku",
+    "position": "Senior videographer",
+    "message": "Having worked in this industry for years, I can confidently say Elfarus possesses a rare combination of creative vision, technical mastery, and exceptional reliability that makes them a true standout professional",
+    "avatar": "https://res.cloudinary.com/dqlrwvoao/image/upload/v1770119440/testimonials/avatars/ugykjzj0ioixcxjmrzqh.jpg",
+    "status": "approved",
+    "submittedAt": "2026-02-03T11:50:42.069Z",
+    "updatedAt": "2026-02-03T11:51:58.038Z"
   }
 ]
