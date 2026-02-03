@@ -98,6 +98,7 @@ const Testimonials = () => {
           animate="show"
           exit="hidden"
           key={refreshKey}
+          className="xl:pr-24 2xl:pr-28 xl:pl-6"
         >
           <TestimonialSlider />
         </motion.div>
